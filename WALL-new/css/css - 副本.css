@@ -1,0 +1,164 @@
+body {
+  text-align: center;
+  position: relative;
+  font-family: Monospace;
+  background-color: #000;
+  color: #fff;
+  margin: 0px;
+  overflow: hidden;
+}
+
+#info {
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  display: block;
+}
+
+#info a {
+  color: #75ddc1;
+  font-weight: bold;
+}
+
+.resetBtn {
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  right: 180px;
+  width: 100px;
+  height: 30px;
+  background-color: #555555;
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.addBtn {
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  right: 50px;
+  width: 100px;
+  height: 30px;
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.image_top {
+  position: absolute;
+  z-index: 1;
+  width: 82%;
+  height: 13%;
+  background-image: url('../images/a.png');
+  background-size: 95% 100%;
+  background-repeat: no-repeat;
+}
+
+.image_bottom {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+}
+
+.image_bottom button img {
+  width: 100px;
+  height: 60px;
+}
+
+/*canvas {*/
+/*position:absolute;*/
+/*}*/
+.btn_box {
+  width: 350px;
+  /*z-index: 9999;*/
+  /*position: absolute;*/
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn_box * {
+  box-sizing: border-box;
+}
+
+.pages span {
+  width: 80px;
+  height: 80px;
+  margin-top:-16vw;
+  background: url(../img/zuoa.png) no-repeat center top;
+  background-size: 100%;
+}
+
+.pages span.active {
+  width: 80px;
+  height: 80px;
+  margin-top:-16vw;
+  background: url(../img/youa.png) no-repeat center top;
+  background-size: 100%;
+}
+
+.shang{
+  margin-top:-16vw;
+  width: 80px;
+  height: 80px;
+  background: url(../img/zuoa.png) no-repeat center top;
+  background-size: 100%;
+}
+
+.xia {
+  margin-top:-16vw;
+  width: 80px;
+  height: 80px;
+  background: url(../img/youa.png) no-repeat center top;
+  background-size: 100%;
+}
+
+.xan {
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: -17%;
+  width: 380px;
+  height: 180px;
+  /* background: url(../files/bg.png) no-repeat center top; */
+  /* background-size: 75%; */
+}
+
+.xan span {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.xan .active {
+  margin-top: 0px;
+}
+
+
+
+@media screen and (min-width: 480px){
+   .xan {
+	bottom: -25%;
+	right: 70%;
+    width: 512px;
+    height: 256px;
+    /* background: url(../files/bg.png) no-repeat center; */
+    background-size: contain;
+   }
+
+
+ }
