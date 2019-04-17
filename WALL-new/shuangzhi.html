@@ -3,144 +3,184 @@
 
 <head>
     <title>足力健清爽鞋</title>
-	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
-	<meta content="yes" name="apple-mobile-web-app-capable">
-	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="css/camtoh5ds.css" />
-	 <link rel="stylesheet" href="css/css.css" />
+    <link rel="stylesheet" type="text/css" href="css/camtoh5ds.css" />
+    <link rel="stylesheet" href="css/css.css" />
     <script src="js/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
 </head>
-		<style>
-					{touch-action: none;}
-	body {
-				font-family: Monospace;
-				background-color: #000;
-				color: #fff;
-				margin: 0px;
-				overflow: hidden;
-				position:fixed;
+<style>
+    * {
+        touch-action: none;
+    }
 
-			}
+    body {
+        font-family: Monospace;
+        background-color: #000;
+        color: #fff;
+        margin: 0px;
+        overflow: hidden;
+        position: fixed;
 
-			#info {
-				color: #fff;
-				position: absolute;
-				top: 10px;
-				width: 100%;
-				text-align: center;
-				z-index: 100;
-				display:block;
-			}
-			#info a {
-				color: #75ddc1;
-				font-weight: bold;
-			}
+    }
+
+    #info {
+        color: #fff;
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        text-align: center;
+        z-index: 100;
+        display: block;
+    }
+
+    #info a {
+        color: #75ddc1;
+        font-weight: bold;
+    }
 
 
 
-			.image_top {
-				position:absolute;
-				z-index: 1;
-				left:50%;
-				top:15px;
-				transform: translateX(-50%);
-			}
-								.image_bottom {
-				position:absolute;
-				z-index: 1;
-				left: 50%;
-				bottom: 0px;
-				transform: translateX(-50%);
+    .image_top {
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 15px;
+        transform: translateX(-50%);
+    }
 
-			}
-        </style>
+    .image_bottom {
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        bottom: 0px;
+        transform: translateX(-50%);
+
+    }
+</style>
+
 <body>
-<audio id ="myAudio" src='' type="audio/mpeg">
-</audio>
+    <audio id="myAudio" src='' type="audio/mpeg">
+    </audio>
 
-            <div class="wer one" style="display: none;"><p onclick="Show_Hidden(xq1);"> xq1 <p></div>
-            <div class="wer two" style="display: none;"><p onclick="Show_Hidden(xq2);"> xq2 <p></div>
+    <div class="wer one" style="display: none;">
+        <p onclick="Show_Hidden(xq1);"> xq1 <p>
+    </div>
+    <div class="wer two" style="display: none;">
+        <p onclick="Show_Hidden(xq2);"> xq2 <p>
+    </div>
 
-			<div class="wer a1" style="display: block;"><p onclick="Show_Hidden(xqa1),donghua3();">手机播放 <p></div>
-            <div class="wer a2" style="display: block;"><p onclick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();"> 权威资源<p></div>
-            <div class="wer a4" style="display: block;"><p onclick="Show_Hidden(xqa4),donghua6();">半月谈AI音箱<p></div>
+    <div class="wer a1" style="display: block;">
+        <p onclick="Show_Hidden(xqa1),donghua3();">手机播放 <p>
+    </div>
+    <div class="wer a2" style="display: block;">
+        <p onclick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();"> 权威资源<p>
+    </div>
+    <div class="wer a4" style="display: block;">
+        <p onclick="Show_Hidden(xqa4),donghua6();">半月谈AI音箱<p>
+    </div>
 
-			<div class="wer b1" style="display: none;"><p onclick="Show_Hidden(xqb1),donghua3();">手机扫描 <p></div>
-            <div class="wer b2" style="display: none;"><p onclick="Show_Hidden(xqb2),donghua5();"> 海量资源<p></div>
-            <div class="wer b4" style="display: none;"><p onclick="Show_Hidden(xqb4),donghua6();">智能音箱<p></div>
-
-
-		<div class='twk' id='xq1' style='display:none'>
-    	</div>
-		<div class='twk' id='xq2' style='display:none'>
-    	</div>
-
-
-
-        <div class='twk' id='xqa1' style='display:none'>
-    	</div>
-		<div class='twk' id='xqa2' style='display:none'>
-    		 <img class='tw' src='images/ziyuan.jpg'><img onclick="Show_Hidden(xq2)" class='close' id ='closetab' src='img/close.png'>
-    	</div>
-    	<div class='twk' id='xqa3' style='display:none'>
-    	</div>
-		<div class='twk' id='xqa4' style='display:none'>
-    	</div>
-		<div class='twk' id='xqa5' style='display:none'>
-    	</div>
+    <div class="wer b1" style="display: none;">
+        <p onclick="Show_Hidden(xqb1),donghua3();">手机扫描 <p>
+    </div>
+    <div class="wer b2" style="display: none;">
+        <p onclick="Show_Hidden(xqb2),donghua5();"> 海量资源<p>
+    </div>
+    <div class="wer b4" style="display: none;">
+        <p onclick="Show_Hidden(xqb4),donghua6();">智能音箱<p>
+    </div>
 
 
-        <div class='twk' id='xqb1' style='display:none'>
-    	</div>
-		<div class='twk' id='xqb2' style='display:none'>
-    	</div>
-    	<div class='twk' id='xqb3' style='display:none'>
-    	</div>
-		    	<div class='twk' id='xqb4' style='display:none'>
-    	</div>
+    <div class='twk' id='xq1' style='display:none'>
+    </div>
+    <div class='twk' id='xq2' style='display:none'>
+    </div>
+
+
+
+    <div class='twk' id='xqa1' style='display:none'>
+    </div>
+    <div class='twk' id='xqa2' style='display:none'>
+        <img class='tw' src='images/ziyuan.jpg'><img onclick="Show_Hidden(xq2)" class='close' id='closetab'
+            src='img/close.png'>
+    </div>
+    <div class='twk' id='xqa3' style='display:none'>
+    </div>
+    <div class='twk' id='xqa4' style='display:none'>
+    </div>
+    <div class='twk' id='xqa5' style='display:none'>
+    </div>
+
+
+    <div class='twk' id='xqb1' style='display:none'>
+    </div>
+    <div class='twk' id='xqb2' style='display:none'>
+    </div>
+    <div class='twk' id='xqb3' style='display:none'>
+    </div>
+    <div class='twk' id='xqb4' style='display:none'>
+    </div>
 
     <div class="image_background">
 
-        </div>
+    </div>
 
-		<div class="image_bottom">
-		<div class="btn_box pages">
-
+    <!-- <div class="image_bottom">
+        <div class="btn_box pages">
             <span class="tips" onclick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();"></span>
             <span class="tips" onclick="Show_Hidden(xqa1),donghua3();"></span>
-			<span class="tips" onclick="Show_Hidden(xqa4),donghua6();"></span>
-
+            <span class="tips" onclick="Show_Hidden(xqa4),donghua6();"></span>
         </div>
+    </div> -->
+
+    <div class="layer-right">
+        <div class="layer-button layer-button-active" onclick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();">室内效果</div>
+        <div class="layer-button" onclick="Show_Hidden(xqa1),donghua3();">室内效果</div>
+        <div class="layer-button" onclick="Show_Hidden(xqa4),donghua6();">室内效果</div>
     </div>
-	
 
 
-	    <div class="xan" id="app">
+    <div class="xan" id="app">
+         
+        <div class="layer">
+          <div class="layer-box">
+            <span v-for="(item,index) in list1" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'"
+                class="active">
+            <img :src="item" width="50" algin="center" /></span>
+          </div>
+        </div>
+
         <div v-if="selectindex==1" class="active">
-            <span v-for="(item,index) in list1" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'" class="active">
+            <span v-for="(item,index) in list1" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'"
+                class="active">
                 <img :src="item" width="50" algin="center" /></span>
         </div>
 
         <div v-if="selectindex==2" class="active">
-            <span v-for="(item,index) in list2" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'" class="active">
+            <span v-for="(item,index) in list2" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'"
+                class="active">
                 <img :src="item" width="50" algin="center" /></span>
         </div>
 
         <div v-if="selectindex==3" class="active">
-            <span v-for="(item,index) in list3" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'" class="active">
+            <span v-for="(item,index) in list3" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'"
+                class="active">
                 <img :src="item" width="50" algin="center" /></span>
         </div>
 
         <div v-if="selectindex==4" class="active">
-            <span v-for="(item,index) in list4" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'" class="active">
+            <span v-for="(item,index) in list4" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'"
+                class="active">
                 <img :src="item" width="50" algin="center" /></span>
         </div>
 
         <div v-if="selectindex==5" class="active">
-            <span v-for="(item,index) in list5" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'" class="active">
+            <span v-for="(item,index) in list5" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'"
+                class="active">
                 <img :src="item" width="50" algin="center" /></span>
         </div>
 
@@ -156,11 +196,17 @@
     <script src="js/libs/stats.min.js"></script>
 
 
-	<script src="js/dat.gui.min.js"></script>
-	<script src="js/Detector.js"></script>
-	<script src="js/inflate.min.js"></script>
+    <script src="js/dat.gui.min.js"></script>
+    <script src="js/Detector.js"></script>
+    <script src="js/inflate.min.js"></script>
     <script>
-var vm = new Vue({
+        var layer_button = $('.layer-button');
+
+        layer_button.click(function(){
+            layer_button.removeClass('layer-button-active');
+            $(this).addClass('layer-button-active');
+        })
+        var vm = new Vue({
             el: '#app',
             data: function () {
                 return {
@@ -197,74 +243,74 @@ var vm = new Vue({
             }
         }
 
-		function backToNormalView() {	
-        
+        function backToNormalView() {
 
-        var target = controls.target.clone();
-        new TWEEN.Tween(target).to({
-            x: 0,
-            y: 0,
-            z: 0
-        }, 1000)
-            .onUpdate(function () {
-                camera.lookAt(target);
-                controls.target = target.clone();
-            })
-            .onComplete(function () {
-                controls.target = new THREE.Vec3(-0.00001,0,0)
-                controls.enable = true;
-            })
-            .easing((TWEEN.Easing.Quadratic.InOut)).start();
 
-        new TWEEN.Tween(camera.position).to({
-            z:  0,
-            x:  0,
-            y:  0,
-        }, 2000).onComplete(function () {
-            if(trid.style.display=="block"){ 	
-                trid.style.display='none';
-            }else{
-                trid.style.display='block';
-                controls.enable = false;
+            var target = controls.target.clone();
+            new TWEEN.Tween(target).to({
+                x: 0,
+                y: 0,
+                z: 0
+            }, 1000)
+                .onUpdate(function () {
+                    camera.lookAt(target);
+                    controls.target = target.clone();
+                })
+                .onComplete(function () {
+                    controls.target = new THREE.Vec3(-0.00001, 0, 0)
+                    controls.enable = true;
+                })
+                .easing((TWEEN.Easing.Quadratic.InOut)).start();
+
+            new TWEEN.Tween(camera.position).to({
+                z: 0,
+                x: 0,
+                y: 0,
+            }, 2000).onComplete(function () {
+                if (trid.style.display == "block") {
+                    trid.style.display = 'none';
+                } else {
+                    trid.style.display = 'block';
+                    controls.enable = false;
+                }
+            }).easing((TWEEN.Easing.Quadratic.InOut)).start();
+        }
+        function Show_Hidden(trid) {
+            if (trid.style.display == "block") {
+                trid.style.display = 'none';
+            } else {
+                trid.style.display = 'block';
             }
-        }).easing((TWEEN.Easing.Quadratic.InOut)).start();
-    }
-	function Show_Hidden(trid){
-			if(trid.style.display=="block"){
-				trid.style.display='none';
-			}else{
-				trid.style.display='block';
-			}
-			switch (trid.id) {
-				case('xq1'):
-			
-                    tweenCameraWithHotspot(targetArray[1], trid,cameraPositionArray[0].position);
-					break;
-				case ('xq2'):
-               
-                    tweenCameraWithHotspot(targetArray[2], trid,cameraPositionArray[1].position);
+            switch (trid.id) {
+                case ('xq1'):
+
+                    tweenCameraWithHotspot(targetArray[1], trid, cameraPositionArray[0].position);
                     break;
-					
-					
+                case ('xq2'):
+
+                    tweenCameraWithHotspot(targetArray[2], trid, cameraPositionArray[1].position);
+                    break;
+
+
                 case ('xqa1'):
-        
-                tweenCameraWithHotspot(targetArray[3], trid,cameraPositionArray[2].position);
-                break;
-                case ('xqa4'):
-               
-                    tweenCameraWithHotspot(targetArray[2], trid,cameraPositionArray[3].position);
-                    break;
-					
-                  case ('xqa5'):
-      
-                tweenCameraWithHotspot(targetArray[7], trid,cameraPositionArray[4].position);
-                break;
-				
-				                 
 
-				default:break;
+                    tweenCameraWithHotspot(targetArray[3], trid, cameraPositionArray[2].position);
+                    break;
+                case ('xqa4'):
+
+                    tweenCameraWithHotspot(targetArray[2], trid, cameraPositionArray[3].position);
+                    break;
+
+                case ('xqa5'):
+
+                    tweenCameraWithHotspot(targetArray[7], trid, cameraPositionArray[4].position);
+                    break;
+
+
+
+                default: break;
             }
-	}
+        }
 
 
 
@@ -273,71 +319,71 @@ var vm = new Vue({
             document.body.appendChild(WEBGL.getWebGLErrorMessage());
         }
 
-    var container, mixer, controls;
-    var camera, scene, renderer, light, scenea;
-    var group = new THREE.Object3D();
-    var startMove = false;
-    var times = 0;
-    var rotationDirection = -1;
-    var opacity = 0.002;
-    var clock = new THREE.Clock();
-    var animUp = false; 
-    var currentAction = null;
-    var Uvoffset = 0.03;
-    var renderer, gui, light, stats;
-    var cube, cube2, cube3, cube4, cube5, cube6,cubea1,cubea2,cubea3,cubea4,cubeb1,cubeb2,cubeb3,cubeb4;
+        var container, mixer, controls;
+        var camera, scene, renderer, light, scenea;
+        var group = new THREE.Object3D();
+        var startMove = false;
+        var times = 0;
+        var rotationDirection = -1;
+        var opacity = 0.002;
+        var clock = new THREE.Clock();
+        var animUp = false;
+        var currentAction = null;
+        var Uvoffset = 0.03;
+        var renderer, gui, light, stats;
+        var cube, cube2, cube3, cube4, cube5, cube6, cubea1, cubea2, cubea3, cubea4, cubeb1, cubeb2, cubeb3, cubeb4;
 
-    var showanimation = [];
-    var shoeModel;
-    var opcityDir = -1;
-    var cameraStartToMove = false;
-    var array_count = 0;
+        var showanimation = [];
+        var shoeModel;
+        var opcityDir = -1;
+        var cameraStartToMove = false;
+        var array_count = 0;
 
-    var camPositions = [];
-    var ctlTargets = [];
-    var currentIndex = -1;
-    var intvTime = 2000;
-    var targetArray = [{name: 'reset', position: new THREE.Vector3(0, 0, 0)}];
-	var targetArraya;
-    var cameraPositionArray = [{position: new THREE.Vector3(3, 1, 21 )}, {position: new THREE.Vector3(3, 1, 21)},{position: new THREE.Vector3(1, 0.5, 4)},{position: new THREE.Vector3(1, 0.5, 4)},{position: new THREE.Vector3(3, 1, 21)}];
-    var movingState = false;
-	var objectQi;
+        var camPositions = [];
+        var ctlTargets = [];
+        var currentIndex = -1;
+        var intvTime = 2000;
+        var targetArray = [{ name: 'reset', position: new THREE.Vector3(0, 0, 0) }];
+        var targetArraya;
+        var cameraPositionArray = [{ position: new THREE.Vector3(3, 1, 21) }, { position: new THREE.Vector3(3, 1, 21) }, { position: new THREE.Vector3(1, 0.5, 4) }, { position: new THREE.Vector3(1, 0.5, 4) }, { position: new THREE.Vector3(3, 1, 21) }];
+        var movingState = false;
+        var objectQi;
 
 
         init();
         animate();
 
 
-	function initRender() {               
-    renderer = new THREE.WebGLRenderer({
-        alpha: true,
-        antialias: true
-    });
+        function initRender() {
+            renderer = new THREE.WebGLRenderer({
+                alpha: true,
+                antialias: true
+            });
 
-    renderer.shadowMap.enabled = true;
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-  
-    document.getElementById("container").appendChild(renderer.domElement);
+            renderer.shadowMap.enabled = true;
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
-}
+            document.getElementById("container").appendChild(renderer.domElement);
+
+        }
 
 
-        function defineCameraPosition(camera,hotspot){
-		    var count = 1;
-		    var cameraPosition = camera.position.clone();
-		    var hotspotPosition = hotspot.position.clone();
-			var positionNormalize = cameraPosition.subVectors(cameraPosition,hotspotPosition).normalize();
-		    return new THREE.Vector3(cameraPosition.x + count*positionNormalize.x,cameraPosition.y + count*positionNormalize.y,cameraPosition.z + count*positionNormalize.z);
-		}
+        function defineCameraPosition(camera, hotspot) {
+            var count = 1;
+            var cameraPosition = camera.position.clone();
+            var hotspotPosition = hotspot.position.clone();
+            var positionNormalize = cameraPosition.subVectors(cameraPosition, hotspotPosition).normalize();
+            return new THREE.Vector3(cameraPosition.x + count * positionNormalize.x, cameraPosition.y + count * positionNormalize.y, cameraPosition.z + count * positionNormalize.z);
+        }
         function tweenCamera(index) {
             controls.enable = false;
             var target = controls.target.clone();
             new TWEEN.Tween(target).to({
-                    x: ctlTargets[index].x,
-                    y: ctlTargets[index].y,
-                    z: ctlTargets[index].z
-                }, 2000)
+                x: ctlTargets[index].x,
+                y: ctlTargets[index].y,
+                z: ctlTargets[index].z
+            }, 2000)
                 .onUpdate(function () {
                     camera.lookAt(target);
                     controls.target = target.clone();
@@ -347,19 +393,19 @@ var vm = new Vue({
                     controls.enable = true;
                 })
                 .easing(TWEEN.Easing.Linear.None).start();
-				
+
             new TWEEN.Tween(camera.position).to({
-                    x: camPositions[index].x,
-                    y: camPositions[index].y,
-                    z: camPositions[index].z
-                }, 2000)
+                x: camPositions[index].x,
+                y: camPositions[index].y,
+                z: camPositions[index].z
+            }, 2000)
                 .easing(TWEEN.Easing.Linear.None).start();
         }
 
-		function tweenCameraWithHotspot(hotspot,trid,cameraPosition) {
-		    var hotspotPosition = hotspot.position;
+        function tweenCameraWithHotspot(hotspot, trid, cameraPosition) {
+            var hotspotPosition = hotspot.position;
 
-			console.log()
+            console.log()
             controls.enable = false;
 
             var target = controls.target.clone();
@@ -373,26 +419,26 @@ var vm = new Vue({
                     controls.target = target.clone();
                 })
                 .onComplete(function () {
-                   controls.target = hotspotPosition.clone();
+                    controls.target = hotspotPosition.clone();
                     controls.enable = true;
                 })
                 .easing((TWEEN.Easing.Quadratic.InOut)).start();
-           
+
             new TWEEN.Tween(camera.position).to({
-                z:  cameraPosition.z,
-                x:  cameraPosition.x,
-                y:  cameraPosition.y,
+                z: cameraPosition.z,
+                x: cameraPosition.x,
+                y: cameraPosition.y,
             }, 2000).onComplete(function () {
                 movingState = false;
-                if(trid.style.display=="block" && trid.id !='xq4'){ 	
-                	trid.style.display='none';
-                }else{
-                	trid.style.display='block';
+                if (trid.style.display == "block" && trid.id != 'xq4') {
+                    trid.style.display = 'none';
+                } else {
+                    trid.style.display = 'block';
                     controls.enable = false;
                 }
             }).easing((TWEEN.Easing.Quadratic.InOut)).start();
 
-	}
+        }
 
         function cameraMoveState() {
             moveDirection = 1;
@@ -406,7 +452,7 @@ var vm = new Vue({
                 tweenCamera(array_count);
             }
 
-           
+
         }
 
 
@@ -423,7 +469,7 @@ var vm = new Vue({
                 tweenCamera(array_count);
             }
 
-          
+
 
         }
 
@@ -432,9 +478,9 @@ var vm = new Vue({
             times++;
             if (times == 2) {
                 startMove = true;
-             
+
                 opcityDir = -opcityDir;
-        
+
                 playDownAnimation();
                 times = 0;
             } else {
@@ -466,24 +512,24 @@ var vm = new Vue({
                 action.play();
             }
         }
-function donghua1() {
-shoeModel.visible = true;
-objectQi.visible = false;
+        function donghua1() {
+            shoeModel.visible = true;
+            objectQi.visible = false;
 
 
 
-			cubea4.visible = true;
+            cubea4.visible = true;
             cubea1.visible = true;
             cubea2.visible = true;
             cubea3.visible = true;
             document.getElementsByClassName('a1')[0].style.display = 'block';
             document.getElementsByClassName('a2')[0].style.display = 'block';
-           
+
             document.getElementsByClassName('a4')[0].style.display = 'block';
 
 
 
-			cubeb4.visible = false;
+            cubeb4.visible = false;
             cubeb1.visible = false;
             cubeb2.visible = false;
             cubeb3.visible = false;
@@ -491,87 +537,87 @@ objectQi.visible = false;
             document.getElementsByClassName('b2')[0].style.display = 'none';
 
             document.getElementsByClassName('b4')[0].style.display = 'none';
-			
-			controls.minPolarAngle = Math.PI / 2 -0.11;
-			controls.maxPolarAngle = Math.PI / 2 +0.08;     
-			controls.minDistance = 6;
-}
+
+            controls.minPolarAngle = Math.PI / 2 - 0.11;
+            controls.maxPolarAngle = Math.PI / 2 + 0.08;
+            controls.minDistance = 6;
+        }
 
 
         function donghua2() {
             //动画2
             shoeModel.visible = false;
-objectQi.visible = true;
+            objectQi.visible = true;
             cubea4.visible = false;
             cubea1.visible = false;
             cubea2.visible = false;
             cubea3.visible = false;
             document.getElementsByClassName('a1')[0].style.display = 'none';
             document.getElementsByClassName('a2')[0].style.display = 'none';
-            
+
             document.getElementsByClassName('a4')[0].style.display = 'none';
 
-			cubeb1.visible = true;
+            cubeb1.visible = true;
             cubeb2.visible = true;
             cubeb3.visible = true;
-			cubeb4.visible = true;
-			document.getElementsByClassName('b1')[0].style.display = 'block';
-			document.getElementsByClassName('b2')[0].style.display = 'block';
+            cubeb4.visible = true;
+            document.getElementsByClassName('b1')[0].style.display = 'block';
+            document.getElementsByClassName('b2')[0].style.display = 'block';
 
-			document.getElementsByClassName('b4')[0].style.display = 'block';
-			
-			controls.minPolarAngle = Math.PI / 2 -0.55;
-			controls.maxPolarAngle = Math.PI / 2 +0.13;      
-			controls.minDistance = 6;
+            document.getElementsByClassName('b4')[0].style.display = 'block';
+
+            controls.minPolarAngle = Math.PI / 2 - 0.55;
+            controls.maxPolarAngle = Math.PI / 2 + 0.13;
+            controls.minDistance = 6;
         }
 
-		
-		
-var listener = new THREE.AudioListener();
-var audio = document.getElementById("myAudio");
-var sound = new THREE.Audio( listener );
+
+
+        var listener = new THREE.AudioListener();
+        var audio = document.getElementById("myAudio");
+        var sound = new THREE.Audio(listener);
         function donghua3() {
-     
+
             audio.src = 'http://qiniucdn.happyppt.com/0402shi/R.mp3';
             audio.play();
-		    controls.minPolarAngle = Math.PI / 2 -0.4;
-			controls.maxPolarAngle = Math.PI / 2 +0.13;       
-			controls.minDistance = 2;
+            controls.minPolarAngle = Math.PI / 2 - 0.4;
+            controls.maxPolarAngle = Math.PI / 2 + 0.13;
+            controls.minDistance = 2;
 
         }
 
 
 
-		        function donghua4() {
-       
-
-                    audio.src = 'http://qiniucdn.happyppt.com/0402shi/L.mp3';
-                    audio.play();
-					
-
-        }
+        function donghua4() {
 
 
-		        function donghua5() {
-   
-
-                    audio.src = 'http://qiniucdn.happyppt.com/0402shi/xijinping.mp3';
-                    audio.play();
+            audio.src = 'http://qiniucdn.happyppt.com/0402shi/L.mp3';
+            audio.play();
 
 
         }
 
 
+        function donghua5() {
 
-		        function donghua6() {
-        
 
-                    audio.src = 'http://qiniucdn.happyppt.com/0402shi/xy.mp3';
-                    audio.play();
-					
-		    controls.minPolarAngle = Math.PI / 2 -0.4;
-			controls.maxPolarAngle = Math.PI / 2 +0.13;       
-			controls.minDistance = 2;
+            audio.src = 'http://qiniucdn.happyppt.com/0402shi/xijinping.mp3';
+            audio.play();
+
+
+        }
+
+
+
+        function donghua6() {
+
+
+            audio.src = 'http://qiniucdn.happyppt.com/0402shi/xy.mp3';
+            audio.play();
+
+            controls.minPolarAngle = Math.PI / 2 - 0.4;
+            controls.maxPolarAngle = Math.PI / 2 + 0.13;
+            controls.minDistance = 2;
         }
 
 
@@ -584,9 +630,9 @@ var sound = new THREE.Audio( listener );
             container = document.getElementsByClassName('image_background')[0];
 
 
-			camera = new THREE.PerspectiveCamera( 30, window.innerWidth / window.innerHeight, 0.25, 200 );
-			camera.position.set( 3, 1, 21 );
-            camera.add( listener );
+            camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 0.25, 200);
+            camera.position.set(3, 1, 21);
+            camera.add(listener);
             scene = new THREE.Scene();
 
             scene.add(group);
@@ -605,123 +651,123 @@ var sound = new THREE.Audio( listener );
             camera.add(pointLight);
             group.add(camera);
 
-          
-
-
-
-
-
-			var helper = new THREE.AxesHelper(50);
-
-
-			var material = new THREE.MeshBasicMaterial({color: 0xffffff, transparent: true, opacity: 0.2});
-
-		
-			var geometry = new THREE.SphereBufferGeometry(0.01, 0.01, 0.01);
-
-
-			cube = new THREE.Mesh(geometry, material);
-			cube.position.set(0,0, 0);
-			cube.name  = 'xq1';
-            targetArray.push({name:cube.name,position:cube.position});
-			scene.add(cube);
-
-
-			cube2 = new THREE.Mesh(geometry, material);
-			cube2.position.set(0,0, 0);
-            cube2.name  = 'xq2';
-            targetArray.push({name:cube2.name,position:cube2.position});
-			scene.add(cube2);
-
-
-			cubea1 = new THREE.Mesh(geometry, material);
-			cubea1.position.set(-0.5, 0.4, -0.17);
-			cubea1.name  = 'xqa1';
-            targetArray.push({name:cubea1.name,position:cubea1.position});
-			scene.add(cubea1);
-
-		
-			cubea2 = new THREE.Mesh(geometry, material);
-			cubea2.position.set(0, 1.5, -0.17);
-            cubea2.name  = 'xqa2';
-            targetArray.push({name:cubea2.name,position:cubea2.position});
-			scene.add(cubea2);
-
-			cubea3 = new THREE.Mesh(geometry, material);
-			cubea3.position.set(-2, 0.8, -0.17);
-            cubea3.name  = 'xqa3';
-            targetArray.push({name:cubea3.name,position:cubea3.position});
-			scene.add(cubea3);
-
-				
-			cubea4 = new THREE.Mesh(geometry, material);
-			cubea4.position.set(-0.12,-0.05,0);
-            cubea4.name  = 'xqa4';
-            targetArray.push({name:cubea4.name,position:cubea4.position});
-			scene.add(cubea3);
-			
-						
-			cubea5 = new THREE.Mesh(geometry, material);
-			cubea5.position.set(-0.12,-1.3,0);
-            cubea5.name  = 'xqa5';
-            targetArray.push({name:cubea5.name,position:cubea5.position});
-			scene.add(cubea5);
-
-		
-			cubeb1 = new THREE.Mesh(geometry, material);
-			cubeb1.position.set(-0.5, 0.4,  -2.2);
-			cubeb1.name  = 'xqb1';
-            targetArray.push({name:cubeb1.name,position:cubeb1.position});
-			scene.add(cubeb1);
-		
-			cubeb2 = new THREE.Mesh(geometry, material);
-			cubeb2.position.set(0, 1.5, -2.2);
-            cubeb2.name  = 'xqb2';
-            targetArray.push({name:cubeb2.name,position:cubeb2.position});
-			scene.add(cubeb2);
-
-	
-			cubeb3 = new THREE.Mesh(geometry, material);
-			cubeb3.position.set(-2, 0.8, -2.2);
-            cubeb3.name  = 'xqb3';
-            targetArray.push({name:cubeb3.name,position:cubeb3.position});
-			scene.add(cubeb3);
-
-				
-			cubeb4 = new THREE.Mesh(geometry, material);
-			cubeb4.position.set(0,0.08,-2);
-            cubeb4.name  = 'xqb4';
-            targetArray.push({name:cubeb3.name,position:cubeb3.position});
-			scene.add(cubeb3);
-			
-			
-
-			console.log(targetArray);
 
 
 
 
 
 
+            var helper = new THREE.AxesHelper(50);
+
+
+            var material = new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.2 });
+
+
+            var geometry = new THREE.SphereBufferGeometry(0.01, 0.01, 0.01);
+
+
+            cube = new THREE.Mesh(geometry, material);
+            cube.position.set(0, 0, 0);
+            cube.name = 'xq1';
+            targetArray.push({ name: cube.name, position: cube.position });
+            scene.add(cube);
+
+
+            cube2 = new THREE.Mesh(geometry, material);
+            cube2.position.set(0, 0, 0);
+            cube2.name = 'xq2';
+            targetArray.push({ name: cube2.name, position: cube2.position });
+            scene.add(cube2);
+
+
+            cubea1 = new THREE.Mesh(geometry, material);
+            cubea1.position.set(-0.5, 0.4, -0.17);
+            cubea1.name = 'xqa1';
+            targetArray.push({ name: cubea1.name, position: cubea1.position });
+            scene.add(cubea1);
+
+
+            cubea2 = new THREE.Mesh(geometry, material);
+            cubea2.position.set(0, 1.5, -0.17);
+            cubea2.name = 'xqa2';
+            targetArray.push({ name: cubea2.name, position: cubea2.position });
+            scene.add(cubea2);
+
+            cubea3 = new THREE.Mesh(geometry, material);
+            cubea3.position.set(-2, 0.8, -0.17);
+            cubea3.name = 'xqa3';
+            targetArray.push({ name: cubea3.name, position: cubea3.position });
+            scene.add(cubea3);
+
+
+            cubea4 = new THREE.Mesh(geometry, material);
+            cubea4.position.set(-0.12, -0.05, 0);
+            cubea4.name = 'xqa4';
+            targetArray.push({ name: cubea4.name, position: cubea4.position });
+            scene.add(cubea3);
+
+
+            cubea5 = new THREE.Mesh(geometry, material);
+            cubea5.position.set(-0.12, -1.3, 0);
+            cubea5.name = 'xqa5';
+            targetArray.push({ name: cubea5.name, position: cubea5.position });
+            scene.add(cubea5);
+
+
+            cubeb1 = new THREE.Mesh(geometry, material);
+            cubeb1.position.set(-0.5, 0.4, -2.2);
+            cubeb1.name = 'xqb1';
+            targetArray.push({ name: cubeb1.name, position: cubeb1.position });
+            scene.add(cubeb1);
+
+            cubeb2 = new THREE.Mesh(geometry, material);
+            cubeb2.position.set(0, 1.5, -2.2);
+            cubeb2.name = 'xqb2';
+            targetArray.push({ name: cubeb2.name, position: cubeb2.position });
+            scene.add(cubeb2);
+
+
+            cubeb3 = new THREE.Mesh(geometry, material);
+            cubeb3.position.set(-2, 0.8, -2.2);
+            cubeb3.name = 'xqb3';
+            targetArray.push({ name: cubeb3.name, position: cubeb3.position });
+            scene.add(cubeb3);
+
+
+            cubeb4 = new THREE.Mesh(geometry, material);
+            cubeb4.position.set(0, 0.08, -2);
+            cubeb4.name = 'xqb4';
+            targetArray.push({ name: cubeb3.name, position: cubeb3.position });
+            scene.add(cubeb3);
+
+
+
+            console.log(targetArray);
 
 
 
 
 
-	
-				var path = 'textures/cube/Bridge2/';
-				var format = '.jpg';
-				var envMap = new THREE.CubeTextureLoader().load( [
-					path + 'posx' + format, path + 'negx' + format,
-					path + 'posy' + format, path + 'negy' + format,
-					path + 'posz' + format, path + 'negz' + format
-		
-				] );
 
 
-	
 
-			var patha = 'textures/cube/Bridge2/';
+
+
+
+
+            var path = 'textures/cube/Bridge2/';
+            var format = '.jpg';
+            var envMap = new THREE.CubeTextureLoader().load([
+                path + 'posx' + format, path + 'negx' + format,
+                path + 'posy' + format, path + 'negy' + format,
+                path + 'posz' + format, path + 'negz' + format
+
+            ]);
+
+
+
+
+            var patha = 'textures/cube/Bridge2/';
             var formata = '.jpg';
             var backtex = new THREE.CubeTextureLoader().load([
                 patha + 'house.right' + formata,
@@ -738,75 +784,75 @@ var sound = new THREE.Audio( listener );
 
 
 
-            
-            	var loader = new THREE.GLTFLoader();
-				loader.load( 'http://qiniucdn.happyppt.com/0402shi/B.gltf',
-				function ( gltf ) {
+
+            var loader = new THREE.GLTFLoader();
+            loader.load('http://qiniucdn.happyppt.com/0402shi/B.gltf',
+                function (gltf) {
                     gltf.scene.scale.set(.23, .23, .23);
                     gltf.scene.position.y -= 2.1;
-					gltf.scene.position.z -= -1.6;
-					gltf.scene.traverse( function ( child ) {
-						if ( child.isMesh ) {
-			
-							child.material.envMap = envMap;
-						}
-					} );
-                   var animations = gltf.animations;
+                    gltf.scene.position.z -= -1.6;
+                    gltf.scene.traverse(function (child) {
+                        if (child.isMesh) {
 
-				        if (animations && animations.length) {
+                            child.material.envMap = envMap;
+                        }
+                    });
+                    var animations = gltf.animations;
+
+                    if (animations && animations.length) {
                         mixer = new THREE.AnimationMixer(gltf.scene);
                         for (var i = 0; i < animations.length; i++) {
                             showanimation.push(animations[i]);
                         }
                     }
 
-				    shoeModel = gltf.scene;
-					scene.add( gltf.scene );
+                    shoeModel = gltf.scene;
+                    scene.add(gltf.scene);
 
-				},
-				undefined,
-				function ( e ) {
+                },
+                undefined,
+                function (e) {
 
-					console.error( e );
+                    console.error(e);
 
-				} );
-
-
+                });
 
 
 
 
-	
-            	var loadera = new THREE.GLTFLoader();
-				loadera.load( 'http://qiniucdn.happyppt.com/0402shi/A.gltf',
-				function ( gltfa ) {
+
+
+
+            var loadera = new THREE.GLTFLoader();
+            loadera.load('http://qiniucdn.happyppt.com/0402shi/A.gltf',
+                function (gltfa) {
                     gltfa.scene.scale.set(.23, .23, 0.23);
                     gltfa.scene.position.y -= 2.1;
-					gltfa.scene.traverse( function ( child ) {
-						if ( child.isMesh ) {
-				
-							child.material.envMap = envMap;
-						}
-					} );
-                   var animations = gltfa.animations;
+                    gltfa.scene.traverse(function (child) {
+                        if (child.isMesh) {
 
-				        if (animations && animations.length) {
+                            child.material.envMap = envMap;
+                        }
+                    });
+                    var animations = gltfa.animations;
+
+                    if (animations && animations.length) {
                         mixer = new THREE.AnimationMixer(gltf.scene);
                         for (var i = 0; i < animations.length; i++) {
                             showanimation.push(animations[i]);
                         }
                     }
-				   objectQi = gltfa.scene;
-				
-					scene.add( gltfa.scene );
+                    objectQi = gltfa.scene;
+
+                    scene.add(gltfa.scene);
                     objectQi.visible = false;
-				},
-				undefined,
-				function ( e ) {
+                },
+                undefined,
+                function (e) {
 
-					console.error( e );
+                    console.error(e);
 
-				} );
+                });
 
 
 
@@ -816,7 +862,7 @@ var sound = new THREE.Audio( listener );
 
 
             renderer = new THREE.WebGLRenderer({
-                antialias: true,alpha:true
+                antialias: true, alpha: true
             });
             renderer.setPixelRatio(window.devicePixelRatio);
             renderer.setSize(window.innerWidth, window.innerHeight);
@@ -828,29 +874,29 @@ var sound = new THREE.Audio( listener );
                 renderer.domElement
             );
             controls.enablePan = true;
-			controls.panSpeed = .1;
-			
+            controls.panSpeed = .1;
+
             controls.enableDamping = true;
             controls.dampingFactor = 0.1;
             controls.enableZoom = true;
             controls.target.set(-0.00001, 0, 0);
-			controls.minPolarAngle = Math.PI / 2 -0.11;
-			controls.maxPolarAngle = Math.PI / 2 +0.08;       
+            controls.minPolarAngle = Math.PI / 2 - 0.11;
+            controls.maxPolarAngle = Math.PI / 2 + 0.08;
 
-			controls.maxAzimuthAngle = 0.9;
-			controls.minAzimuthAngle = -0.9 ;     
-   
-			
-			controls.autoRotateSpeed = -0.016;          
-      
-            controls.autoRotate = false;                
+            controls.maxAzimuthAngle = 0.9;
+            controls.minAzimuthAngle = -0.9;
 
 
-			controls.minDistance = 6;
-			controls.maxDistance = 23;
+            controls.autoRotateSpeed = -0.016;
+
+            controls.autoRotate = false;
+
+
+            controls.minDistance = 6;
+            controls.maxDistance = 23;
 
             window.addEventListener('resize', onWindowResize, false);
-    
+
         }
 
         function onWindowResize() {
@@ -879,152 +925,152 @@ var sound = new THREE.Audio( listener );
 
 
 
-	
-		function initGui() {
-	
-			gui = {
-			};
-			
-		}
 
+        function initGui() {
 
-	
-		function initStats() {
-			stats = new Stats();
-			
-		}
+            gui = {
+            };
+
+        }
 
 
 
-		function initControls() {
-			
+        function initStats() {
+            stats = new Stats();
 
-
-	controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls.addEventListener('change', render);
-
-    controls.maxPolarAngle = Math.PI / 2;       
+        }
 
 
 
+        function initControls() {
 
-		}
 
-		
-		function render() {
-		renderer.render(scene, camera);
-		
-			let halfWidth = window.innerWidth / 2;
-			let halfHeight = window.innerHeight / 2;
+
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.addEventListener('change', render);
+
+            controls.maxPolarAngle = Math.PI / 2;
+
+
+
+
+        }
+
+
+        function render() {
+            renderer.render(scene, camera);
+
+            let halfWidth = window.innerWidth / 2;
+            let halfHeight = window.innerHeight / 2;
 
             var vector1 = cube.position.clone().project(camera);
             var vector2 = cube2.position.clone().project(camera);
 
-			var vectora1 = cubea1.position.clone().project(camera);
-			var vectora2 = cubea2.position.clone().project(camera);
-			var vectora3 = cubea3.position.clone().project(camera);
-			var vectora4 = cubea4.position.clone().project(camera);
-			var vectorb1 = cubeb1.position.clone().project(camera);
-			var vectorb2 = cubeb2.position.clone().project(camera);
-			var vectorb3 = cubeb3.position.clone().project(camera);
-			var vectorb3 = cubeb3.position.clone().project(camera);
-			var vectorb4 = cubeb4.position.clone().project(camera);
-
-
-		
-			$(".one").css({
-				left: vector1.x * halfWidth + halfWidth,
-				top: -vector1.y * halfHeight + halfHeight
-			});
-
-
-			$(".two").css({
-				left: vector2.x * halfWidth + halfWidth,
-				top: -vector2.y * halfHeight + halfHeight
-			});
+            var vectora1 = cubea1.position.clone().project(camera);
+            var vectora2 = cubea2.position.clone().project(camera);
+            var vectora3 = cubea3.position.clone().project(camera);
+            var vectora4 = cubea4.position.clone().project(camera);
+            var vectorb1 = cubeb1.position.clone().project(camera);
+            var vectorb2 = cubeb2.position.clone().project(camera);
+            var vectorb3 = cubeb3.position.clone().project(camera);
+            var vectorb3 = cubeb3.position.clone().project(camera);
+            var vectorb4 = cubeb4.position.clone().project(camera);
 
 
 
-			            $(".a1").css({
+            $(".one").css({
+                left: vector1.x * halfWidth + halfWidth,
+                top: -vector1.y * halfHeight + halfHeight
+            });
+
+
+            $(".two").css({
+                left: vector2.x * halfWidth + halfWidth,
+                top: -vector2.y * halfHeight + halfHeight
+            });
+
+
+
+            $(".a1").css({
                 left: vectora1.x * halfWidth + halfWidth,
                 top: -vectora1.y * halfHeight + halfHeight
             });
-			            $(".a2").css({
+            $(".a2").css({
                 left: vectora2.x * halfWidth + halfWidth,
                 top: -vectora2.y * halfHeight + halfHeight
             });
-			            $(".a3").css({
+            $(".a3").css({
                 left: vectora3.x * halfWidth + halfWidth,
                 top: -vectora3.y * halfHeight + halfHeight
             });
-						$(".a4").css({
+            $(".a4").css({
                 left: vectora4.x * halfWidth + halfWidth,
                 top: -vectora4.y * halfHeight + halfHeight
             });
 
-					    $(".b1").css({
+            $(".b1").css({
                 left: vectorb1.x * halfWidth + halfWidth,
                 top: -vectorb1.y * halfHeight + halfHeight
             });
-			            $(".b2").css({
+            $(".b2").css({
                 left: vectorb2.x * halfWidth + halfWidth,
                 top: -vectorb2.y * halfHeight + halfHeight
             });
-			            $(".b3").css({
+            $(".b3").css({
                 left: vectorb3.x * halfWidth + halfWidth,
                 top: -vectorb3.y * halfHeight + halfHeight
             });
-						$(".b4").css({
+            $(".b4").css({
                 left: vectorb4.x * halfWidth + halfWidth,
                 top: -vectorb4.y * halfHeight + halfHeight
             });
 
 
-		}
-
-	
-		function onWindowResize() {
-
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    render();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-
-		}
+        }
 
 
+        function onWindowResize() {
 
-		function draw() {
-			
-			if (!Detector.webgl) Detector.addGetWebGLMessage();
-			initGui();
-			initRender();
-			initScene();
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            render();
+            renderer.setSize(window.innerWidth, window.innerHeight);
 
-			fbxLoader();
-			initCamera();
-			initLight();
-			initModel();
-			initControls();
-			initStats();
-			animate();
-			window.onresize = onWindowResize;
-		}
+        }
 
 
+
+        function draw() {
+
+            if (!Detector.webgl) Detector.addGetWebGLMessage();
+            initGui();
+            initRender();
+            initScene();
+
+            fbxLoader();
+            initCamera();
+            initLight();
+            initModel();
+            initControls();
+            initStats();
+            animate();
+            window.onresize = onWindowResize;
+        }
 
 
 
 
 
-    
+
+
+
         var time = 0;
 
         function animate() {
 
-			
-			render();
-	
+
+            render();
+
             requestAnimationFrame(animate);
             TWEEN.update();
             controls.update();
@@ -1058,50 +1104,50 @@ var sound = new THREE.Audio( listener );
 
 
 
-				if (mixers.length > 0) {
-        for (var i = 0; i < mixers.length; i++) {
+                if (mixers.length > 0) {
+                    for (var i = 0; i < mixers.length; i++) {
 
-            mixers[i].update(clock.getDelta());
+                        mixers[i].update(clock.getDelta());
 
-        }
+                    }
 
-    }
-    requestAnimationFrame(animate);
-    if (modelShow && modelShow.children.length > 0 && !initPosition) {
-        camera.position.set(0, cameraResetPositionY, cameraResetPosition);
-        console.log('enter');
-        initPosition = true;
-    }
+                }
+                requestAnimationFrame(animate);
+                if (modelShow && modelShow.children.length > 0 && !initPosition) {
+                    camera.position.set(0, cameraResetPositionY, cameraResetPosition);
+                    console.log('enter');
+                    initPosition = true;
+                }
 
 
 
             }
-     
+
         }
 
 
 
 
-		function loadJs(url,callback){
-    var script=document.createElement('script');
-    script.type="text/javascript";
-    if(typeof(callback)!="undefined"){
-        if(script.readyState){
-            script.onreadystatechange=function(){
-                if(script.readyState == "loaded" || script.readyState == "complete"){
-                    script.onreadystatechange=null;
-                    callback();
+        function loadJs(url, callback) {
+            var script = document.createElement('script');
+            script.type = "text/javascript";
+            if (typeof (callback) != "undefined") {
+                if (script.readyState) {
+                    script.onreadystatechange = function () {
+                        if (script.readyState == "loaded" || script.readyState == "complete") {
+                            script.onreadystatechange = null;
+                            callback();
+                        }
+                    }
+                } else {
+                    script.onload = function () {
+                        callback();
+                    }
                 }
             }
-        }else{
-            script.onload=function(){
-                callback();
-            }
+            script.src = url;
+            document.body.appendChild(script);
         }
-    }
-    script.src=url;
-    document.body.appendChild(script);
-}
     </script>
 </body>
 
