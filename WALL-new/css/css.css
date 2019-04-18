@@ -154,7 +154,7 @@ body {
 
 .layer-right {
   position: fixed;
-  right: 20px;  /*右边浮层距离浏览器右边的距离*/
+  right: -1120px;  /*右边浮层距离浏览器右边的距离*/
   top: 10%;  /*右边浮层距离浏览器上边的距离*/
 }
 .layer-right .layer-button {
@@ -164,23 +164,23 @@ body {
   border-radius: 5px; /*右边浮层按钮的圆弧大小 越大越圆*/
 }
 .layer-right .layer-button:first-child {
-  background: url('../textures/a.jpg') no-repeat center;
+  background: url('../textures/kuanga.png') no-repeat center;
 }
 .layer-right .layer-button:nth-child(2) {
-  background: url('../textures/b.jpg') no-repeat center;
+  background: url('../textures/kuangb.png') no-repeat center;
 }
 .layer-right .layer-button:last-child {
-  background: url('../textures/c.jpg') no-repeat center;
+  background: url('../textures/kuangc.png') no-repeat center;
 }
 /*高亮效果*/
 .layer-right .layer-button:first-child.layer-button-active {
-  background: url('../textures/aa.jpg') no-repeat center;
+  background: url('../textures/kuangaa.png') no-repeat center;
 }
 .layer-right .layer-button:nth-child(2).layer-button-active {
-  background: url('../textures/bb.jpg') no-repeat center;
+  background: url('../textures/kuangbb.png') no-repeat center;
 }
 .layer-right .layer-button:last-child.layer-button-active {
-  background: url('../textures/cc.jpg') no-repeat center;
+  background: url('../textures/kuangcc.png') no-repeat center;
 }
 
 
@@ -188,9 +188,23 @@ body {
 
 
 @media screen and (min-width: 480px){
+	.xan span img{
+		width:60px;
+		height:70px;
+	}
+	.layer-right .layer-button {
+
+  margin-bottom: -20px; /*右边浮层按钮上下的间距*/
+
+}
+	.layer-right {
+  position: fixed;
+  right: -30px;  /*右边浮层距离浏览器右边的距离*/
+  top: 10%;  /*右边浮层距离浏览器上边的距离*/
+}
    .xan {
 	bottom: -15%;
-	right: 70%;
+	right: 60%;
     width: 512px;
     height: 256px;
     /* background: url(../files/bg.png) no-repeat center; */
@@ -205,7 +219,7 @@ body {
       display: block;
       position: fixed;
       padding: 10px;
-      background-color: #999;
+      /* background-color: #999; */
       left: 5%;
       bottom: 35%;
     }
