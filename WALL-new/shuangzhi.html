@@ -138,9 +138,9 @@
     </div> -->
 
     <div class="layer-right">
-        <div class="layer-button layer-button-active" onclick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();">室内效果</div>
-        <div class="layer-button" onclick="Show_Hidden(xqa1),donghua3();">室内效果</div>
-        <div class="layer-button" onclick="Show_Hidden(xqa4),donghua6();">室内效果</div>
+        <div class="layer-button" onclick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();"></div>
+        <div class="layer-button" onclick="Show_Hidden(xqa1),donghua3();"></div>
+        <div class="layer-button" onclick="Show_Hidden(xqa4),donghua6();"></div>
     </div>
 
 
@@ -149,15 +149,15 @@
         <div class="layer">
           <div class="layer-box">
             <span v-for="(item,index) in list1" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'"
-                class="active">
-            <img :src="item" width="50" algin="center" /></span>
+                class="active" @click="layerClick(index)">
+            <img :src="layerIndex === index ? item.target : item.source" width="50" algin="center" /></span>
           </div>
         </div>
 
         <div v-if="selectindex==1" class="active">
             <span v-for="(item,index) in list1" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'"
-                class="active">
-                <img :src="item" width="50" algin="center" /></span>
+                class="active" @click="layerClick(index)">
+                <img :src="layerIndex === index ? item.target : item.source" width="50" algin="center" /></span>
         </div>
 
         <div v-if="selectindex==2" class="active">
@@ -211,14 +211,35 @@
             data: function () {
                 return {
                     selectindex: 1,
+                    layerIndex: "",
                     list1: [
-                        'textures/a.png',
-                        'textures/b.png',
-                        'textures/c.png',
-                        'textures/d.png',
-                        'textures/e.png',
+                      {
+                        source: 'textures/a.png',
+                        target: 'textures/aa.png'
+                      },
+                      {
+                        source: 'textures/b.png',
+                        target: 'textures/bb.png'
+                      },
+                      {
+                        source: 'textures/c.png',
+                        target: 'textures/cc.png'
+                      },
+                      {
+                        source: 'textures/d.png',
+                        target: 'textures/dd.png'
+                      },
+                      {
+                        source: 'textures/e.png',
+                        target: 'textures/ee.png'
+                      }
                     ],
                 };
+            },
+            methods: {
+              layerClick(index) {
+                this.layerIndex = index;
+              }
             }
         });
 

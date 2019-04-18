@@ -158,18 +158,29 @@ body {
   top: 10%;  /*右边浮层距离浏览器上边的距离*/
 }
 .layer-right .layer-button {
-  color: #fff; /*右边浮层按钮的文字的颜色*/
-  font-size: 14px; /*右边浮层按钮文字大小*/
-  padding: 5px 10px; /*右边浮层按钮左右撑开的距离*/
-  background-color: #333; /*右边浮层按钮背景色*/
-  border: 3px solid #666;/*右边浮层按钮的边框 以及颜色*/
+  width: 320px;
+  height: 144px;
   margin-bottom: 30px; /*右边浮层按钮上下的间距*/
   border-radius: 5px; /*右边浮层按钮的圆弧大小 越大越圆*/
 }
+.layer-right .layer-button:first-child {
+  background: url('../textures/a.jpg') no-repeat center;
+}
+.layer-right .layer-button:nth-child(2) {
+  background: url('../textures/b.jpg') no-repeat center;
+}
+.layer-right .layer-button:last-child {
+  background: url('../textures/c.jpg') no-repeat center;
+}
 /*高亮效果*/
-.layer-right .layer-button-active {
-  color: red;
-  background-color: #fff;
+.layer-right .layer-button:first-child.layer-button-active {
+  background: url('../textures/aa.jpg') no-repeat center;
+}
+.layer-right .layer-button:nth-child(2).layer-button-active {
+  background: url('../textures/bb.jpg') no-repeat center;
+}
+.layer-right .layer-button:last-child.layer-button-active {
+  background: url('../textures/cc.jpg') no-repeat center;
 }
 
 
