@@ -3,6 +3,7 @@
 
 <head>
     <title>足力健清爽鞋</title>
+
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
@@ -10,8 +11,9 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/camtoh5ds.css" />
     <link rel="stylesheet" href="css/css.css" />
+	    <link rel="stylesheet" href="css/cssanniu.css" />
     <script src="js/vue.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+
 </head>
 <style>
     * {
@@ -64,34 +66,38 @@
 </style>
 
 <body>
+
+
+
+
     <audio id="myAudio" src='' type="audio/mpeg">
     </audio>
 
     <div class="wer one" style="display: none;">
-        <p onclick="Show_Hidden(xq1);"> xq1 <p>
+        <p onClick="Show_Hidden(xq1);"> xq1 <p>
     </div>
     <div class="wer two" style="display: none;">
-        <p onclick="Show_Hidden(xq2);"> xq2 <p>
+        <p onClick="Show_Hidden(xq2);"> xq2 <p>
     </div>
 
     <div class="wer a1" style="display: block;">
-        <p onclick="Show_Hidden(xqa1),donghua3();">手机播放 <p>
+        <p onClick="Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '中间', '手机播放']);">A <p>
     </div>
     <div class="wer a2" style="display: block;">
-        <p onclick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();"> 权威资源<p>
+        <p onClick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();_czc.push(['_trackEvent', '中间', '权威资源']);"> B<p>
     </div>
     <div class="wer a4" style="display: block;">
-        <p onclick="Show_Hidden(xqa4),donghua6();">半月谈AI音箱<p>
+        <p onClick="Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '中间', '半月谈AI音箱']);">C<p>
     </div>
 
     <div class="wer b1" style="display: none;">
-        <p onclick="Show_Hidden(xqb1),donghua3();">手机扫描 <p>
+        <p onClick="Show_Hidden(xqb1),donghua3();">手机扫描 <p>
     </div>
     <div class="wer b2" style="display: none;">
-        <p onclick="Show_Hidden(xqb2),donghua5();"> 海量资源<p>
+        <p onClick="Show_Hidden(xqb2),donghua5();"> 海量资源<p>
     </div>
     <div class="wer b4" style="display: none;">
-        <p onclick="Show_Hidden(xqb4),donghua6();">智能音箱<p>
+        <p onClick="Show_Hidden(xqb4),donghua6();">智能音箱<p>
     </div>
 
 
@@ -105,7 +111,7 @@
     <div class='twk' id='xqa1' style='display:none'>
     </div>
     <div class='twk' id='xqa2' style='display:none'>
-        <img class='tw' src='images/ziyuan.jpg'><img onclick="Show_Hidden(xq2)" class='close' id='closetab'
+        <img class='tw' src='images/ziyuan.jpg'><img onClick="Show_Hidden(xq2)" class='close' id='closetab'
             src='img/close.png'>
     </div>
     <div class='twk' id='xqa3' style='display:none'>
@@ -138,9 +144,9 @@
     </div> -->
 
     <div class="layer-right">
-        <div class="layer-button" onclick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();"></div>
-        <div class="layer-button" onclick="Show_Hidden(xqa1),donghua3();"></div>
-        <div class="layer-button" onclick="Show_Hidden(xqa4),donghua6();"></div>
+        <div class="layer-button" onClick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();_czc.push(['_trackEvent', '首页', '按钮A']);"></div>
+        <div class="layer-button" onClick="Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '首页', '按钮B']);"></div>
+        <div class="layer-button" onClick="Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '首页', '按钮C']);"></div>
     </div>
 
 
@@ -153,43 +159,61 @@
             <img :src="layerIndex === index ? item.target : item.source" width="50" algin="center" /></span>
           </div>
         </div>
-
+		
+		
         <div v-if="selectindex==1" class="active">
-            <span v-for="(item,index) in list1" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'"
-                class="active" @click="layerClick(index)">
-                <img :src="layerIndex === index ? item.target : item.source" width="50" algin="center" /></span>
+            <span v-for="(item,index) in list1" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'" 
+                class="active" @click="layerClick(index);_czc.push(['_trackEvent', '首页', '五个按钮', '\'按钮'+(index+1)+'\'']);">
+                <img :src="layerIndex === index ? item.target : item.source" width="50" algin="center"  /></span>
         </div>
 
-        <div v-if="selectindex==2" class="active">
-            <span v-for="(item,index) in list2" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'"
-                class="active">
-                <img :src="item" width="50" algin="center" /></span>
-        </div>
+        <!-- <div v-if="selectindex==2" class="active"> -->
+            <!-- <span v-for="(item,index) in list2" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'" -->
+                <!-- class="active"> -->
+                <!-- <img :src="item" width="50" algin="center"  /></span> -->
+        <!-- </div> -->
 
-        <div v-if="selectindex==3" class="active">
-            <span v-for="(item,index) in list3" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'"
-                class="active">
-                <img :src="item" width="50" algin="center" /></span>
-        </div>
+        <!-- <div v-if="selectindex==3" class="active"> -->
+            <!-- <span v-for="(item,index) in list3" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'" -->
+                <!-- class="active"> -->
+                <!-- <img :src="item" width="50" algin="center" /></span> -->
+        <!-- </div> -->
 
-        <div v-if="selectindex==4" class="active">
-            <span v-for="(item,index) in list4" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'"
-                class="active">
-                <img :src="item" width="50" algin="center" /></span>
-        </div>
+        <!-- <div v-if="selectindex==4" class="active"> -->
+            <!-- <span v-for="(item,index) in list4" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'" -->
+                <!-- class="active"> -->
+                <!-- <img :src="item" width="50" algin="center"  /></span> -->
+        <!-- </div> -->
 
-        <div v-if="selectindex==5" class="active">
-            <span v-for="(item,index) in list5" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'"
-                class="active">
-                <img :src="item" width="50" algin="center" /></span>
-        </div>
+        <!-- <div v-if="selectindex==5" class="active"> -->
+            <!-- <span v-for="(item,index) in list5" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'" -->
+                <!-- class="active"> -->
+                <!-- <img :src="item" width="50" algin="center" /></span> -->
+        <!-- </div> -->
 
     </div>
+	
+  
+
+
+
+			<div class="image_bottoma">
+		<div class="btn_boxa pagesa">
+<div class="shang"></div>
+      <span class="active  tips" onclick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();vm.selectindexa=1;"></span>
+      <span class="tips" onclick="Show_Hidden(xqa1),donghua3();vm.selectindexa=2;"></span>
+      <span class="tips" onclick="Show_Hidden(xqa4),donghua6();vm.selectindexa=3;"></span>
+
+      <div class="xia"></div>
+        </div>
+    </div>
+
+
     <script src="build/three.js"></script>
     <script src="js/jquery-1.8.2.min.js"></script>
     <script src="js/controls/OrbitControls.js"></script>
     <script src="js/loaders/GLTFLoader.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+    <script src="js/libs/tween.min.js"></script>
 
 
     <script src="js/WebGL.js"></script>
@@ -199,6 +223,11 @@
     <script src="js/dat.gui.min.js"></script>
     <script src="js/Detector.js"></script>
     <script src="js/inflate.min.js"></script>
+			<script src="js/objects/Reflector.js"></script>
+				<script src="colora.js"></script>
+				<script src="js/loaders/FBXLoader.js"></script>
+						<script src="js/objects/Refractor.js"></script>
+		<script src="js/objects/Water2.js"></script>
     <script>
         var layer_button = $('.layer-button');
 
@@ -243,23 +272,25 @@
             }
         });
 
+
+	
         function Anclick(clickindex) {
 
             switch (clickindex) {
                 case '1-1':
-                    donghua1();
+                    document.getElementById("colora.js").innerHTML = colorone();
                     break;
                 case '1-2':
-                    donghua2();
+                    document.getElementById("colora.js").innerHTML = colortwo();
                     break;
                 case '1-3':
-                    donghua3();
+                    document.getElementById("colora.js").innerHTML = colorthree();
                     break;
                 case '1-4':
-                    donghua4();
+                    document.getElementById("colora.js").innerHTML = colorfour();
                     break;
                 case '1-5':
-                    donghua5();
+                    document.getElementById("colora.js").innerHTML = colorfive();
                     break;
             }
         }
@@ -311,7 +342,6 @@
 
                     tweenCameraWithHotspot(targetArray[2], trid, cameraPositionArray[1].position);
                     break;
-
 
                 case ('xqa1'):
 
@@ -369,7 +399,37 @@
         var cameraPositionArray = [{ position: new THREE.Vector3(3, 1, 21) }, { position: new THREE.Vector3(3, 1, 21) }, { position: new THREE.Vector3(1, 0.5, 4) }, { position: new THREE.Vector3(1, 0.5, 4) }, { position: new THREE.Vector3(3, 1, 21) }];
         var movingState = false;
         var objectQi;
+		var water;
+		<!-- var torusKnot; -->
 
+		<!-- var params = { -->
+			<!-- color: '#ffffff', -->
+			<!-- scale: 0, -->
+			<!-- flowX: 0, -->
+			<!-- flowY: 0 -->
+			
+		<!-- }; -->
+				
+		
+		
+		
+		
+		
+		
+		
+			// scene size
+			var WIDTH = window.innerWidth;
+			var HEIGHT = window.innerHeight;
+
+			// camera
+			var VIEW_ANGLE = 45;
+			var ASPECT = WIDTH / HEIGHT;
+			var NEAR = 1;
+			var FAR = 500;
+		var sphereGroup, smallSphere;
+		var cameraControls;
+		
+		
 
         init();
         animate();
@@ -534,34 +594,37 @@
             }
         }
         function donghua1() {
-            shoeModel.visible = true;
-            objectQi.visible = false;
+		
+
+		
+            <!-- shoeModel.visible = true; -->
+            <!-- objectQi.visible = false; -->
 
 
 
-            cubea4.visible = true;
-            cubea1.visible = true;
-            cubea2.visible = true;
-            cubea3.visible = true;
-            document.getElementsByClassName('a1')[0].style.display = 'block';
-            document.getElementsByClassName('a2')[0].style.display = 'block';
+            <!-- cubea4.visible = true; -->
+            <!-- cubea1.visible = true; -->
+            <!-- cubea2.visible = true; -->
+            <!-- cubea3.visible = true; -->
+            <!-- document.getElementsByClassName('a1')[0].style.display = 'block'; -->
+            <!-- document.getElementsByClassName('a2')[0].style.display = 'block'; -->
 
-            document.getElementsByClassName('a4')[0].style.display = 'block';
+            <!-- document.getElementsByClassName('a4')[0].style.display = 'block'; -->
 
 
 
-            cubeb4.visible = false;
-            cubeb1.visible = false;
-            cubeb2.visible = false;
-            cubeb3.visible = false;
-            document.getElementsByClassName('b1')[0].style.display = 'none';
-            document.getElementsByClassName('b2')[0].style.display = 'none';
+            <!-- cubeb4.visible = false; -->
+            <!-- cubeb1.visible = false; -->
+            <!-- cubeb2.visible = false; -->
+            <!-- cubeb3.visible = false; -->
+            <!-- document.getElementsByClassName('b1')[0].style.display = 'none'; -->
+            <!-- document.getElementsByClassName('b2')[0].style.display = 'none'; -->
 
-            document.getElementsByClassName('b4')[0].style.display = 'none';
+            <!-- document.getElementsByClassName('b4')[0].style.display = 'none'; -->
 
-            controls.minPolarAngle = Math.PI / 2 - 0.11;
-            controls.maxPolarAngle = Math.PI / 2 + 0.08;
-            controls.minDistance = 6;
+            <!-- controls.minPolarAngle = Math.PI / 2 - 0.11; -->
+            <!-- controls.maxPolarAngle = Math.PI / 2 + 0.08; -->
+            <!-- controls.minDistance = 6; -->
         }
 
 
@@ -648,6 +711,12 @@
 
 
         function init() {
+
+		
+		
+		
+		
+		
             container = document.getElementsByClassName('image_background')[0];
 
 
@@ -655,6 +724,11 @@
             camera.position.set(3, 1, 21);
             camera.add(listener);
             scene = new THREE.Scene();
+			
+
+
+			
+			
 
             scene.add(group);
 
@@ -768,14 +842,6 @@
 
 
 
-
-
-
-
-
-
-
-
             var path = 'textures/cube/Bridge2/';
             var format = '.jpg';
             var envMap = new THREE.CubeTextureLoader().load([
@@ -784,8 +850,6 @@
                 path + 'posz' + format, path + 'negz' + format
 
             ]);
-
-
 
 
             var patha = 'textures/cube/Bridge2/';
@@ -802,33 +866,82 @@
             scene.add(group);
 
 
+			 var pathb = 'textures/cube/Bridge2/';
+            var formatb = '.jpg';
+            var backtexb = new THREE.CubeTextureLoader().load([
+                pathb + 'house.right' + formatb,
+                pathb + 'house.left' + formatb,
+                pathb + 'house.top' + formatb,
+                pathb + 'house.bottom' + formatb,
+                pathb + 'house.front' + formatb,
+                pathb + 'house.back' + formatb
+            ]);
+			
+			 
 
+<!-- var loader = new THREE.FBXLoader(); -->
+				<!-- loader.load( 'files/chumo_SCREEN/fff.fbx', function ( object ) { -->
+				<!-- object.position.y -= 1.1; -->
+				<!-- object.rotation.y -= 0.6; -->
+				<!-- object.scale.set(.63, .63, 0.63); -->
+				<!-- shoeModel = object; -->
+					<!-- scene.add( object ); -->
+					<!-- console.log(object); -->
+					<!-- object.material.roughness = 0.1; -->
+					
+					                    <!-- object.traverse(function (child) { -->
+                        <!-- if (child.isMesh) { -->
 
+                            <!-- child.material.envMap = envMap; -->
+					
+                        <!-- } -->
+                    <!-- }); -->
+					
+					
+				<!-- } ); -->
+				<!-- console.log(shoeModel); -->
+				
+				
+						var mapa55 = new  THREE.TextureLoader().load('files/bb.jpg');
+	//遮罩片			
+var cubeaaa = new THREE.Mesh(new THREE.CircleGeometry(25, 25,),
+        new THREE.MeshStandardMaterial({
+		color: 0x282a3a,
+            //color: 0x2c3444,
+			opacity:0.5,
+			transparent:true,
+		    emissive:0xffffff,
+			emissiveMap:mapa55,
+			emissiveIntensity:1
+        })
+);
+cubeaaa.position.y = -1.12;
+cubeaaa.rotation.x = -1.57;
+scene.add(cubeaaa);
 
-
+//duanluqifiles/glb/YE.glb
             var loader = new THREE.GLTFLoader();
-            loader.load('http://qiniucdn.happyppt.com/0402shi/B.gltf',
+            loader.load('files/chumo_SCREEN/s.gltf',
                 function (gltf) {
-                    gltf.scene.scale.set(.23, .23, .23);
-                    gltf.scene.position.y -= 2.1;
-                    gltf.scene.position.z -= -1.6;
+				
+				
+                    gltf.scene.scale.set(.33, .33, 0.33);
+					gltf.scene.rotation.y -= 0.8;
+                    gltf.scene.position.y -= 1.1;
+
+					//gltf.scene.position.x -= 1.1;
+
                     gltf.scene.traverse(function (child) {
                         if (child.isMesh) {
-
+						
                             child.material.envMap = envMap;
+							
                         }
                     });
                     var animations = gltf.animations;
-
-                    if (animations && animations.length) {
-                        mixer = new THREE.AnimationMixer(gltf.scene);
-                        for (var i = 0; i < animations.length; i++) {
-                            showanimation.push(animations[i]);
-                        }
-                    }
-
                     shoeModel = gltf.scene;
                     scene.add(gltf.scene);
+                    console.log(shoeModel);
 
                 },
                 undefined,
@@ -839,42 +952,59 @@
                 });
 
 
+<!-- var loader = new THREE.FBXLoader(); -->
+				<!-- loader.load( 'files/fbx/FBX.fbx', function ( object ) { -->
+				
+					<!-- scene.add( object ); -->
+					<!-- console.log(object); -->
+				<!-- } ); -->
 
 
 
 
+            <!-- var loadera = new THREE.GLTFLoader(); -->
+            <!-- loadera.load('http://qiniucdn.happyppt.com/0402shi/A.gltf', -->
+                <!-- function (gltfa) { -->
+                    <!-- gltfa.scene.scale.set(.23, .23, 0.23); -->
+                    <!-- gltfa.scene.position.y -= 2.1; -->
+                    <!-- gltfa.scene.traverse(function (child) { -->
+                        <!-- if (child.isMesh) { -->
 
-            var loadera = new THREE.GLTFLoader();
-            loadera.load('http://qiniucdn.happyppt.com/0402shi/A.gltf',
-                function (gltfa) {
-                    gltfa.scene.scale.set(.23, .23, 0.23);
-                    gltfa.scene.position.y -= 2.1;
-                    gltfa.scene.traverse(function (child) {
-                        if (child.isMesh) {
+                            <!-- child.material.envMap = envMap; -->
+                        <!-- } -->
+                    <!-- }); -->
+                    <!-- var animations = gltfa.animations; -->
 
-                            child.material.envMap = envMap;
-                        }
-                    });
-                    var animations = gltfa.animations;
+                    <!-- if (animations && animations.length) { -->
+                        <!-- mixer = new THREE.AnimationMixer(gltf.scene); -->
+                        <!-- for (var i = 0; i < animations.length; i++) { -->
+                            <!-- showanimation.push(animations[i]); -->
+                        <!-- } -->
+                    <!-- } -->
+                    <!-- objectQi = gltfa.scene; -->
 
-                    if (animations && animations.length) {
-                        mixer = new THREE.AnimationMixer(gltf.scene);
-                        for (var i = 0; i < animations.length; i++) {
-                            showanimation.push(animations[i]);
-                        }
-                    }
-                    objectQi = gltfa.scene;
+                    <!-- scene.add(gltfa.scene); -->
+                    <!-- objectQi.visible = false; -->
+                <!-- }, -->
+                <!-- undefined, -->
+                <!-- function (e) { -->
 
-                    scene.add(gltfa.scene);
-                    objectQi.visible = false;
-                },
-                undefined,
-                function (e) {
+                    <!-- console.error(e); -->
 
-                    console.error(e);
-
-                });
-
+                <!-- }); -->
+				
+	//遮罩片			
+<!-- var cubeaaa = new THREE.Mesh(new THREE.CircleGeometry(20, 20,), -->
+        <!-- new THREE.MeshBasicMaterial({ -->
+		<!-- color: 0x282a3a, -->
+            <!-- //color: 0x2c3444, -->
+			<!-- opacity: 0.9, -->
+			<!-- transparent:true -->
+        <!-- }) -->
+<!-- ); -->
+<!-- cubeaaa.position.y = -1.12; -->
+<!-- cubeaaa.rotation.x = -1.57; -->
+<!-- scene.add(cubeaaa); -->
 
 
 
@@ -889,6 +1019,7 @@
             renderer.setSize(window.innerWidth, window.innerHeight);
             renderer.setClearColor(0x4f6c97, 1.0);
             renderer.gammaOutput = true;
+			renderer.gammaFactor = 2.2;
             container.appendChild(renderer.domElement);
             controls = new THREE.OrbitControls(
                 camera,
@@ -896,27 +1027,34 @@
             );
             controls.enablePan = true;
             controls.panSpeed = .1;
-
             controls.enableDamping = true;
             controls.dampingFactor = 0.1;
             controls.enableZoom = true;
             controls.target.set(-0.00001, 0, 0);
-            controls.minPolarAngle = Math.PI / 2 - 0.11;
-            controls.maxPolarAngle = Math.PI / 2 + 0.08;
-
-            controls.maxAzimuthAngle = 0.9;
-            controls.minAzimuthAngle = -0.9;
-
-
+            controls.minPolarAngle = Math.PI / 2 - 0.8;
+            controls.maxPolarAngle = Math.PI / 2 -0.001;
             controls.autoRotateSpeed = -0.016;
-
             controls.autoRotate = false;
-
-
             controls.minDistance = 6;
             controls.maxDistance = 23;
 
             window.addEventListener('resize', onWindowResize, false);
+			
+//反射
+			var waterGeometry = new THREE.CircleGeometry( 25, 25 );
+
+			water = new THREE.Water( waterGeometry, {
+
+				flowDirection: new THREE.Vector2( 0, 0 ),
+				textureWidth: 1024,
+				textureHeight: 1024
+			} );
+
+			water.position.y = -1.14;
+			water.rotation.x = Math.PI * - 0.5;
+			scene.add( water );
+			water.material.uniforms[ "config" ].value.w = 0;
+			
 
         }
 
@@ -965,28 +1103,19 @@
 
         function initControls() {
 
-
-
             controls = new THREE.OrbitControls(camera, renderer.domElement);
             controls.addEventListener('change', render);
-
             controls.maxPolarAngle = Math.PI / 2;
-
-
-
 
         }
 
 
         function render() {
             renderer.render(scene, camera);
-
             let halfWidth = window.innerWidth / 2;
             let halfHeight = window.innerHeight / 2;
-
             var vector1 = cube.position.clone().project(camera);
             var vector2 = cube2.position.clone().project(camera);
-
             var vectora1 = cubea1.position.clone().project(camera);
             var vectora2 = cubea2.position.clone().project(camera);
             var vectora3 = cubea3.position.clone().project(camera);
@@ -997,21 +1126,16 @@
             var vectorb3 = cubeb3.position.clone().project(camera);
             var vectorb4 = cubeb4.position.clone().project(camera);
 
-
-
             $(".one").css({
                 left: vector1.x * halfWidth + halfWidth,
                 top: -vector1.y * halfHeight + halfHeight
             });
-
-
             $(".two").css({
                 left: vector2.x * halfWidth + halfWidth,
                 top: -vector2.y * halfHeight + halfHeight
             });
 
-
-
+			
             $(".a1").css({
                 left: vectora1.x * halfWidth + halfWidth,
                 top: -vectora1.y * halfHeight + halfHeight
@@ -1062,12 +1186,10 @@
 
 
         function draw() {
-
             if (!Detector.webgl) Detector.addGetWebGLMessage();
             initGui();
             initRender();
             initScene();
-
             fbxLoader();
             initCamera();
             initLight();
@@ -1079,34 +1201,21 @@
         }
 
 
-
-
-
-
-
-
         var time = 0;
 
         function animate() {
-
-
             render();
-
             requestAnimationFrame(animate);
             TWEEN.update();
             controls.update();
             renderer.render(scene, camera);
-
             if (mixer) mixer.update(clock.getDelta());
-
-
             if (shoeModel && startMove) {
                 time += 1;
                 shoeModel.traverse(function (child) {
                     if (child.type == 'Mesh') {
                         child.material.opacity -= opacity * opcityDir;
                         child.material.transparent = true;
-
                         if (child.material.opacity < 0.4 || child.material.opacity == 1) {
                             startMove = false;
                             time = 0;
@@ -1139,16 +1248,123 @@
                     console.log('enter');
                     initPosition = true;
                 }
-
-
-
             }
 
         }
+		
+
+		
+		
+		
+		
+    $(function () {
+      $('.shang').on('click', function () {
+        var dqindex = vm.selectindexa;
+        //上翻页
+        cameraMoveBackState();
+        if ($('.tips.active').index() - 1 == 0) {
+          $('.tips').removeClass('active');
+          $($('.tips')[$('.tips').length - 1])
+            .addClass('active')
+            .click();
+        } else {
+          $($('.tips')[$('.tips.active').index() - 2])
+            .addClass('active')
+            .click()
+            .siblings()
+            .removeClass('active');
+          vm.selectindexa = dqindex - 1;
+        }
+      });
+
+      $('.xia').on('click', function () {
+        cameraMoveState();
+        var dqindex = vm.selectindexa;
+        //下翻页
+        if ($('.tips.active').index() == $('.tips').length) {
+          $('.tips').removeClass('active');
+          $($('.tips')[0])
+            .addClass('active')
+            .click();
+          vm.selectindexa = 1;
+          console.log(8);
+        } else {
+          $($('.tips')[$('.tips.active').index()])
+            .addClass('active')
+            .click()
+            .siblings()
+            .removeClass('active');
+          vm.selectindexa = dqindex + 1;
+        }
+      });
+
+      $('.tips').on('click', function () {
+        //单独点击
+        $('.tips').removeClass('active');
+        $(this).addClass('active');
+      });
+    });
+
+	
+	
+	//键盘控制
+	window.onkeydown = onKeyDown;
+	
+	<!-- if(event.keyCode==39){ -->
+		<!-- Show_Hidden(xqa4); -->
+        <!-- donghua2(); -->
+		<!-- } -->
+	
+function onKeyDown(event){
+	<!-- if(event.keyCode==37){ -->
+<!-- document.getElementById("js/controls/OrbitControls.js").innerHTML = dollyOut( getZoomScale() ); -->
+	<!-- } -->
 
 
+    if(event.keyCode==65){
+ var dqindex = vm.selectindexa;
+        //上翻页
+        cameraMoveBackState();
+        if ($('.tips.active').index() - 1 == 0) {
+          $('.tips').removeClass('active');
+          $($('.tips')[$('.tips').length - 1])
+            .addClass('active')
+            .click();
+        } else {
+          $($('.tips')[$('.tips.active').index() - 2])
+            .addClass('active')
+            .click()
+            .siblings()
+            .removeClass('active');
+          vm.selectindexa = dqindex - 1;
+        }
+		}
 
-
+		
+		
+	if(event.keyCode==66){
+ cameraMoveState();
+        var dqindex = vm.selectindexa;
+        //下翻页
+        if ($('.tips.active').index() == $('.tips').length) {
+          $('.tips').removeClass('active');
+          $($('.tips')[0])
+            .addClass('active')
+            .click();
+          vm.selectindexa = 1;
+          console.log(8);
+        } else {
+          $($('.tips')[$('.tips.active').index()])
+            .addClass('active')
+            .click()
+            .siblings()
+            .removeClass('active');
+          vm.selectindexa = dqindex + 1;
+        }
+		}
+    }
+	
+	
         function loadJs(url, callback) {
             var script = document.createElement('script');
             script.type = "text/javascript";

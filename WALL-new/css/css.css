@@ -137,11 +137,18 @@ body {
   height: 180px;
   /* background: url(../files/bg.png) no-repeat center top; */
   /* background-size: 75%; */
+  
+  
+  
+  
+  /* /* pointer-events: none; */    
+  /* 图片不受影响，哪个图片需要不受影响，加到哪里就行  */
 }
 
-.xan span {
+.xan span { 
   margin-left: 5px;
   margin-right: 5px;
+  margin: 0 10px;
 }
 
 .xan .active {
@@ -213,48 +220,45 @@ body {
    .xan span {
      margin: 0 20px;
    }
-   .xan span img {
-     
-   }
 
-   .xan .layer {
-      width: 150px;
-      display: block;
-      position: fixed;
-      padding: 10px;
-      /* background-color: #999; */
-      left: 5%;
-      bottom: 35%;
-    }
-    .xan .layer .layer-box {
-      width: 100%;
-      height: 200px;
-      position: relative;
-    }
-    .xan .layer span {
-      display: inline-block;
-      position: absolute;
-    }
-    /* 可调整左边浮层第一个图形在浮层里面位置 
-    left是 水平位置 top是垂直位置 后面的以此类推 分别是 2 3 4 5个 */
-    .xan .layer span:first-child {
-      left: 0;
-      top: 0;
-    }
-    .xan .layer span:nth-child(2) {
-      left: 70px;
-      top: 0;
-    }
-    .xan .layer span:nth-child(3) {
-      left: -20px;
-      top: 70px;
-    }
-    .xan .layer span:nth-child(4) {
-      left: 60px;
-      top: 70px;
-    }
-    .xan .layer span:last-child {
-      left: 0;
-      top: 130px;
-    }
+   /* .xan .layer { */
+      /* width: 150px; */
+      /* display: block; */
+      /* position: fixed; */
+      /* padding: 10px; */
+      /* /* background-color: #999; */ */
+      /* left: 5%; */
+      /* bottom: 35%; */
+    /* } */
+    /* .xan .layer .layer-box { */
+      /* width: 100%; */
+      /* height: 200px; */
+      /* position: relative; */
+    /* } */
+    /* .xan .layer span { */
+      /* display: inline-block; */
+      /* position: absolute; */
+    /* } */
+    /* /* 可调整左边浮层第一个图形在浮层里面位置  */
+    /* left是 水平位置 top是垂直位置 后面的以此类推 分别是 2 3 4 5个 */ */
+    /* .xan .layer span:first-child { */
+      /* left: 0; */
+      /* top: 0; */
+    /* } */
+    /* .xan .layer span:nth-child(2) { */
+      /* left: 70px; */
+      /* top: 0; */
+    /* } */
+    /* .xan .layer span:nth-child(3) { */
+      /* left: -20px; */
+      /* top: 70px; */
+    /* } */
+    /* .xan .layer span:nth-child(4) { */
+      /* left: 60px; */
+      /* top: 70px; */
+    /* } */
+    /* .xan .layer span:last-child { */
+      /* left: 0; */
+      /* top: 130px; */
+    /* } */
  }

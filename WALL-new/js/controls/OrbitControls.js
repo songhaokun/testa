@@ -13,7 +13,7 @@
 //    Zoom - middle mouse, or mousewheel / touch: two-finger spread or squish
 //    Pan - right mouse, or left mouse + ctrl/meta/shiftKey, or arrow keys / touch: two-finger move
 
-THREE.OrbitControls = function ( object, domElement) {
+THREE.OrbitControls = function ( object, domElement ) {
 
 	this.object = object;
 
@@ -51,22 +51,22 @@ THREE.OrbitControls = function ( object, domElement) {
 	// This option actually enables dollying in and out; left as "zoom" for backwards compatibility.
 	// Set to false to disable zooming
 	this.enableZoom = true;
-	this.zoomSpeed = 0.5;
+	this.zoomSpeed = 1.0;
 
 	// Set to false to disable rotating
 	this.enableRotate = true;
-	this.rotateSpeed = 0.1;
+	this.rotateSpeed = 1.0;
 
 	// Set to false to disable panning
 	this.enablePan = true;
-	this.panSpeed = 0.5;
+	this.panSpeed = 1.0;
 	this.screenSpacePanning = false; // if true, pan in screen-space
 	this.keyPanSpeed = 7.0;	// pixels moved per arrow key push
 
 	// Set to true to automatically rotate around the target
 	// If auto-rotate is enabled, you must call controls.update() in your animation loop
 	this.autoRotate = false;
-	this.autoRotateSpeed = 1.0; // 30 seconds per round when fps is 60
+	this.autoRotateSpeed = 2.0; // 30 seconds per round when fps is 60
 
 	// Set to false to disable use of the keys
 	this.enableKeys = true;
@@ -132,19 +132,9 @@ THREE.OrbitControls = function ( object, domElement) {
 
 		var lastPosition = new THREE.Vector3();
 		var lastQuaternion = new THREE.Quaternion();
+
 		return function update() {
 
-			if(state == STATE.ROTATE_END){			//
-            rotateDelta = rotateDelta.divideScalar( 1.85 );
-            if ( rotateDelta && ( Math.abs( rotateDelta.x ) > 0.001 || Math.abs( rotateDelta.y ) > 0.001 ) ) {
-                var element = scope.domElement === document ? scope.domElement.body : scope.domElement;
-                rotateLeft( 2 * Math.PI * rotateDelta.x / element.clientHeight ); // yes, height
-                rotateUp( 2 * Math.PI * rotateDelta.y / element.clientHeight );
-                rotateStart.copy( rotateEnd );
-            }else{
-                state = STATE.NONE;
-            }
-            }
 			var position = scope.object.position;
 
 			offset.copy( position ).sub( scope.target );
@@ -260,7 +250,7 @@ THREE.OrbitControls = function ( object, domElement) {
 	var startEvent = { type: 'start' };
 	var endEvent = { type: 'end' };
 
-	var STATE = { NONE: - 1, ROTATE: 0, DOLLY: 1, PAN: 2, TOUCH_ROTATE: 3, TOUCH_DOLLY_PAN: 4, ROTATE_END: 5 };
+	var STATE = { NONE: - 1, ROTATE: 0, DOLLY: 1, PAN: 2, TOUCH_ROTATE: 3, TOUCH_DOLLY_PAN: 4 };
 
 	var state = STATE.NONE;
 
@@ -277,7 +267,7 @@ THREE.OrbitControls = function ( object, domElement) {
 	var rotateStart = new THREE.Vector2();
 	var rotateEnd = new THREE.Vector2();
 	var rotateDelta = new THREE.Vector2();
-	var count = 0;
+
 	var panStart = new THREE.Vector2();
 	var panEnd = new THREE.Vector2();
 	var panDelta = new THREE.Vector2();
@@ -301,7 +291,6 @@ THREE.OrbitControls = function ( object, domElement) {
 	function rotateLeft( angle ) {
 
 		sphericalDelta.theta -= angle;
-
 
 	}
 
@@ -465,7 +454,7 @@ THREE.OrbitControls = function ( object, domElement) {
 	function handleMouseMoveRotate( event ) {
 
 		//console.log( 'handleMouseMoveRotate' );
-		// 改写ori控制器，当拖动结束的时候，会有物理效果存在，
+
 		rotateEnd.set( event.clientX, event.clientY );
 
 		rotateDelta.subVectors( rotateEnd, rotateStart ).multiplyScalar( scope.rotateSpeed );
@@ -476,13 +465,11 @@ THREE.OrbitControls = function ( object, domElement) {
 
 		rotateUp( 2 * Math.PI * rotateDelta.y / element.clientHeight );
 
-		// 当mousemove 结束的时候，rotateDelta 依旧有值，则通过一次方程使其为零；
 		rotateStart.copy( rotateEnd );
 
 		scope.update();
 
 	}
-
 
 	function handleMouseMoveDolly( event ) {
 
@@ -550,31 +537,43 @@ THREE.OrbitControls = function ( object, domElement) {
 
 	function handleKeyDown( event ) {
 
-		//console.log( 'handleKeyDown' );
+		// console.log( 'handleKeyDown' );
+
+		var needsUpdate = false;
 
 		switch ( event.keyCode ) {
 
 			case scope.keys.UP:
 				pan( 0, scope.keyPanSpeed );
-				scope.update();
+				needsUpdate = true;
 				break;
 
 			case scope.keys.BOTTOM:
 				pan( 0, - scope.keyPanSpeed );
-				scope.update();
+				needsUpdate = true;
 				break;
 
 			case scope.keys.LEFT:
 				pan( scope.keyPanSpeed, 0 );
-				scope.update();
+				needsUpdate = true;
 				break;
 
 			case scope.keys.RIGHT:
 				pan( - scope.keyPanSpeed, 0 );
-				scope.update();
+				needsUpdate = true;
 				break;
 
 		}
+
+		if ( needsUpdate ) {
+
+			// prevent the browser from scrolling on cursor keys
+			event.preventDefault();
+
+			scope.update();
+
+		}
+
 
 	}
 
@@ -686,12 +685,14 @@ THREE.OrbitControls = function ( object, domElement) {
 
 		if ( scope.enabled === false ) return;
 
-        if (event.cancelable) {
-            // 判断默认行为是否已经被禁用
-            if (!event.defaultPrevented) {
-                event.preventDefault();
-            }
-        }
+		// Prevent the browser from scrolling.
+
+		event.preventDefault();
+
+		// Manually set the focus since calling preventDefault above
+		// prevents the browser from setting it automatically.
+
+		scope.domElement.focus ? scope.domElement.focus() : window.focus();
 
 		switch ( event.button ) {
 
@@ -754,12 +755,7 @@ THREE.OrbitControls = function ( object, domElement) {
 
 		if ( scope.enabled === false ) return;
 
-        if (event.cancelable) {
-            // 判断默认行为是否已经被禁用
-            if (!event.defaultPrevented) {
-                event.preventDefault();
-            }
-        }
+		event.preventDefault();
 
 		switch ( state ) {
 
@@ -786,6 +782,7 @@ THREE.OrbitControls = function ( object, domElement) {
 				handleMouseMovePan( event );
 
 				break;
+
 		}
 
 	}
@@ -798,28 +795,18 @@ THREE.OrbitControls = function ( object, domElement) {
 
 		document.removeEventListener( 'mousemove', onMouseMove, false );
 		document.removeEventListener( 'mouseup', onMouseUp, false );
-		scope.dispatchEvent( endEvent );
-		if( state == STATE.ROTATE ){
-			state = STATE.ROTATE_END;
-			console.log('rotete end');
-		}else{
-            state = STATE.NONE;
-		}
 
+		scope.dispatchEvent( endEvent );
+
+		state = STATE.NONE;
 
 	}
-
 
 	function onMouseWheel( event ) {
 
 		if ( scope.enabled === false || scope.enableZoom === false || ( state !== STATE.NONE && state !== STATE.ROTATE ) ) return;
 
-        if (event.cancelable) {
-            // 判断默认行为是否已经被禁用
-            if (!event.defaultPrevented) {
-                event.preventDefault();
-            }
-        }
+		event.preventDefault();
 		event.stopPropagation();
 
 		scope.dispatchEvent( startEvent );
@@ -842,12 +829,7 @@ THREE.OrbitControls = function ( object, domElement) {
 
 		if ( scope.enabled === false ) return;
 
-        if (event.cancelable) {
-            // 判断默认行为是否已经被禁用
-            if (!event.defaultPrevented) {
-                event.preventDefault();
-            }
-        }
+		event.preventDefault();
 
 		switch ( event.touches.length ) {
 
@@ -889,12 +871,7 @@ THREE.OrbitControls = function ( object, domElement) {
 
 		if ( scope.enabled === false ) return;
 
-        if (event.cancelable) {
-            // 判断默认行为是否已经被禁用
-            if (!event.defaultPrevented) {
-                event.preventDefault();
-            }
-        }
+		event.preventDefault();
 		event.stopPropagation();
 
 		switch ( event.touches.length ) {
@@ -933,11 +910,7 @@ THREE.OrbitControls = function ( object, domElement) {
 
 		scope.dispatchEvent( endEvent );
 
-        if( state == STATE.ROTATE ){
-            state = STATE.ROTATE_END;
-        }else{
-            state = STATE.NONE;
-        }
+		state = STATE.NONE;
 
 	}
 
@@ -945,12 +918,7 @@ THREE.OrbitControls = function ( object, domElement) {
 
 		if ( scope.enabled === false ) return;
 
-        if (event.cancelable) {
-            // 判断默认行为是否已经被禁用
-            if (!event.defaultPrevented) {
-                event.preventDefault();
-            }
-        }
+		event.preventDefault();
 
 	}
 

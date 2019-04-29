@@ -148,17 +148,110 @@ body {
   margin-top: 0px;
 }
 
+.xan .layer {
+  display: none;
+}
+
+.layer-right {
+  position: fixed;
+  right: -1120px;  /*右边浮层距离浏览器右边的距离*/
+  top: 10%;  /*右边浮层距离浏览器上边的距离*/
+}
+.layer-right .layer-button {
+  width: 320px;
+  height: 144px;
+  margin-bottom: 30px; /*右边浮层按钮上下的间距*/
+  border-radius: 5px; /*右边浮层按钮的圆弧大小 越大越圆*/
+}
+.layer-right .layer-button:first-child {
+  background: url('../textures/kuanga.png') no-repeat center;
+}
+.layer-right .layer-button:nth-child(2) {
+  background: url('../textures/kuangb.png') no-repeat center;
+}
+.layer-right .layer-button:last-child {
+  background: url('../textures/kuangc.png') no-repeat center;
+}
+/*高亮效果*/
+.layer-right .layer-button:first-child.layer-button-active {
+  background: url('../textures/kuangaa.png') no-repeat center;
+}
+.layer-right .layer-button:nth-child(2).layer-button-active {
+  background: url('../textures/kuangbb.png') no-repeat center;
+}
+.layer-right .layer-button:last-child.layer-button-active {
+  background: url('../textures/kuangcc.png') no-repeat center;
+}
+
+
+
 
 
 @media screen and (min-width: 480px){
+	.xan span img{
+		width:60px;
+		height:70px;
+	}
+	.layer-right .layer-button {
+
+  margin-bottom: -20px; /*右边浮层按钮上下的间距*/
+
+}
+	.layer-right {
+  position: fixed;
+  right: -30px;  /*右边浮层距离浏览器右边的距离*/
+  top: 10%;  /*右边浮层距离浏览器上边的距离*/
+}
    .xan {
-	bottom: -25%;
-	right: 70%;
+	bottom: -15%;
+	right: 60%;
     width: 512px;
     height: 256px;
     /* background: url(../files/bg.png) no-repeat center; */
     background-size: contain;
    }
+   .xan span {
+     margin: 0 20px;
+   }
 
-
+   .xan .layer {
+      width: 150px;
+      display: block;
+      position: fixed;
+      padding: 10px;
+      /* background-color: #999; */
+      left: 5%;
+      bottom: 35%;
+    }
+    .xan .layer .layer-box {
+      width: 100%;
+      height: 200px;
+      position: relative;
+    }
+    .xan .layer span {
+      display: inline-block;
+      position: absolute;
+    }
+    /* 可调整左边浮层第一个图形在浮层里面位置 
+    left是 水平位置 top是垂直位置 后面的以此类推 分别是 2 3 4 5个 */
+    .xan .layer span:first-child {
+      left: 0;
+      top: 0;
+    }
+    .xan .layer span:nth-child(2) {
+      left: 70px;
+      top: 0;
+    }
+    .xan .layer span:nth-child(3) {
+      left: -20px;
+      top: 70px;
+    }
+    .xan .layer span:nth-child(4) {
+      left: 60px;
+      top: 70px;
+    }
+    .xan .layer span:last-child {
+      left: 0;
+      top: 130px;
+    }
  }

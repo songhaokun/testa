@@ -1,0 +1,161 @@
+body {
+  text-align: center;
+  position: relative;
+  font-family: Monospace;
+  background-color: #000;
+  color: #fff;
+  margin: 0px;
+  overflow: hidden;
+}
+
+#info {
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  display: block;
+}
+
+#info a {
+  color: #75ddc1;
+  font-weight: bold;
+}
+
+.resetBtn {
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  right: 180px;
+  width: 100px;
+  height: 30px;
+  background-color: #555555;
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.addBtn {
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  right: 50px;
+  width: 100px;
+  height: 30px;
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.image_top {
+  position: absolute;
+  z-index: 1;
+  width: 82%;
+  height: 13%;
+  background-image: url('../images/a.png');
+  background-size: 95% 100%;
+  background-repeat: no-repeat;
+}
+
+.image_bottoma {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+}
+
+.image_bottoma button img {
+  width: 100px;
+  height: 60px;
+}
+
+/*canvas {*/
+/*position:absolute;*/
+/*}*/
+.btn_boxa {
+	margin-top:-10vw;
+  width: 350px;
+  /*z-index: 9999;*/
+  /*position: absolute;*/
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn_boxa * {
+  box-sizing: border-box;
+}
+
+.pagesa span {
+  width: 10px;
+  height: 10px;
+  margin-top:-16vw;
+  background: url(../img/diana.png) no-repeat center top;
+  background-size: 100%;
+}
+
+.pagesa span.active {
+  margin-top:-16vw;
+  background: url(../img/dian.png) no-repeat center top;
+  background-size: 100%;
+  
+
+}
+
+.shanga{
+  margin-top:-16vw;
+  width: 80px;
+  height: 80px;
+  background: url(../img/zuoa.png) no-repeat center top;
+  background-size: 100%;
+}
+
+.xiaa {
+  margin-top:-16vw;
+  width: 80px;
+  height: 80px;
+  background: url(../img/youa.png) no-repeat center top;
+  background-size: 100%;
+}
+
+.xana {
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 3%;
+  width: 380px;
+  height: 180px;
+  background: url(../files/bg.png) no-repeat center top;
+  background-size: 75%;
+}
+
+.xan spana {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.xan .activea {
+  margin-top: 0px;
+}
+
+
+@media screen and (min-width: 480px){
+.btn_boxa {
+	margin-top:-710vw;
+
+}
+	
+	
+	
+}

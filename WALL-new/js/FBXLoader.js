@@ -491,14 +491,14 @@ THREE.FBXLoader = ( function () {
 			switch ( type.toLowerCase() ) {
 
 				case 'phong':
-					material = new THREE.MeshPhongMaterial();
+					material = new THREE.MeshStandardMaterial();
 					break;
 				case 'lambert':
 					material = new THREE.MeshLambertMaterial();
 					break;
 				default:
-					console.warn( 'THREE.FBXLoader: unknown material type "%s". Defaulting to MeshPhongMaterial.', type );
-					material = new THREE.MeshPhongMaterial( { color: 0x3300ff } );
+					console.warn( 'THREE.FBXLoader: unknown material type "%s". Defaulting to MeshStandardMaterial.', type );
+					material = new THREE.MeshStandardMaterial( { color: 0x3300ff } );
 					break;
 
 			}
@@ -1207,7 +1207,7 @@ THREE.FBXLoader = ( function () {
 
 			} else {
 
-				material = new THREE.MeshPhongMaterial( { color: 0xcccccc } );
+				material = new THREE.MeshStandardMaterial( { color: 0xcccccc } );
 				materials.push( material );
 
 			}
