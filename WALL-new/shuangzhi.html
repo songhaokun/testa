@@ -63,13 +63,48 @@
         transform: translateX(-50%);
 
     }
+    .videobox{
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background-color:#000;
+    }
+    .videobox video.video{
+      width: 100%;
+      height: 100%;
+    }
+    :-webkit-full-screen {}
+    :-moz-full-screen {}
+    :-ms-fullscreen {}
+    :-o-fullscreen {}
+    :full-screen {}
+    :fullscreen {}
+    :-webkit-full-screen video {
+      width: 100%;
+      height: 100%;
+    }
+    :-moz-full-screen video{
+      width: 100%;
+      height: 100%;
+    }
 </style>
 
 <body>
 
 
-
-
+    <div id="videobox" class="videobox" style=" display: block;">
+      <video autoplay loop controls preload="preload" id="video" class="video">
+        <source src="http://www.w3school.com.cn/i/movie.ogg" type="video/ogg" />
+        <source src="http://www.w3school.com.cn/i/movie.mp4" type="video/mp4" />
+        <source src="http://www.w3school.com.cn/i/movie.webm" type="video/webm" />
+        <object data="http://www.w3school.com.cn/i/movie.mp4" width="100%" height="100%">
+          <embed width="100%" height="100%" src="./movie.swf" />
+        </object>
+      </video>
+    </div>
     <audio id="myAudio" src='' type="audio/mpeg">
     </audio>
 
@@ -1386,6 +1421,7 @@ function onKeyDown(event){
             document.body.appendChild(script);
         }
     </script>
+    <script src="js/video-control.js"></script>
 </body>
 
 </html>
