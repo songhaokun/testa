@@ -226,7 +226,7 @@ body {
       /* display: block; */
       /* position: fixed; */
       /* padding: 10px; */
-      /* /* background-color: #999; */ */
+      /* /* background-color: #999; */ 
       /* left: 5%; */
       /* bottom: 35%; */
     /* } */
@@ -240,7 +240,7 @@ body {
       /* position: absolute; */
     /* } */
     /* /* 可调整左边浮层第一个图形在浮层里面位置  */
-    /* left是 水平位置 top是垂直位置 后面的以此类推 分别是 2 3 4 5个 */ */
+    /* left是 水平位置 top是垂直位置 后面的以此类推 分别是 2 3 4 5个 */ 
     /* .xan .layer span:first-child { */
       /* left: 0; */
       /* top: 0; */
@@ -261,4 +261,10 @@ body {
       /* left: 0; */
       /* top: 130px; */
     /* } */
+ }
+
+@media screen and (max-width: 480px) {
+   #videobox {
+     display: none !important;
+   }
  }
