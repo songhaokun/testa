@@ -1,26 +1,32 @@
-var ele = document.getElementById("videobox");
+var clientWidth = document.body.clientWidth;
 
-var video = document.getElementById("video");
+if (clientWidth <= 768) {
+  document.getElementById("video").pause();
+}else {
+  var ele = document.getElementById("videobox");
 
-var dispalyAttr = ele.style.display;
+  var video = document.getElementById("video");
 
-var cur = 0;
+  var dispalyAttr = ele.style.display;
 
-var wait = 60;  //页面停留的时间，超过该时间则出现屏保 5 * 60  就是 5分钟
+  var cur = 0;
 
-document.addEventListener("mousemove", function() {
-  cur = 0;
-  if(dispalyAttr === "block") {
-    ele.style.display = "none";
-    video.pause();
-  }
-}, false)
+  var wait = 60;  //页面停留的时间，超过该时间则出现屏保 5 * 60  就是 5分钟
 
-setInterval(function() {
-  cur++;
-  if(cur > wait && ele.style.display === "none") {
+  document.addEventListener("mousemove", function() {
     cur = 0;
-    ele.style.display = "block";
-    video.load();
-  }
-},1000)
+    if(dispalyAttr === "block") {
+      ele.style.display = "none";
+      video.pause();
+    }
+  }, false)
+
+  setInterval(function() {
+    cur++;
+    if(cur > wait && ele.style.display === "none") {
+      cur = 0;
+      ele.style.display = "block";
+      video.load();
+    }
+  },1000)
+}
