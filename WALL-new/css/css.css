@@ -268,3 +268,52 @@ body {
      display: none !important;
    }
  }
+.word-box {
+  width: 370px;
+  height: 250px;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  z-index: 99998;
+}
+.word-box .dian {
+  width: 63px;
+  height: 61px;
+  background: url("../images/dian.png") no-repeat center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-size: contain;
+}
+.word-box .box {
+  width: 200px;
+  height: 80px;
+  text-align: left;
+  border: 1px solid #ddd;
+  background-color: #999;
+  padding: 20px;
+  color: #fff;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.word-box .box .line {
+  width: 1px;
+  height: 113px;
+  background-color: #fff;
+  position: absolute;
+  right: -41px;
+  bottom: -96px;
+  transform: rotate(135deg);
+  opacity: 0;
+}
+.word-box .box .box-top {
+  font-size: 18px;
+  opacity: 0;
+}
+.word-box .box .box-bottom {
+  line-height: 24px;
+  opacity: 0;
+}
