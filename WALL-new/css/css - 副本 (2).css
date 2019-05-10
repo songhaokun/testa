@@ -137,9 +137,15 @@ body {
   height: 180px;
   /* background: url(../files/bg.png) no-repeat center top; */
   /* background-size: 75%; */
+  
+  
+  
+  
+  /* /* pointer-events: none; */    
+  /* 图片不受影响，哪个图片需要不受影响，加到哪里就行  */
 }
 
-.xan span {
+.xan span { 
   margin-left: 5px;
   margin-right: 5px;
   margin: 0 10px;
@@ -170,9 +176,19 @@ body {
 .layer-right .layer-button:nth-child(2) {
   background: url('../textures/kuangb.png') no-repeat center;
 }
-.layer-right .layer-button:last-child {
+.layer-right .layer-button:nth-child(3) {
   background: url('../textures/kuangc.png') no-repeat center;
 }
+.layer-right .layer-button:nth-child(4) {
+  background: url('../textures/kuangd.png') no-repeat center;
+}
+.layer-right .layer-button:nth-child(5) {
+  background: url('../textures/kuange.png') no-repeat center;
+}
+.layer-right .layer-button:last-child {
+  background: url('../textures/kuangf.png') no-repeat center;
+}
+
 /*高亮效果*/
 .layer-right .layer-button:first-child.layer-button-active {
   background: url('../textures/kuangaa.png') no-repeat center;
@@ -180,10 +196,51 @@ body {
 .layer-right .layer-button:nth-child(2).layer-button-active {
   background: url('../textures/kuangbb.png') no-repeat center;
 }
-.layer-right .layer-button:last-child.layer-button-active {
+.layer-right .layer-button:nth-child(3).layer-button-active {
   background: url('../textures/kuangcc.png') no-repeat center;
 }
+.layer-right .layer-button:nth-child(4).layer-button-active {
+  background: url('../textures/kuangdd.png') no-repeat center;
+}
+.layer-right .layer-button:nth-child(5).layer-button-active {
+  background: url('../textures/kuangee.png') no-repeat center;
+}
+.layer-right .layer-button:last-child.layer-button-active {
+  background: url('../textures/kuangff.png') no-repeat center;
+}
 
+
+
+
+
+
+
+
+.layer-qiehuan {
+  position: fixed;
+  right: -1120px;  /*右边浮层距离浏览器右边的距离*/
+  top: 10%;  /*右边浮层距离浏览器上边的距离*/
+}
+.layer-qiehuan .layer-button {
+  width: 320px;
+  height: 144px;
+  margin-bottom: -30px; /*右边浮层按钮上下的间距*/
+}
+.layer-qiehuan .layer-button:first-child {
+  background: url('../textures/c.png') no-repeat center;
+}
+.layer-qiehuan .layer-button:nth-child(2) {
+  background: url('../textures/e.png') no-repeat center;
+}
+
+
+/*高亮效果*/
+.layer-qiehuan .layer-button:first-child.layer-button-active {
+  background: url('../textures/cc.png') no-repeat center;
+}
+.layer-qiehuan .layer-button:nth-child(2).layer-button-active {
+  background: url('../textures/ee.png') no-repeat center;
+}
 
 
 
@@ -203,6 +260,17 @@ body {
   right: -30px;  /*右边浮层距离浏览器右边的距离*/
   top: 10%;  /*右边浮层距离浏览器上边的距离*/
 }
+
+
+
+	.layer-qiehuan {
+  position: fixed;
+  right: 1550px;  /*右边浮层距离浏览器右边的距离*/
+  top: 60%;  /*右边浮层距离浏览器上边的距离*/
+}
+
+
+
    .xan {
 	bottom: -15%;
 	right: 60%;
@@ -255,4 +323,12 @@ body {
       /* left: 0; */
       /* top: 130px; */
     /* } */
+ }
+ 
+ 
+ 
+ @media screen and (max-width: 480px) {
+   #videobox {
+     display: none !important;
+   }
  }

@@ -91,13 +91,13 @@ canvas {display: block;
 @media screen and (min-width: 480px){
 	.picdi{
 	/* 右侧按钮触发的底部图片 */
-	width: 25vw;
+	width: 7vw;
     height: auto;
     position: absolute;
     left: 0%;
     top: 0%;
-	margin-left:8vw;
-	margin-top:35vw;
+	margin-left:88vw;
+	margin-top:45vw;
 }
 
 .wer {	width:8%;

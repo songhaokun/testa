@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>足力健清爽鞋</title>
+    <title>字框css动画测试</title>
 
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
     <meta content="yes" name="apple-mobile-web-app-capable">
@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/camtoh5ds.css" />
     <link rel="stylesheet" href="css/css.css" />
-	    <link rel="stylesheet" href="css/cssanniu.css" />
+	<link rel="stylesheet" href="css/cssanniu.css" />
     <script src="js/vue.js"></script>
 
 </head>
@@ -95,18 +95,18 @@
 <body>
 
 
-    <div id="videobox" class="videobox" style=" display: block;">
-      <video autoplay loop controls preload="preload" id="video" class="video">
-        <source src="http://www.w3school.com.cn/i/movie.ogg" type="video/ogg" />
-        <source src="http://www.w3school.com.cn/i/movie.mp4" type="video/mp4" />
-        <source src="http://www.w3school.com.cn/i/movie.webm" type="video/webm" />
-        <object data="http://www.w3school.com.cn/i/movie.mp4" width="100%" height="100%">
-          <embed width="100%" height="100%" src="./movie.swf" />
-        </object>
-      </video>
-    </div>
-    <audio id="myAudio" src='' type="audio/mpeg">
-    </audio>
+    <!-- <div id="videobox" class="videobox" style=" display: block;"> -->
+      <!-- <video autoplay loop controls preload="preload" id="video" class="video"> -->
+        <!-- <source src="http://www.w3school.com.cn/i/movie.ogg" type="video/ogg" /> -->
+        <!-- <source src="http://www.w3school.com.cn/i/movie.mp4" type="video/mp4" /> -->
+        <!-- <source src="http://www.w3school.com.cn/i/movie.webm" type="video/webm" /> -->
+        <!-- <object data="http://www.w3school.com.cn/i/movie.mp4" width="100%" height="100%"> -->
+          <!-- <embed width="100%" height="100%" src="./movie.swf" /> -->
+        <!-- </object> -->
+      <!-- </video> -->
+    <!-- </div> -->
+    <!-- <audio id="myAudio" src='' type="audio/mpeg"> -->
+    <!-- </audio> -->
 
     <div class="wer one" style="display: none;">
         <p onClick="Show_Hidden(xq1);"> xq1 <p>
@@ -115,24 +115,40 @@
         <p onClick="Show_Hidden(xq2);"> xq2 <p>
     </div>
 
+	
+	<style type="text/css">
+#tp1{ position: absolute; width: 400px; height: 213px; overflow: hidden; left:0;transition: all 0.8s;  text-indent: 0;  transform: translate(-100%,-47%);z-index: 999999;}
+#tp2{ transition: all 0.5s ease-out; margin-left: 100%;}
+
+#tp3{ position: absolute; width: 400px; height: 213px; overflow: hidden; left:0;transition: all 0.8s;  text-indent: 0;  transform: translate(-100%,-47%);z-index: 999999;}
+#tp4{ transition: all 0.5s ease-out; margin-left: 100%;}
+</style>
+
+	
+	
     <div class="wer a1" style="display: block;">
-        <p onClick="Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '中间', '手机播放']);">A <p>
+	    	<div id="tp1"><img id="tp2" src="img/ac.png"/></div>
+        <p onClick="Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '中间热点', 'Aa']);">Aa <p>
     </div>
     <div class="wer a2" style="display: block;">
-        <p onClick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();_czc.push(['_trackEvent', '中间', '权威资源']);"> B<p>
+        <p onClick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();_czc.push(['_trackEvent', '中间热点', 'Bb']);"> Bb<p>
     </div>
     <div class="wer a4" style="display: block;">
-        <p onClick="Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '中间', '半月谈AI音箱']);">C<p>
+        <p onClick="Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '中间热点', 'Cc']);">Cc<p>
     </div>
 
+	
+	
+	
+
     <div class="wer b1" style="display: none;">
-        <p onClick="Show_Hidden(xqb1),donghua3();">手机扫描 <p>
+        <p onClick="Show_Hidden(xqb1),donghua3();">Dd <p>
     </div>
     <div class="wer b2" style="display: none;">
-        <p onClick="Show_Hidden(xqb2),donghua5();"> 海量资源<p>
+        <p onClick="Show_Hidden(xqb2),donghua5();"> Ee<p>
     </div>
     <div class="wer b4" style="display: none;">
-        <p onClick="Show_Hidden(xqb4),donghua6();">智能音箱<p>
+        <p onClick="Show_Hidden(xqb4),donghua6();">Ff<p>
     </div>
 
 
@@ -166,6 +182,10 @@
     <div class='twk' id='xqb4' style='display:none'>
     </div>
 
+	<div class='twk' id='xqmoren' style='display:none'>
+    </div>
+	
+	
     <div class="image_background">
 
     </div>
@@ -177,23 +197,63 @@
             <span class="tips" onclick="Show_Hidden(xqa4),donghua6();"></span>
         </div>
     </div> -->
-
-    <div class="layer-right">
-        <div class="layer-button" onClick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();_czc.push(['_trackEvent', '首页', '按钮A']);"></div>
-        <div class="layer-button" onClick="Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '首页', '按钮B']);"></div>
-        <div class="layer-button" onClick="Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '首页', '按钮C']);"></div>
+  <!-- 右侧按钮点击后出图 -->
+  <div class='twk' id='pic1' style='display:none'>
+    <img class='picdi' src='files/bg1.png'>
+  </div>
+  <div class='twk' id='pic2' style='display:none'>
+    <img class='picdi' src='files/bg2.png'>
+  </div>
+    <div class='twk' id='pic3' style='display:none'>
+    <img class='picdi' src='files/bg3.png'>
+  </div>
+  <div class='twk' id='pic4' style='display:none'>
+    <img class='picdi' src='files/bg4.png'>
+  </div>
+    <div class='twk' id='pic5' style='display:none'>
+    <img class='picdi' src='files/bg5.png'>
+  </div>
+  <div class='twk' id='pic6' style='display:none'>
+    <img class='picdi' src='files/bg6.png'>
+  </div>
+  <!-- 右侧按钮 -->
+    <div class="layer-right" >
+        <div class="layer-button" onClick="Show_Hidden(pic1),Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
+        <div class="layer-button" onClick="Show_Hidden(pic2),Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '右侧', '功能2']);"></div>
+        <div class="layer-button" onClick="Show_Hidden(pic3),Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '右侧', '功能3']);"></div>
+		<div class="layer-button" onClick="Show_Hidden(pic4),Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '右侧', '功能4']);"></div>
+        <div class="layer-button" onClick="Show_Hidden(pic5),Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '右侧', '功能5']);"></div>
+		<div class="layer-button" onClick="Show_Hidden(pic6),Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '右侧', '功能6']);"></div>
     </div>
+	
+	
+	    <div class="layera-right" style='display:none'>
+        <div class="layera-button" onClick="Show_Hidden(pic1),Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
+        <div class="layera-button" onClick="Show_Hidden(pic2),Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
+        <div class="layera-button" onClick="Show_Hidden(pic3),Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
+		<div class="layera-button" onClick="Show_Hidden(pic4),Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
+        <div class="layera-button" onClick="Show_Hidden(pic5),Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
+		<div class="layera-button" onClick="Show_Hidden(pic6),Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
+    </div>
+	
+	
+	
+	    <!-- <div class="layer-qiehuan"> -->
+        <!-- <div class="layer-button" onClick="qiehuana();_czc.push(['_trackEvent', '首页', '按钮A']);"></div> -->
+        <!-- <div class="layer-button" onClick="qiehuanb();_czc.push(['_trackEvent', '首页', '按钮B']);"></div> -->
+    <!-- </div> -->
+	
 
 
     <div class="xan" id="app">
          
-        <div class="layer">
-          <div class="layer-box">
-            <span v-for="(item,index) in list1" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'"
-                class="active" @click="layerClick(index)">
-            <img :src="layerIndex === index ? item.target : item.source" width="50" algin="center" /></span>
-          </div>
-        </div>
+        <!-- <div class="layer"> -->
+          <!-- <div class="layer-box"> -->
+            <!-- <span v-for="(item,index) in list1" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'" -->
+                <!-- class="active" @click="layerClick(index)"> -->
+            <!-- <img :src="layerIndex === index ? item.target : item.source" width="50" algin="center" /></span> -->
+          <!-- </div> -->
+        <!-- </div> -->
 		
 		
         <div v-if="selectindex==1" class="active">
@@ -259,11 +319,66 @@
     <script src="js/Detector.js"></script>
     <script src="js/inflate.min.js"></script>
 			<script src="js/objects/Reflector.js"></script>
-				<script src="colora.js"></script>
+				<!-- <script src="colora.js"></script> -->
 				<script src="js/loaders/FBXLoader.js"></script>
 						<script src="js/objects/Refractor.js"></script>
 		<script src="js/objects/Water2.js"></script>
+		
+		
+				<!-- <video id="video" loop crossOrigin="anonymous" webkit-playsinline style="display:none"> -->
+			<!-- <source src="textures/sintel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'> -->
+		<!-- </video> -->
+		
+		
+		<script type="text/javascript">
+			var isx=0;
+			$(".a1").click(function(){
+				
+				if(isx==0){
+				isx=1;
+				$("#tp1").show();
+				setTimeout(function(){
+					$("#tp2").css("margin-left","0px");
+				},50)
+				
+				}else{
+					isx=0;
+						$("#tp2").css("margin-left","100%");
+				setTimeout(function(){
+					$("#tp1").hide();
+					
+				},550)
+					
+				}
+				
+			})
+			
+			$(".a2,.a4").click(function(){
+				isx=0;
+				$("#tp2").css("margin-left","100%");
+				setTimeout(function(){
+					$("#tp1").hide();
+					
+				},550)
+			})
+		</script>
+		
+		
+		
     <script>
+	<!-- $("A").keypress(function(){ -->
+		<!-- $("w").keypress(); -->
+	<!-- } -->
+	<!-- ) -->
+	
+	<!-- e = jQuery.Event("keydown"); -->
+
+	<!-- e.keyCode = 13; //enter key -->
+
+	<!-- jQuery('#input').trigger(e); -->
+
+	
+	
         var layer_button = $('.layer-button');
 
         layer_button.click(function(){
@@ -308,25 +423,25 @@
         });
 
 
-	
+	<!-- 左下角按钮的触发 -->
         function Anclick(clickindex) {
 
             switch (clickindex) {
                 case '1-1':
-                    document.getElementById("colora.js").innerHTML = colorone();
+                    qiehuanb(),Show_Hidden(xqmoren);
                     break;
                 case '1-2':
-                    document.getElementById("colora.js").innerHTML = colortwo();
+                    qiehuana(),Show_Hidden(xqmoren);
                     break;
-                case '1-3':
-                    document.getElementById("colora.js").innerHTML = colorthree();
-                    break;
-                case '1-4':
-                    document.getElementById("colora.js").innerHTML = colorfour();
-                    break;
-                case '1-5':
-                    document.getElementById("colora.js").innerHTML = colorfive();
-                    break;
+                <!-- case '1-3': -->
+                    <!-- document.getElementById("colora.js").innerHTML = colorthree(); -->
+                    <!-- break; -->
+                <!-- case '1-4': -->
+                    <!-- document.getElementById("colora.js").innerHTML = colorfour(); -->
+                    <!-- break; -->
+                <!-- case '1-5': -->
+                    <!-- document.getElementById("colora.js").innerHTML = colorfive(); -->
+                    <!-- break; -->
             }
         }
 
@@ -391,8 +506,13 @@
 
                     tweenCameraWithHotspot(targetArray[7], trid, cameraPositionArray[4].position);
                     break;
+					
+					
+				case ('xqmoren'):
 
-
+                    tweenCameraWithHotspot(targetArray[0], trid, cameraPositionArray[5].position);
+                    break;
+<!-- targetArray后面的序数写创建cube的顺序序数，这决定了摄影机的中心点在哪里。cameraPositionArray后面的序数写var定义那里排号序数。 -->
 
                 default: break;
             }
@@ -417,7 +537,7 @@
         var currentAction = null;
         var Uvoffset = 0.03;
         var renderer, gui, light, stats;
-        var cube, cube2, cube3, cube4, cube5, cube6, cubea1, cubea2, cubea3, cubea4, cubeb1, cubeb2, cubeb3, cubeb4;
+        var cube, cube2, cube3, cube4, cube5, cube6, cubea1, cubea2, cubea3, cubea4, cubeb1, cubeb2, cubeb3, cubeb4,cubemoren;
 
         var showanimation = [];
         var shoeModel;
@@ -431,10 +551,11 @@
         var intvTime = 2000;
         var targetArray = [{ name: 'reset', position: new THREE.Vector3(0, 0, 0) }];
         var targetArraya;
-        var cameraPositionArray = [{ position: new THREE.Vector3(3, 1, 21) }, { position: new THREE.Vector3(3, 1, 21) }, { position: new THREE.Vector3(1, 0.5, 4) }, { position: new THREE.Vector3(1, 0.5, 4) }, { position: new THREE.Vector3(3, 1, 21) }];
+        var cameraPositionArray = [{ position: new THREE.Vector3(3, 1, 21) }, { position: new THREE.Vector3(3, 1, 21) }, { position: new THREE.Vector3(1, 0.5, 4) }, { position: new THREE.Vector3(1, 0.5, 4) }, { position: new THREE.Vector3(3, 1, 21) }, { position: new THREE.Vector3(3, 1, 21) }];
         var movingState = false;
         var objectQi;
 		var water;
+		var video, texture;
 		<!-- var torusKnot; -->
 
 		<!-- var params = { -->
@@ -673,7 +794,6 @@
             cubea3.visible = false;
             document.getElementsByClassName('a1')[0].style.display = 'none';
             document.getElementsByClassName('a2')[0].style.display = 'none';
-
             document.getElementsByClassName('a4')[0].style.display = 'none';
 
             cubeb1.visible = true;
@@ -682,7 +802,6 @@
             cubeb4.visible = true;
             document.getElementsByClassName('b1')[0].style.display = 'block';
             document.getElementsByClassName('b2')[0].style.display = 'block';
-
             document.getElementsByClassName('b4')[0].style.display = 'block';
 
             controls.minPolarAngle = Math.PI / 2 - 0.55;
@@ -697,8 +816,8 @@
         var sound = new THREE.Audio(listener);
         function donghua3() {
 
-            audio.src = 'http://qiniucdn.happyppt.com/0402shi/R.mp3';
-            audio.play();
+            <!-- audio.src = 'http://qiniucdn.happyppt.com/0402shi/R.mp3'; -->
+            <!-- audio.play(); -->
             controls.minPolarAngle = Math.PI / 2 - 0.4;
             controls.maxPolarAngle = Math.PI / 2 + 0.13;
             controls.minDistance = 2;
@@ -710,8 +829,8 @@
         function donghua4() {
 
 
-            audio.src = 'http://qiniucdn.happyppt.com/0402shi/L.mp3';
-            audio.play();
+            <!-- audio.src = 'http://qiniucdn.happyppt.com/0402shi/L.mp3'; -->
+            <!-- audio.play(); -->
 
 
         }
@@ -720,8 +839,8 @@
         function donghua5() {
 
 
-            audio.src = 'http://qiniucdn.happyppt.com/0402shi/xijinping.mp3';
-            audio.play();
+            <!-- audio.src = 'http://qiniucdn.happyppt.com/0402shi/xijinping.mp3'; -->
+            <!-- audio.play(); -->
 
 
         }
@@ -731,14 +850,70 @@
         function donghua6() {
 
 
-            audio.src = 'http://qiniucdn.happyppt.com/0402shi/xy.mp3';
-            audio.play();
+            <!-- audio.src = 'http://qiniucdn.happyppt.com/0402shi/xy.mp3'; -->
+            <!-- audio.play(); -->
 
             controls.minPolarAngle = Math.PI / 2 - 0.4;
             controls.maxPolarAngle = Math.PI / 2 + 0.13;
             controls.minDistance = 2;
         }
+        function qiehuana() {
 
+		  objectQi.visible = true;
+          shoeModel.visible = false;
+ 
+ 
+            cubea1.visible = false;
+            cubea2.visible = false;
+            cubea4.visible = false;
+            document.getElementsByClassName('a1')[0].style.display = 'none';
+            document.getElementsByClassName('a2')[0].style.display = 'none';
+            document.getElementsByClassName('a4')[0].style.display = 'none';
+
+            cubeb1.visible = true;
+            cubeb2.visible = true;
+            cubeb4.visible = true;
+            document.getElementsByClassName('b1')[0].style.display = 'block';
+            document.getElementsByClassName('b2')[0].style.display = 'block';
+            document.getElementsByClassName('b4')[0].style.display = 'block';
+			
+			
+			document.getElementsByClassName('layer-right')[0].style.display = 'none';
+			document.getElementsByClassName('layera-right')[0].style.display = 'block';
+			
+			
+        }
+		
+		
+		
+		
+		 function qiehuanb() {
+
+		  objectQi.visible = false;
+          shoeModel.visible = true;
+
+		  
+			cubea1.visible = true;
+            cubea2.visible = true;
+            cubea4.visible = true;
+            document.getElementsByClassName('a1')[0].style.display = 'block';
+            document.getElementsByClassName('a2')[0].style.display = 'block';
+            document.getElementsByClassName('a4')[0].style.display = 'block';
+
+
+
+            cubeb1.visible = false;
+            cubeb2.visible = false;
+            cubeb4.visible = false;
+            document.getElementsByClassName('b1')[0].style.display = 'none';
+            document.getElementsByClassName('b2')[0].style.display = 'none';
+            document.getElementsByClassName('b4')[0].style.display = 'none';
+			
+			
+			
+			document.getElementsByClassName('layer-right')[0].style.display = 'block';
+			document.getElementsByClassName('layera-right')[0].style.display = 'none';
+        }
 
 
 
@@ -747,7 +922,8 @@
 
         function init() {
 
-		
+				
+
 		
 		
 		
@@ -811,14 +987,14 @@
 
 
             cubea1 = new THREE.Mesh(geometry, material);
-            cubea1.position.set(-0.5, 0.4, -0.17);
+            cubea1.position.set(0.8, 1.8, -1.3);
             cubea1.name = 'xqa1';
             targetArray.push({ name: cubea1.name, position: cubea1.position });
             scene.add(cubea1);
 
 
             cubea2 = new THREE.Mesh(geometry, material);
-            cubea2.position.set(0, 1.5, -0.17);
+            cubea2.position.set(6, 1.5, 0.3);
             cubea2.name = 'xqa2';
             targetArray.push({ name: cubea2.name, position: cubea2.position });
             scene.add(cubea2);
@@ -831,7 +1007,7 @@
 
 
             cubea4 = new THREE.Mesh(geometry, material);
-            cubea4.position.set(-0.12, -0.05, 0);
+            cubea4.position.set(-1, 1, -2.5);
             cubea4.name = 'xqa4';
             targetArray.push({ name: cubea4.name, position: cubea4.position });
             scene.add(cubea3);
@@ -845,32 +1021,40 @@
 
 
             cubeb1 = new THREE.Mesh(geometry, material);
-            cubeb1.position.set(-0.5, 0.4, -2.2);
+            cubeb1.position.set(-1.8, 1.4, -1);
             cubeb1.name = 'xqb1';
             targetArray.push({ name: cubeb1.name, position: cubeb1.position });
             scene.add(cubeb1);
 
             cubeb2 = new THREE.Mesh(geometry, material);
-            cubeb2.position.set(0, 1.5, -2.2);
+            cubeb2.position.set(2.2, 2, -0.3);
             cubeb2.name = 'xqb2';
             targetArray.push({ name: cubeb2.name, position: cubeb2.position });
             scene.add(cubeb2);
 
 
             cubeb3 = new THREE.Mesh(geometry, material);
-            cubeb3.position.set(-2, 0.8, -2.2);
+            cubeb3.position.set(-3, 0.8, -3.2);
             cubeb3.name = 'xqb3';
             targetArray.push({ name: cubeb3.name, position: cubeb3.position });
             scene.add(cubeb3);
 
 
             cubeb4 = new THREE.Mesh(geometry, material);
-            cubeb4.position.set(0, 0.08, -2);
+            cubeb4.position.set(-0.12, 3, -1);
             cubeb4.name = 'xqb4';
             targetArray.push({ name: cubeb3.name, position: cubeb3.position });
             scene.add(cubeb3);
 
 
+			cubemoren = new THREE.Mesh(geometry, material);
+            cubemoren.position.set(0, 0, 0);
+            cubemoren.name = 'xqmoren';
+            targetArray.push({ name: cubemoren.name, position: cubemoren.position });
+            scene.add(cubemoren);
+			
+			
+			
 
             console.log(targetArray);
 
@@ -901,16 +1085,16 @@
             scene.add(group);
 
 
-			 var pathb = 'textures/cube/Bridge2/';
-            var formatb = '.jpg';
-            var backtexb = new THREE.CubeTextureLoader().load([
-                pathb + 'house.right' + formatb,
-                pathb + 'house.left' + formatb,
-                pathb + 'house.top' + formatb,
-                pathb + 'house.bottom' + formatb,
-                pathb + 'house.front' + formatb,
-                pathb + 'house.back' + formatb
-            ]);
+			 <!-- var pathb = 'textures/cube/Bridge2/'; -->
+            <!-- var formatb = '.jpg'; -->
+            <!-- var backtexb = new THREE.CubeTextureLoader().load([ -->
+                <!-- pathb + 'house.right' + formatb, -->
+                <!-- pathb + 'house.left' + formatb, -->
+                <!-- pathb + 'house.top' + formatb, -->
+                <!-- pathb + 'house.bottom' + formatb, -->
+                <!-- pathb + 'house.front' + formatb, -->
+                <!-- pathb + 'house.back' + formatb -->
+            <!-- ]); -->
 			
 			 
 
@@ -950,76 +1134,71 @@ var cubeaaa = new THREE.Mesh(new THREE.CircleGeometry(25, 25,),
 			emissiveIntensity:1
         })
 );
-cubeaaa.position.y = -1.12;
+cubeaaa.position.y = -1.7;
 cubeaaa.rotation.x = -1.57;
 scene.add(cubeaaa);
 
-//duanluqifiles/glb/YE.glb
-            var loader = new THREE.GLTFLoader();
-            loader.load('files/chumo_SCREEN/s.gltf',
-                function (gltf) {
+
+
+				<!-- video = document.getElementById( 'video' ); -->
+				<!-- video.play(); -->
+				<!-- texture = new THREE.VideoTexture( video ); -->
+				<!-- var parameters = { color: 0xffffff, map: texture }; -->
+				<!-- materials = new THREE.MeshLambertMaterial( parameters ); -->
+				<!-- var cubett = new THREE.Mesh(new THREE.PlaneGeometry(1.75,1.05),materials); -->
+				<!-- scene.add(cubett); -->
+				<!-- cubett.position.set(5.05, 1.5, -0.08); -->
+                <!-- cubett.rotation.y -= 0.33; -->
+
+				
+            <!-- var loader = new THREE.GLTFLoader(); -->
+            <!-- loader.load('files/new/a.gltf', -->
+                <!-- function (gltf) { -->
 				
 				
-                    gltf.scene.scale.set(.33, .33, 0.33);
-					gltf.scene.rotation.y -= 0.8;
-                    gltf.scene.position.y -= 1.1;
+                    <!-- gltf.scene.scale.set(.2, .2, .2); -->
+					<!-- gltf.scene.rotation.y -= 1.9; -->
+                    <!-- gltf.scene.position.y -= 2; -->
+					<!-- gltf.scene.position.z += 2; -->
 
-					//gltf.scene.position.x -= 1.1;
-
-                    gltf.scene.traverse(function (child) {
-                        if (child.isMesh) {
+                    <!-- gltf.scene.traverse(function (child) { -->
+                        <!-- if (child.isMesh) { -->
 						
-                            child.material.envMap = envMap;
+                            <!-- child.material.envMap = envMap; -->
 							
-                        }
-                    });
-                    var animations = gltf.animations;
-                    shoeModel = gltf.scene;
-                    scene.add(gltf.scene);
-                    console.log(shoeModel);
+                        <!-- } -->
+                    <!-- }); -->
+                    <!-- var animations = gltf.animations; -->
+                    <!-- shoeModel = gltf.scene; -->
+                    <!-- scene.add(gltf.scene); -->
+                    <!-- console.log(shoeModel); -->
 
-                },
-                undefined,
-                function (e) {
+                <!-- }, -->
+                <!-- undefined, -->
+                <!-- function (e) { -->
 
-                    console.error(e);
+                    <!-- console.error(e); -->
 
-                });
-
-
-<!-- var loader = new THREE.FBXLoader(); -->
-				<!-- loader.load( 'files/fbx/FBX.fbx', function ( object ) { -->
-				
-					<!-- scene.add( object ); -->
-					<!-- console.log(object); -->
-				<!-- } ); -->
-
-
+                <!-- }); -->
 
 
             <!-- var loadera = new THREE.GLTFLoader(); -->
-            <!-- loadera.load('http://qiniucdn.happyppt.com/0402shi/A.gltf', -->
+            <!-- loadera.load('files/glb/A.gltf', -->
                 <!-- function (gltfa) { -->
-                    <!-- gltfa.scene.scale.set(.23, .23, 0.23); -->
-                    <!-- gltfa.scene.position.y -= 2.1; -->
+                    <!-- gltfa.scene.scale.set(.27, .27, .27); -->
+					<!-- gltfa.scene.rotation.y -= 0.2; -->
+                    <!-- gltfa.scene.position.y -= 1.65; -->
+<!-- gltfa.scene.position.z += 2; -->
                     <!-- gltfa.scene.traverse(function (child) { -->
                         <!-- if (child.isMesh) { -->
-
+						
                             <!-- child.material.envMap = envMap; -->
+							
                         <!-- } -->
                     <!-- }); -->
-                    <!-- var animations = gltfa.animations; -->
-
-                    <!-- if (animations && animations.length) { -->
-                        <!-- mixer = new THREE.AnimationMixer(gltf.scene); -->
-                        <!-- for (var i = 0; i < animations.length; i++) { -->
-                            <!-- showanimation.push(animations[i]); -->
-                        <!-- } -->
-                    <!-- } -->
-                    <!-- objectQi = gltfa.scene; -->
-
+					<!-- objectQi = gltfa.scene; -->
                     <!-- scene.add(gltfa.scene); -->
-                    <!-- objectQi.visible = false; -->
+					<!-- objectQi.visible = false; -->
                 <!-- }, -->
                 <!-- undefined, -->
                 <!-- function (e) { -->
@@ -1072,8 +1251,14 @@ scene.add(cubeaaa);
             controls.autoRotate = false;
             controls.minDistance = 6;
             controls.maxDistance = 23;
+			controls.rotateSpeed = 0.05;
+			
+			controls.maxAzimuthAngle = 1.3;
+			controls.minAzimuthAngle = -1.8 ;       //水平角度最大最小限制
 
             window.addEventListener('resize', onWindowResize, false);
+			
+			
 			
 //反射
 			var waterGeometry = new THREE.CircleGeometry( 25, 25 );
@@ -1085,7 +1270,7 @@ scene.add(cubeaaa);
 				textureHeight: 1024
 			} );
 
-			water.position.y = -1.14;
+			water.position.y = -1.72;
 			water.rotation.x = Math.PI * - 0.5;
 			scene.add( water );
 			water.material.uniforms[ "config" ].value.w = 0;
@@ -1206,6 +1391,7 @@ scene.add(cubeaaa);
             });
 
 
+			
         }
 
 
@@ -1345,15 +1531,12 @@ scene.add(cubeaaa);
 	//键盘控制
 	window.onkeydown = onKeyDown;
 	
-	<!-- if(event.keyCode==39){ -->
-		<!-- Show_Hidden(xqa4); -->
-        <!-- donghua2(); -->
-		<!-- } -->
+
 	
 function onKeyDown(event){
-	<!-- if(event.keyCode==37){ -->
-<!-- document.getElementById("js/controls/OrbitControls.js").innerHTML = dollyOut( getZoomScale() ); -->
-	<!-- } -->
+
+//if(event.keyCode==87){document.getElementById("js/controls/OrbitControls.js").innerHTML = dollyOut( getZoomScale() )}
+//if(event.keyCode==83){dollyIn( getZoomScale() )}
 
 
     if(event.keyCode==65){
@@ -1422,6 +1605,12 @@ function onKeyDown(event){
         }
     </script>
     <script src="js/video-control.js"></script>
+	
+	
+	<div style="display:none">
+	<script type="text/javascript" src="https://s23.cnzz.com/z_stat.php?id=1277224848&web_id=1277224848"></script>
+	</div>
+	
+	
 </body>
-
 </html>

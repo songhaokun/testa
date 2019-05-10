@@ -72,8 +72,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 	this.enableKeys = true;
 
 	// The four arrow keys
-	this.keys = { LEFT: 37, UP: 87, RIGHT: 39, BOTTOM: 83 };
-	
+	this.keys = { LEFT: 37, UP: 38, RIGHT: 39, BOTTOM: 40 };
 
 	// Mouse buttons
 	this.mouseButtons = { LEFT: THREE.MOUSE.LEFT, MIDDLE: THREE.MOUSE.MIDDLE, RIGHT: THREE.MOUSE.RIGHT };
@@ -517,14 +516,10 @@ THREE.OrbitControls = function ( object, domElement ) {
 		// console.log( 'handleMouseUp' );
 
 	}
-	
-//window.onkeydown = handleMouseWheel;
 
 	function handleMouseWheel( event ) {
 
 		// console.log( 'handleMouseWheel' );
-//if(event.keyCode==87){dollyOut( getZoomScale() )}
-//if(event.keyCode==83){dollyIn( getZoomScale() )}
 
 		if ( event.deltaY < 0 ) {
 
@@ -549,11 +544,13 @@ THREE.OrbitControls = function ( object, domElement ) {
 		switch ( event.keyCode ) {
 
 			case scope.keys.UP:
-				dollyOut( getZoomScale() );
+				pan( 0, scope.keyPanSpeed );
+				needsUpdate = true;
 				break;
 
 			case scope.keys.BOTTOM:
-				dollyIn( getZoomScale() );
+				pan( 0, - scope.keyPanSpeed );
+				needsUpdate = true;
 				break;
 
 			case scope.keys.LEFT:
