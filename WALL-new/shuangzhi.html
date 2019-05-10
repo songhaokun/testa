@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>字框css动画测试</title>
+    <title>半月谈融媒体学习站</title>
 
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
     <meta content="yes" name="apple-mobile-web-app-capable">
@@ -188,15 +188,6 @@
 	
     <div class="image_background">
 
-    </div>
-
-    <div class="word-box">
-        <div class="dian" id="dian"></div>
-        <div class="box" id="box">
-            <div class="line" id="line"></div>
-            <div class="box-top" id="box_top">动态字框特效</div>
-            <div class="box-bottom" id="box_bottom">动态字框特效动态字框特效动态字框特效动态字框特效动态字框特效动态字框特效动态字框特效</div>
-        </div>
     </div>
 
     <!-- <div class="image_bottom">
@@ -393,26 +384,6 @@
         layer_button.click(function(){
             layer_button.removeClass('layer-button-active');
             $(this).addClass('layer-button-active');
-        })
-
-        $("#dian").click(function() {
-            console.log(1)
-            $('#line').animate({
-                opacity: 1
-            }, function () {
-                console.log(2)
-                $('#box').animate({
-                    opacity: 1
-                }, function () {
-                    $('#box_top').animate({
-                        opacity: 1
-                    }, function () {
-                        $('#box_bottom').animate({
-                            opacity: 1
-                        });
-                    });
-                });
-            });
         })
         var vm = new Vue({
             el: '#app',
