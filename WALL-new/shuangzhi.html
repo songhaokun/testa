@@ -126,9 +126,24 @@
 
 	
 	
-    <div class="wer a1" style="display: block;">
-	    	<div id="tp1"><img id="tp2" src="img/ac.png"/></div>
-        <p onClick="Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '中间热点', 'Aa']);">Aa <p>
+<!--    <div class="wer a1" style="display: block;">-->
+<!--        <div id="tp1"><img id="tp2" src="img/ac.png"/></div>-->
+<!--        <p onClick="Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '中间热点', 'Aa']);">Aa </p>-->
+<!--    </div>-->
+    <div class="wer a1" style="display: block; background-image: none">
+        <div id="tp1">
+            <img id="tp2" src="img/ac.png"/>
+        </div>
+        <div class="self-dian" id="self_dian" style="text-indent: 0px">
+            <img src="img/dianaa.png"/>
+        </div>
+        <div class="self-box">
+            <div class="self-right" id="self_right" style="text-indent: 0px">
+                <span style="position: absolute; left: 0; top: 20%; text-indent: 1em">Aa</span>
+                <img src="img/kuangaa.png"
+                     onClick="Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '中间热点', 'Aa']);">
+            </div>
+        </div>
     </div>
     <div class="wer a2" style="display: block;">
         <p onClick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();_czc.push(['_trackEvent', '中间热点', 'Bb']);"> Bb<p>
@@ -332,23 +347,25 @@
 		
 		<script type="text/javascript">
 			var isx=0;
-			$(".a1").click(function(){
+			$("#self_dian").click(function(){
+
+			    if(document.body.clientWidth <= 768) return;
 				
 				if(isx==0){
 				isx=1;
 				$("#tp1").show();
 				setTimeout(function(){
 					$("#tp2").css("margin-left","0px");
+                    $("#self_right").animate({"margin-left":"300px"});
 				},50)
 				
 				}else{
 					isx=0;
-						$("#tp2").css("margin-left","100%");
-				setTimeout(function(){
-					$("#tp1").hide();
-					
-				},550)
-					
+                    $("#tp2").css("margin-left","100%");
+                    $("#self_right").animate({"margin-left":"0px"});
+                    setTimeout(function(){
+                        $("#tp1").hide();
+                    },550)
 				}
 				
 			})

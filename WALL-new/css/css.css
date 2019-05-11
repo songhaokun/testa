@@ -400,3 +400,29 @@ body {
      display: none !important;
    }
  }
+
+.self-dian {
+  width: 31px;
+  height: 29px;
+  float: left;
+}
+.self-dian  img {
+  width: 100%;
+  height: 100%;
+}
+
+.self-box {
+  width: 77px;
+  height: 28px;
+  overflow: hidden;
+  float: left;
+}
+.self-right {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.self-right img {
+  width: 100%;
+  height: 100%;
+}
