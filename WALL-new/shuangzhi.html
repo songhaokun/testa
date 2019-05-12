@@ -117,8 +117,8 @@
 
 	
 	<style type="text/css">
-#tp1{ position: absolute; width: 400px; height: 213px; overflow: hidden; left:0;transition: all 0.8s;  text-indent: 0;  transform: translate(-100%,-47%);z-index: 999999;}
-#tp2{ transition: all 0.5s ease-out; margin-left: 100%;}
+.tp1{ position: absolute; width: 400px; height: 213px; overflow: hidden; left:0;transition: all 0.8s;  text-indent: 0;  transform: translate(-100%,-47%);z-index: 999999;}
+.tp2{ transition: all 0.5s ease-out; margin-left: 100%;}
 
 #tp3{ position: absolute; width: 400px; height: 213px; overflow: hidden; left:0;transition: all 0.8s;  text-indent: 0;  transform: translate(-100%,-47%);z-index: 999999;}
 #tp4{ transition: all 0.5s ease-out; margin-left: 100%;}
@@ -130,27 +130,61 @@
 <!--        <div id="tp1"><img id="tp2" src="img/ac.png"/></div>-->
 <!--        <p onClick="Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '中间热点', 'Aa']);">Aa </p>-->
 <!--    </div>-->
+<!--    <div class="wer a2" style="display: block;">-->
+<!--        <p onClick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();_czc.push(['_trackEvent', '中间热点', 'Bb']);"> Bb<p>-->
+<!--    </div>-->
+<!--    <div class="wer a4" style="display: block;">-->
+<!--        <p onClick="Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '中间热点', 'Cc']);">Cc<p>-->
+<!--    </div>-->
+
     <div class="wer a1" style="display: block; background-image: none">
-        <div id="tp1">
-            <img id="tp2" src="img/ac.png"/>
+        <div class="tp1 tp1-0">
+            <img class="tp2 tp2-0" src="img/ac.png"/>
         </div>
-        <div class="self-dian" id="self_dian" style="text-indent: 0px">
+        <div class="self-dian" data-index="0" style="text-indent: 0px">
             <img src="img/dianaa.png"/>
         </div>
         <div class="self-box">
-            <div class="self-right" id="self_right" style="text-indent: 0px">
+            <div class="self-right self-right-0" style="text-indent: 0px">
                 <span style="position: absolute; left: 0; top: 20%; text-indent: 1em">Aa</span>
                 <img src="img/kuangaa.png"
                      onClick="Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '中间热点', 'Aa']);">
             </div>
         </div>
     </div>
-    <div class="wer a2" style="display: block;">
-        <p onClick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();_czc.push(['_trackEvent', '中间热点', 'Bb']);"> Bb<p>
+
+    <div class="wer a2" style="display: block; background-image: none">
+        <div class="tp1 tp1-1">
+            <img class="tp2 tp2-1" src="img/ac.png"/>
+        </div>
+        <div class="self-dian" data-index="1" style="text-indent: 0px">
+            <img src="img/dianaa.png"/>
+        </div>
+        <div class="self-box">
+            <div class="self-right self-right-1" style="text-indent: 0px">
+                <span style="position: absolute; left: 0; top: 20%; text-indent: 1em">Bb</span>
+                <img src="img/kuangaa.png"
+                     onClick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();_czc.push(['_trackEvent', '中间热点', 'Bb']);">
+            </div>
+        </div>
     </div>
-    <div class="wer a4" style="display: block;">
-        <p onClick="Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '中间热点', 'Cc']);">Cc<p>
+
+    <div class="wer a4" style="display: block; background-image: none">
+        <div class="tp1 tp1-2">
+            <img class="tp2 tp2-2" src="img/ac.png"/>
+        </div>
+        <div class="self-dian" data-index="2" style="text-indent: 0px">
+            <img src="img/dianaa.png"/>
+        </div>
+        <div class="self-box">
+            <div class="self-right self-right-2" style="text-indent: 0px">
+                <span style="position: absolute; left: 0; top: 20%; text-indent: 1em">Ca</span>
+                <img src="img/kuangaa.png"
+                     onClick="Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '中间热点', 'Cc']);">
+            </div>
+        </div>
     </div>
+
 
 	
 	
@@ -346,28 +380,32 @@
 		
 		
 		<script type="text/javascript">
-			var isx=0;
-			$("#self_dian").click(function(){
-
+			$(".self-dian").click(function(){
 			    if(document.body.clientWidth <= 768) return;
-				
-				if(isx==0){
-				isx=1;
-				$("#tp1").show();
-				setTimeout(function(){
-					$("#tp2").css("margin-left","0px");
-                    $("#self_right").animate({"margin-left":"300px"});
-				},50)
-				
-				}else{
-					isx=0;
-                    $("#tp2").css("margin-left","100%");
-                    $("#self_right").animate({"margin-left":"0px"});
-                    setTimeout(function(){
-                        $("#tp1").hide();
-                    },550)
-				}
-				
+			    var self = $(this);
+			    var index = $(this).attr("data-index");
+			    var tp2Class = ".tp2-" +index,
+                    selfRightClass = ".self-right-" + index,
+                    tp1Class = ".tp1-" + index;
+                $(`.tp2:not(${tp2Class})`).css("margin-left","400px");
+                $(`.self-right:not(${selfRightClass})`).animate({"margin-left":"0px"});
+                setTimeout(function(){
+                    $(`.tp1:not(${tp1Class})`).hide();
+                    var parent = self.closest('.wer');
+                    if(parent.find('.tp2').css('margin-left') === "400px"){
+                        parent.find('.tp1').show();
+                        setTimeout(function(){
+                            parent.find('.tp2').css("margin-left","0px");
+                            parent.find('.self-right').animate({"margin-left":"300px"});
+                        },50)
+                    }else{
+                        parent.find('.tp2').css("margin-left","400px");
+                        parent.find('.self-right').animate({"margin-left":"0px"});
+                        setTimeout(function(){
+                            parent.find(".tp1").hide();
+                        },550)
+                    }
+                },550)
 			})
 			
 			$(".a2,.a4").click(function(){
