@@ -406,12 +406,14 @@
                         if(parent.find('.tp2').css('margin-left') === "400px"){
                             parent.find('.tp1').show();
                             setTimeout(function(){
-                                parent.find('.tp2').css("margin-left","0px");
-                                parent.find('.self-right').animate({"margin-left":"-300px"});
+                                parent.find('.self-right').animate({"margin-left":"-300px"},function() {
+                                    parent.find('.tp2').css("margin-left","0px");
+                                });
                             },50)
                         }else{
-                            parent.find('.tp2').css("margin-left","400px");
-                            parent.find('.self-right').animate({"margin-left":"0px"});
+                            parent.find('.self-right').animate({"margin-left":"0px"}, function() {
+                                parent.find('.tp2').css("margin-left","400px");
+                            });
                             setTimeout(function(){
                                 parent.find(".tp1").hide();
                             },550)
