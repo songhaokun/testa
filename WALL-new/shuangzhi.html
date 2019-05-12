@@ -118,7 +118,15 @@
 	
 	<style type="text/css">
 .tp1{ position: absolute; width: 400px; height: 213px; overflow: hidden; left:0;transition: all 0.8s;  text-indent: 0;  transform: translate(-100%,-47%);z-index: 999999;}
-.tp2{ transition: all 0.5s ease-out; margin-left: 100%;}
+.tp2{ width: 100%; transition: all 0.5s ease-out; margin-left: 100%;}
+.close-button {
+    width: 37px;
+    height: 37px;
+    background: url("./img/close.png") no-repeat center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
 @media screen and ( max-width: 480px){
     .tp1,.tp2 {display: none;}
 }
@@ -142,7 +150,10 @@
 
     <div class="wer a1" style="display: block; background-image: none">
         <div class="tp1 tp1-0">
-            <img class="tp2 tp2-0" src="img/ac.png"/>
+            <div class="tp2 tp2-0" style="position: relative">
+                <div class="close-button"></div>
+                <img src="img/ac.png"/>
+            </div>
         </div>
         <div class="self-dian" data-index="0" style="text-indent: 0px">
             <img src="img/dianaa.png"/>
@@ -158,7 +169,10 @@
 
     <div class="wer a2" style="display: block; background-image: none">
         <div class="tp1 tp1-1">
-            <img class="tp2 tp2-1" src="img/ac.png"/>
+            <div class="tp2 tp2-1" style="position: relative">
+                <div class="close-button"></div>
+                <img src="img/ac.png"/>
+            </div>
         </div>
         <div class="self-dian" data-index="1" style="text-indent: 0px">
             <img src="img/dianaa.png"/>
@@ -174,7 +188,10 @@
 
     <div class="wer a4" style="display: block; background-image: none">
         <div class="tp1 tp1-2">
-            <img class="tp2 tp2-2" src="img/ac.png"/>
+            <div class="tp2 tp2-2" style="position: relative">
+                <div class="close-button"></div>
+                <img src="img/ac.png"/>
+            </div>
         </div>
         <div class="self-dian" data-index="2" style="text-indent: 0px">
             <img src="img/dianaa.png"/>
@@ -391,7 +408,6 @@
                 var self = $(this);
                 var index = $(this).attr("data-index");
 			    if(document.body.clientWidth <= 768) {
-			        console.log(1)
 			        var imageSrc = ["img/ac.png","img/ac.png","img/ac.png"];
 			        $('#mobile_image').attr('src',imageSrc[+index]);
                 } else {
@@ -422,7 +438,15 @@
                 }
 
 			})
-			
+			$('.close-button').click(function() {
+                var parent = $(this).closest('.wer');
+                parent.find('.self-right').animate({"margin-left":"0px"}, function() {
+                    parent.find('.tp2').css("margin-left","400px");
+                });
+                setTimeout(function(){
+                    parent.find(".tp1").hide();
+                },550)
+            })
 			$(".a2,.a4").click(function(){
 				isx=0;
 				$("#tp2").css("margin-left","100%");
