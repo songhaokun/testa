@@ -406,7 +406,7 @@
                         if(parent.find('.tp2').css('margin-left') === "400px"){
                             parent.find('.tp1').show();
                             setTimeout(function(){
-                                parent.find('.self-right').animate({"margin-left":"-300px"},function() {
+                                parent.find('.self-right').animate({"margin-left": (index === "1" ? "300px" : "-300px")},function() {
                                     parent.find('.tp2').css("margin-left","0px");
                                 });
                             },50)
