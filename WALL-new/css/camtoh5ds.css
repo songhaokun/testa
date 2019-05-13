@@ -13,6 +13,9 @@ canvas {display: block;
 		text-indent:2em;
 		text-top:2em;
 		}
+.a1,.a2,.a4 {
+	width: 32vw;
+}
 .wer p{color:#0xffffff;
        font-family:"黑体";
 	   position: absolute;
