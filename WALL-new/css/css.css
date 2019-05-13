@@ -428,14 +428,9 @@ body {
   margin-left: -40%;
   position: fixed;
   bottom: 22%;
+  display: none;
 }
 .mobile-image img {
   width: 100%;
   height: 100%;
-}
-
-@media screen and (min-width: 480px){
-  .mobile-image {
-    display: none;
-  }
 }

@@ -127,6 +127,14 @@
     right: 10px;
     top: 10px;
 }
+.mobile-close-button {
+    width: 37px;
+    height: 37px;
+    background: url("./img/close.png") no-repeat center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
 @media screen and ( max-width: 480px){
     .tp1,.tp2 {display: none;}
 }
@@ -206,8 +214,9 @@
     </div>
 
 
-    <div class="mobile-image">
+    <div class="mobile-image" style="position: relative">
         <img src="img/ac.png" id="mobile_image"/>
+        <div class="mobile-close-button"></div>
     </div>
 
 	
@@ -409,6 +418,7 @@
                 var index = $(this).attr("data-index");
 			    if(document.body.clientWidth <= 768) {
 			        var imageSrc = ["img/ac.png","img/ac.png","img/ac.png"];
+                    $('#mobile_image').show();
 			        $('#mobile_image').attr('src',imageSrc[+index]);
                 } else {
                     var tp2Class = ".tp2-" +index,
@@ -446,6 +456,9 @@
                 setTimeout(function(){
                     parent.find(".tp1").hide();
                 },550)
+            });
+			$('.mobile-close-button').click(function () {
+              $('#mobile_image').hide();
             })
 			$(".a2,.a4").click(function(){
 				isx=0;
