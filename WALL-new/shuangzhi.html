@@ -168,8 +168,9 @@
         </div>
         <div class="self-box">
             <div class="self-right self-right-0" style="text-indent: 0px">
-                <span style="position: absolute; left: 0; top: 20%; text-indent: 1em;">有声图书馆</span>
+                <span style="position: absolute; left: 0; top: 20%; text-indent: 10px;">有声图书馆</span>
                 <img src="img/kuangaa.png"
+                     class="layer-button-image"
                      onClick="Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '中间热点', 'Aa']);">
             </div>
         </div>
@@ -187,8 +188,9 @@
         </div>
         <div class="self-box">
             <div class="self-right self-right-1" style="text-indent: 0px">
-                <span style="position: absolute; left: 0; top: 20%; text-indent: 1em">Bb</span>
+                <span style="position: absolute; left: 0; top: 20%; text-indent: 10px">Bb</span>
                 <img src="img/kuangaa.png"
+                     class="layer-button-image"
                      onClick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();_czc.push(['_trackEvent', '中间热点', 'Bb']);">
             </div>
         </div>
@@ -206,8 +208,9 @@
         </div>
         <div class="self-box">
             <div class="self-right self-right-2" style="text-indent: 0px">
-                <span style="position: absolute; left: 0; top: 20%; text-indent: 1em">Ca</span>
+                <span style="position: absolute; left: 0; top: 20%; text-indent: 10px">Ca</span>
                 <img src="img/kuangaa.png"
+                     class="layer-button-image"
                      onClick="Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '中间热点', 'Cc']);">
             </div>
         </div>
@@ -309,7 +312,7 @@
     </div>
 	
 	
-	    <div class="layera-right" style='display:none'>
+    <div class="layer-right" style='display:none'>
         <div class="layera-button" onClick="Show_Hidden(pic1),Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
         <div class="layera-button" onClick="Show_Hidden(pic2),Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
         <div class="layera-button" onClick="Show_Hidden(pic3),Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
@@ -468,7 +471,18 @@
 					
 				},550)
 			})
-		</script>
+
+            function selfMap() {
+			    var layer_button_image = $('.layer-button-image');
+			    $('.layer-button').click(function() {
+			        var idx = $(this).index();
+                    layer_button_image.eq(idx).click();
+                })
+            }
+            selfMap();
+
+
+        </script>
 		
 		
 		
