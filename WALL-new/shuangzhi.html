@@ -213,24 +213,6 @@
             </div>
         </div>
 
-        <div class="wer a4" style="display: block; background-image: none">
-            <div class="tp1 tp1-3">
-                <div class="tp2 tp2-3" style="position: relative">
-                    <div class="close-button"></div>
-                    <img src="img/ac.png"/>
-                </div>
-            </div>
-            <div class="self-dian layer-button-image" data-index="3" style="text-indent: 0px">
-                <img src="img/dianaa.png"/>
-            </div>
-            <div class="self-box">
-                <div class="self-right self-right-3" style="text-indent: 0px">
-                    <span style="position: absolute; left: 0; top: 20%; text-indent: 10px">Da</span>
-                    <img src="img/kuangaa.png"
-                         onClick="Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '中间热点', 'Cc']);">
-                </div>
-            </div>
-        </div>
     </div>
 
     <div class="second" style="display: none">
@@ -294,7 +276,7 @@
 
 
     <div class="mobile-image" id="mobile_image">
-        <img src="img/ac.png"/>
+        <img src="" id="mobile_img"/>
         <div class="mobile-close-button"></div>
     </div>
 
@@ -493,7 +475,7 @@
 		
 		<script type="text/javascript">
             var mobileSrcMap = {
-              '.first': ["img/ac.png","img/ac.png","img/ac.png"],
+              '.first': ["images/a.png","images/b.png","images/c.png"],
               '.second': ["img/ac.png","img/ac.png","img/ac.png"],
             }
             function selfButton(ele) {
@@ -502,8 +484,9 @@
                 var index = $(this).attr("data-index");
                 if(document.body.clientWidth <= 768) {
                   var imageSrc = mobileSrcMap [ele.selector];
+                  console.log(imageSrc,index)
                   $('#mobile_image').show();
-                  $('#mobile_image').attr('src',imageSrc[+index]);
+                  $('#mobile_image').find('#mobile_img').attr('src',imageSrc[+index]);
                 } else {
                   var tp2Class = ".tp2-" +index,
                     selfRightClass = ".self-right-" + index,
