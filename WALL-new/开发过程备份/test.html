@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        img{display:none;}
+    </style>
+</head>
+<body>
+<form>
+    <select name="test" onchange="testimg(this.value)">
+        <option value="-1">请选择</option>
+        <option value="0" >图片1</option>
+        <option value="1">图片2</option>
+        <option value="2">图片3</option>
+        <option value="3">图片4</option>
+    </select>
+</form>
+<img id="imgshow" src="1.png" />
+ 
+<script type="text/javascript">
+   var arr=["1.png","2.png","3.png","4.png"];
+    var imgShow=document.getElementById('imgshow');
+    function testimg(val){
+        if(val==-1){
+            imgShow.style.display="none";
+        }
+        else{
+            imgShow.style.display="block";
+            imgShow.src=arr[val];
+        }
+    }
+</script>
+</body>

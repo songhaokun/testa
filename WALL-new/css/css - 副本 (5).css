@@ -1,0 +1,402 @@
+body {
+  text-align: center;
+  position: relative;
+  font-family: Monospace;
+  background-color: #000;
+  color: #fff;
+  margin: 0px;
+  overflow: hidden;
+}
+
+#info {
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  display: block;
+}
+
+#info a {
+  color: #75ddc1;
+  font-weight: bold;
+}
+
+.resetBtn {
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  right: 180px;
+  width: 100px;
+  height: 30px;
+  background-color: #555555;
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.addBtn {
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  right: 50px;
+  width: 100px;
+  height: 30px;
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.image_top {
+  position: absolute;
+  z-index: 1;
+  width: 82%;
+  height: 13%;
+  background-image: url('../images/a.png');
+  background-size: 95% 100%;
+  background-repeat: no-repeat;
+}
+
+.image_bottom {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+}
+
+.image_bottom button img {
+  width: 100px;
+  height: 60px;
+}
+
+/*canvas {*/
+/*position:absolute;*/
+/*}*/
+.btn_box {
+  width: 350px;
+  /*z-index: 9999;*/
+  /*position: absolute;*/
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn_box * {
+  box-sizing: border-box;
+}
+
+.pages span {
+  width: 80px;
+  height: 80px;
+  margin-top:-16vw;
+  background: url(../img/zuoa.png) no-repeat center top;
+  background-size: 100%;
+}
+
+.pages span.active {
+  width: 80px;
+  height: 80px;
+  margin-top:-16vw;
+  background: url(../img/youa.png) no-repeat center top;
+  background-size: 100%;
+}
+
+.shang{
+  margin-top:-16vw;
+  width: 80px;
+  height: 80px;
+  background: url(../img/zuoa.png) no-repeat center top;
+  background-size: 100%;
+}
+
+.xia {
+  margin-top:-16vw;
+  width: 80px;
+  height: 80px;
+  background: url(../img/youa.png) no-repeat center top;
+  background-size: 100%;
+}
+
+.xan {
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: -17%;
+  width: 380px;
+  height: 180px;
+  /* background: url(../files/bg.png) no-repeat center top; */
+  /* background-size: 75%; */
+  /* /* pointer-events: none; */    
+  /* 图片不受影响，哪个图片需要不受影响，加到哪里就行  */
+}
+
+.xan span { 
+  margin-left: 5px;
+  margin-right: 5px;
+  margin: 0 10px;
+}
+
+.xan .active {
+  margin-top: 0px;
+}
+
+.xan .layer .layera{
+  display: none;
+}
+
+
+
+/* 第一套右侧框 */
+.layer-right {
+  position: fixed;
+  right: -1120px;  /*右边浮层距离浏览器右边的距离*/
+  top: 10%;  /*右边浮层距离浏览器上边的距离*/
+}
+.layer-right .layer-button {
+  width: 150px;
+  height: 49px;
+  margin-bottom: 30px; /*右边浮层按钮上下的间距*/
+  border-radius: 5px; /*右边浮层按钮的圆弧大小 越大越圆*/
+}
+.layer-right .layer-button:first-child {
+  background: url('../textures/kuanga.png') no-repeat center;
+}
+.layer-right .layer-button:nth-child(2) {
+  background: url('../textures/kuangb.png') no-repeat center;
+}
+.layer-right .layer-button:nth-child(3) {
+  background: url('../textures/kuangc.png') no-repeat center;
+}
+.layer-right .layer-button:nth-child(4) {
+  background: url('../textures/kuangd.png') no-repeat center;
+}
+.layer-right .layer-button:nth-child(5) {
+  background: url('../textures/kuange.png') no-repeat center;
+}
+.layer-right .layer-button:last-child {
+  background: url('../textures/kuangf.png') no-repeat center;
+}
+
+/*高亮效果*/
+.layer-right .layer-button:first-child.layer-button-active {
+  background: url('../textures/kuangaa.png') no-repeat center;
+}
+.layer-right .layer-button:nth-child(2).layer-button-active {
+  background: url('../textures/kuangbb.png') no-repeat center;
+}
+.layer-right .layer-button:nth-child(3).layer-button-active {
+  background: url('../textures/kuangcc.png') no-repeat center;
+}
+.layer-right .layer-button:nth-child(4).layer-button-active {
+  background: url('../textures/kuangdd.png') no-repeat center;
+}
+.layer-right .layer-button:nth-child(5).layer-button-active {
+  background: url('../textures/kuangee.png') no-repeat center;
+}
+.layer-right .layer-button:last-child.layer-button-active {
+  background: url('../textures/kuangff.png') no-repeat center;
+}
+
+
+
+
+/* 第二套右侧框 */
+.layera-right {
+  position: fixed;
+  right: -1120px;  /*右边浮层距离浏览器右边的距离*/
+  top: 10%;  /*右边浮层距离浏览器上边的距离*/
+}
+.layera-right .layera-button {
+  width: 150px;
+  height: 49px;
+  margin-bottom: 30px; /*右边浮层按钮上下的间距*/
+  border-radius: 5px; /*右边浮层按钮的圆弧大小 越大越圆*/
+}
+.layera-right .layera-button:first-child {
+  background: url('../textures/kuangf.png') no-repeat center;
+}
+.layera-right .layera-button:nth-child(2) {
+  background: url('../textures/kuange.png') no-repeat center;
+}
+.layera-right .layera-button:nth-child(3) {
+  background: url('../textures/kuangd.png') no-repeat center;
+}
+.layera-right .layera-button:nth-child(4) {
+  background: url('../textures/kuangc.png') no-repeat center;
+}
+.layera-right .layera-button:nth-child(5) {
+  background: url('../textures/kuangb.png') no-repeat center;
+}
+.layera-right .layera-button:last-child {
+  background: url('../textures/kuanga.png') no-repeat center;
+}
+
+/*高亮效果*/
+.layera-right .layera-button:first-child.layera-button-active {
+  background: url('../textures/kuangff.png') no-repeat center;
+}
+.layera-right .layera-button:nth-child(2).layera-button-active {
+  background: url('../textures/kuangee.png') no-repeat center;
+}
+.layera-right .layera-button:nth-child(3).layera-button-active {
+  background: url('../textures/kuangdd.png') no-repeat center;
+}
+.layera-right .layera-button:nth-child(4).layera-button-active {
+  background: url('../textures/kuangcc.png') no-repeat center;
+}
+.layera-right .layera-button:nth-child(5).layera-button-active {
+  background: url('../textures/kuangbb.png') no-repeat center;
+}
+.layera-right .layera-button:last-child.layera-button-active {
+  background: url('../textures/kuangaa.png') no-repeat center;
+}
+
+
+
+
+
+
+.layer-qiehuan {
+  position: fixed;
+  right: -1120px;  /*右边浮层距离浏览器右边的距离*/
+  top: 10%;  /*右边浮层距离浏览器上边的距离*/
+}
+.layer-qiehuan .layer-button {
+  width: 320px;
+  height: 144px;
+  margin-bottom: -30px; /*右边浮层按钮上下的间距*/
+}
+.layer-qiehuan .layer-button:first-child {
+  background: url('../textures/c.png') no-repeat center;
+}
+.layer-qiehuan .layer-button:nth-child(2) {
+  background: url('../textures/e.png') no-repeat center;
+}
+
+
+/*高亮效果*/
+.layer-qiehuan .layer-button:first-child.layer-button-active {
+  background: url('../textures/cc.png') no-repeat center;
+}
+.layer-qiehuan .layer-button:nth-child(2).layer-button-active {
+  background: url('../textures/ee.png') no-repeat center;
+}
+
+
+
+
+@media screen and (min-width: 480px){
+	.xan span img{
+		/* 左下侧按钮大小 */
+		width:60px;
+		height:70px;
+	}
+	.layer-right .layer-button  {
+
+  margin-bottom: 40px; /*右边浮层按钮上下的间距*/
+
+}
+	.layer-right {
+  position: fixed;
+  right: 20px;  /*右边浮层距离浏览器右边的距离*/
+  top: 10%;  /*右边浮层距离浏览器上边的距离*/
+}
+	.layera-right {
+  position: fixed;
+  right: 20px;  /*右边浮层距离浏览器右边的距离*/
+  top: 10%;  /*右边浮层距离浏览器上边的距离*/
+}
+	.layera-right .layera-button  {
+
+  margin-bottom: 40px; /*右边浮层按钮上下的间距*/
+
+}
+
+	.layer-qiehuan {
+  position: fixed;
+  right: 1550px;  /*右边浮层距离浏览器右边的距离*/
+  top: 60%;  /*右边浮层距离浏览器上边的距离*/
+}
+
+
+
+   .xan {
+	bottom: -15%;
+	right: 60%;
+    width: 512px;
+    height: 256px;
+    /* background: url(../files/bg.png) no-repeat center; */
+    background-size: contain;
+   }
+   /* 左下方按钮间距 */
+   .xan span {
+     margin: 0 20px;
+   }
+
+   /* .xan .layer { */
+      /* width: 150px; */
+      /* display: block; */
+      /* position: fixed; */
+      /* padding: 10px; */
+      /* /* background-color: #999; */ */
+      /* left: 5%; */
+      /* bottom: 35%; */
+    /* } */
+    /* .xan .layer .layer-box { */
+      /* width: 100%; */
+      /* height: 200px; */
+      /* position: relative; */
+    /* } */
+    /* .xan .layer span { */
+      /* display: inline-block; */
+      /* position: absolute; */
+    /* } */
+    /* /* 可调整左边浮层第一个图形在浮层里面位置  */
+    /* left是 水平位置 top是垂直位置 后面的以此类推 分别是 2 3 4 5个 */ */
+    /* .xan .layer span:first-child { */
+      /* left: 0; */
+      /* top: 0; */
+    /* } */
+    /* .xan .layer span:nth-child(2) { */
+      /* left: 70px; */
+      /* top: 0; */
+    /* } */
+    /* .xan .layer span:nth-child(3) { */
+      /* left: -20px; */
+      /* top: 70px; */
+    /* } */
+    /* .xan .layer span:nth-child(4) { */
+      /* left: 60px; */
+      /* top: 70px; */
+    /* } */
+    /* .xan .layer span:last-child { */
+      /* left: 0; */
+      /* top: 130px; */
+    /* } */
+	
+	
+
+	
+	
+	
+	
+ }
+ 
+ 
+ 
+ @media screen and (max-width: 480px) {
+   #videobox {
+     display: none !important;
+   }
+ }
