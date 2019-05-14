@@ -536,7 +536,7 @@
 
             function selfMap(ele) {
 			    var layer_button_image = ele.find('.layer-button-image');
-			    $(ele.selector).find('.layer-button').click(function() {
+			    $(ele.selector + '-layer-button').find('.layer-button').click(function() {
 			        var idx = $(this).index();
                     layer_button_image.eq(idx).click();
                 })
