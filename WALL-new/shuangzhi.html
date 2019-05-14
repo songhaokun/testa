@@ -227,7 +227,7 @@
             </div>
             <div class="self-box">
                 <div class="self-right self-right-0" style="text-indent: 0px">
-                    <span style="position: absolute; left: 0; top: 20%; text-indent: 10px;">有声图书馆</span>
+                    <span style="position: absolute; left: 0; top: 20%; text-indent: 10px;">有声图书馆2</span>
                     <img src="img/kuangaa.png"
                          onClick="Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '中间热点', 'Aa']);">
                 </div>
@@ -359,7 +359,7 @@
     <img class='picdi' src='files/bg6.png'>
   </div>
   <!-- 右侧按钮 -->
-    <div class="layer-right" >
+    <div class="layer-right first-layer-button" >
         <div class="layer-button" onClick="Show_Hidden(pic1),Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
         <div class="layer-button" onClick="Show_Hidden(pic2),Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '右侧', '功能2']);"></div>
         <div class="layer-button" onClick="Show_Hidden(pic3),Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '右侧', '功能3']);"></div>
@@ -369,13 +369,13 @@
     </div>
 	
 	
-    <div class="layer-right" style='display:none'>
-        <div class="layera-button" onClick="Show_Hidden(pic1),Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
-        <div class="layera-button" onClick="Show_Hidden(pic2),Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
-        <div class="layera-button" onClick="Show_Hidden(pic3),Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
-		<div class="layera-button" onClick="Show_Hidden(pic4),Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
-        <div class="layera-button" onClick="Show_Hidden(pic5),Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
-		<div class="layera-button" onClick="Show_Hidden(pic6),Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
+    <div class="layer-right second-layer-button" style='display:none'>
+        <div class="layer-button" onClick="Show_Hidden(pic1),Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
+        <div class="layer-button" onClick="Show_Hidden(pic2),Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
+        <div class="layer-button" onClick="Show_Hidden(pic3),Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
+		<div class="layer-button" onClick="Show_Hidden(pic4),Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
+        <div class="layer-button" onClick="Show_Hidden(pic5),Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
+		<div class="layer-button" onClick="Show_Hidden(pic6),Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
     </div>
 	
 	
@@ -473,8 +473,8 @@
 		
 		
 		<script type="text/javascript">
-            function selfButton() {
-              $(".self-dian").click(function(){
+            function selfButton(ele) {
+              ele.find(".self-dian").click(function(){
                 var self = $(this);
                 var index = $(this).attr("data-index");
                 if(document.body.clientWidth <= 768) {
@@ -485,10 +485,10 @@
                   var tp2Class = ".tp2-" +index,
                     selfRightClass = ".self-right-" + index,
                     tp1Class = ".tp1-" + index;
-                  $(`.tp2:not(${tp2Class})`).css("margin-left","400px");
-                  $(`.self-right:not(${selfRightClass})`).animate({"margin-left":"0px"});
+                  ele.find(`.tp2:not(${tp2Class})`).css("margin-left","400px");
+                  ele.find(`.self-right:not(${selfRightClass})`).animate({"margin-left":"0px"});
                   setTimeout(function(){
-                    $(`.tp1:not(${tp1Class})`).hide();
+                    ele.find(`.tp1:not(${tp1Class})`).hide();
                     var parent = self.closest('.wer');
                     if(parent.find('.tp2').css('margin-left') === "400px"){
                       parent.find('.tp1').show();
@@ -509,7 +509,7 @@
                 }
 
               })
-              $('.close-button').click(function() {
+              ele.find('.close-button').click(function() {
                 var parent = $(this).closest('.wer');
                 parent.find('.self-right').animate({"margin-left":"0px"}, function() {
                   parent.find('.tp2').css("margin-left","400px");
@@ -534,17 +534,17 @@
 				},550)
 			})
 
-            function selfMap() {
-			    var layer_button_image = $('.layer-button-image');
-			    $('.layer-button').click(function() {
+            function selfMap(ele) {
+			    var layer_button_image = ele.find('.layer-button-image');
+			    $(ele.selector).find('.layer-button').click(function() {
 			        var idx = $(this).index();
                     layer_button_image.eq(idx).click();
                 })
             }
 
 
-            selfButton();
-            selfMap();
+            selfButton($('.first'));
+            selfMap($('.first'));
 
 
         </script>
