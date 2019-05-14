@@ -669,11 +669,21 @@
                 }
             }).easing((TWEEN.Easing.Quadratic.InOut)).start();
         }
+        function resetDisplay(ele) {
+          var arr = ["pic1","pic2","pic3","pic4","pic5","pic6"];
+          if (!arr.includes(ele)) return;
+          arr.forEach(function (item) {
+            if(item !== ele) {
+              document.getElementById(item).style.display = 'none';
+            }
+          })
+        }
         function Show_Hidden(trid) {
-            if (trid.style.display == "block") {
+          resetDisplay(trid.id);
+	        if (trid.style.display == "block") {
                 trid.style.display = 'none';
             } else {
-                trid.style.display = 'block';
+	            trid.style.display = 'block';
             }
             switch (trid.id) {
                 case ('xq1'):
