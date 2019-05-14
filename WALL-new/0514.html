@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>半月谈融媒体学习站</title>
+
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/camtoh5ds.css" />
+    <link rel="stylesheet" href="css/css.css" />
+	<link rel="stylesheet" href="css/cssanniu.css" />
+    <script src="js/vue.js"></script>
+
+</head>
+<style>
+    * {
+        touch-action: none;
+    }
+
+    body {
+        font-family: Monospace;
+        background-color: #000;
+        color: #fff;
+        margin: 0px;
+        overflow: hidden;
+        position: fixed;
+
+    }
+
+    #info {
+        color: #fff;
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        text-align: center;
+        z-index: 100;
+        display: block;
+    }
+
+    #info a {
+        color: #75ddc1;
+        font-weight: bold;
+    }
+
+
+
+    .image_top {
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 15px;
+        transform: translateX(-50%);
+    }
+
+    .image_bottom {
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        bottom: 0px;
+        transform: translateX(-50%);
+
+    }
+    .videobox{
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background-color:#000;
+    }
+    .videobox video.video{
+      width: 100%;
+      height: 100%;
+    }
+    :-webkit-full-screen {}
+    :-moz-full-screen {}
+    :-ms-fullscreen {}
+    :-o-fullscreen {}
+    :full-screen {}
+    :fullscreen {}
+    :-webkit-full-screen video {
+      width: 100%;
+      height: 100%;
+    }
+    :-moz-full-screen video{
+      width: 100%;
+      height: 100%;
+    }
+</style>
+
+<body>
+
+
+    <!-- <div id="videobox" class="videobox" style=" display: block;"> -->
+      <!-- <video autoplay loop controls preload="preload" id="video" class="video"> -->
+        <!-- <source src="http://www.w3school.com.cn/i/movie.ogg" type="video/ogg" /> -->
+        <!-- <source src="http://www.w3school.com.cn/i/movie.mp4" type="video/mp4" /> -->
+        <!-- <source src="http://www.w3school.com.cn/i/movie.webm" type="video/webm" /> -->
+        <!-- <object data="http://www.w3school.com.cn/i/movie.mp4" width="100%" height="100%"> -->
+          <!-- <embed width="100%" height="100%" src="./movie.swf" /> -->
+        <!-- </object> -->
+      <!-- </video> -->
+    <!-- </div> -->
+    <!-- <audio id="myAudio" src='' type="audio/mpeg"> -->
+    <!-- </audio> -->
+
+    <div class="wer one" style="display: none;">
+        <p onClick="Show_Hidden(xq1);"> xq1 <p>
+    </div>
+    <div class="wer two" style="display: none;">
+        <p onClick="Show_Hidden(xq2);"> xq2 <p>
+    </div>
+
+	
+	<style type="text/css">
+.tp1{ position: absolute; width: 400px; height: 213px; overflow: hidden; left:0;transition: all 0.8s;  text-indent: 0;  transform: translate(-100%,-47%);z-index: 999999;}
+.tp2{ width: 100%; transition: all 0.5s ease-out; margin-left: 100%;}
+.close-button {
+    width: 37px;
+    height: 37px;
+    background: url("./img/close.png") no-repeat center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.mobile-close-button {
+    width: 37px;
+    height: 37px;
+    background: url("./img/close.png") no-repeat center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+@media screen and ( max-width: 480px){
+    .tp1,.tp2 {display: none;}
+}
+
+#tp3{ position: absolute; width: 400px; height: 213px; overflow: hidden; left:0;transition: all 0.8s;  text-indent: 0;  transform: translate(-100%,-47%);z-index: 999999;}
+#tp4{ transition: all 0.5s ease-out; margin-left: 100%;}
+</style>
+
+	
+	
+<!--    <div class="wer a1" style="display: block;">-->
+<!--        <div id="tp1"><img id="tp2" src="img/ac.png"/></div>-->
+<!--        <p onClick="Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '中间热点', 'Aa']);">Aa </p>-->
+<!--    </div>-->
+<!--    <div class="wer a2" style="display: block;">-->
+<!--        <p onClick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();_czc.push(['_trackEvent', '中间热点', 'Bb']);"> Bb<p>-->
+<!--    </div>-->
+<!--    <div class="wer a4" style="display: block;">-->
+<!--        <p onClick="Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '中间热点', 'Cc']);">Cc<p>-->
+<!--    </div>-->
+    <div class="first">
+        <div class="wer a1" style="display: block; background-image: none">
+            <div class="tp1 tp1-0">
+                <div class="tp2 tp2-0" style="position: relative">
+                    <div class="close-button"></div>
+                    <img src="img/ac.png"/>
+                </div>
+            </div>
+            <div class="self-dian layer-button-image" data-index="0" style="text-indent: 0px">
+                <img src="img/dianaa.png"/>
+            </div>
+            <div class="self-box">
+                <div class="self-right self-right-0" style="text-indent: 0px">
+                    <span style="position: absolute; left: 0; top: 20%; text-indent: 10px;">有声图书馆</span>
+                    <img src="img/kuangaa.png"
+                         onClick="Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '中间热点', 'Aa']);">
+                </div>
+            </div>
+        </div>
+
+        <div class="wer a2" style="display: block; background-image: none">
+            <div class="tp1 tp1-1">
+                <div class="tp2 tp2-1" style="position: relative">
+                    <div class="close-button"></div>
+                    <img src="img/ac.png"/>
+                </div>
+            </div>
+            <div class="self-dian layer-button-image" data-index="1" style="text-indent: 0px">
+                <img src="img/dianaa.png"/>
+            </div>
+            <div class="self-box">
+                <div class="self-right self-right-1" style="text-indent: 0px">
+                    <span style="position: absolute; left: 0; top: 20%; text-indent: 10px">Bb</span>
+                    <img src="img/kuangaa.png"
+                         onClick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();_czc.push(['_trackEvent', '中间热点', 'Bb']);">
+                </div>
+            </div>
+        </div>
+
+        <div class="wer a4" style="display: block; background-image: none">
+            <div class="tp1 tp1-2">
+                <div class="tp2 tp2-2" style="position: relative">
+                    <div class="close-button"></div>
+                    <img src="img/ac.png"/>
+                </div>
+            </div>
+            <div class="self-dian layer-button-image" data-index="2" style="text-indent: 0px">
+                <img src="img/dianaa.png"/>
+            </div>
+            <div class="self-box">
+                <div class="self-right self-right-2" style="text-indent: 0px">
+                    <span style="position: absolute; left: 0; top: 20%; text-indent: 10px">Ca</span>
+                    <img src="img/kuangaa.png"
+                         onClick="Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '中间热点', 'Cc']);">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="second" style="display: none">
+        <div class="wer b1" style="display: block; background-image: none">
+            <div class="tp1 tp1-0">
+                <div class="tp2 tp2-0" style="position: relative">
+                    <div class="close-button"></div>
+                    <img src="img/ac.png"/>
+                </div>
+            </div>
+            <div class="self-dian layer-button-image" data-index="0" style="text-indent: 0px">
+                <img src="img/dianaa.png"/>
+            </div>
+            <div class="self-box">
+                <div class="self-right self-right-0" style="text-indent: 0px">
+                    <span style="position: absolute; left: 0; top: 20%; text-indent: 10px;">有声图书馆</span>
+                    <img src="img/kuangaa.png"
+                         onClick="Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '中间热点', 'Aa']);">
+                </div>
+            </div>
+        </div>
+
+        <div class="wer b2" style="display: block; background-image: none">
+            <div class="tp1 tp1-1">
+                <div class="tp2 tp2-1" style="position: relative">
+                    <div class="close-button"></div>
+                    <img src="img/ac.png"/>
+                </div>
+            </div>
+            <div class="self-dian layer-button-image" data-index="1" style="text-indent: 0px">
+                <img src="img/dianaa.png"/>
+            </div>
+            <div class="self-box">
+                <div class="self-right self-right-1" style="text-indent: 0px">
+                    <span style="position: absolute; left: 0; top: 20%; text-indent: 10px">Bb</span>
+                    <img src="img/kuangaa.png"
+                         onClick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();_czc.push(['_trackEvent', '中间热点', 'Bb']);">
+                </div>
+            </div>
+        </div>
+
+        <div class="wer b4" style="display: block; background-image: none">
+            <div class="tp1 tp1-2">
+                <div class="tp2 tp2-2" style="position: relative">
+                    <div class="close-button"></div>
+                    <img src="img/ac.png"/>
+                </div>
+            </div>
+            <div class="self-dian layer-button-image" data-index="2" style="text-indent: 0px">
+                <img src="img/dianaa.png"/>
+            </div>
+            <div class="self-box">
+                <div class="self-right self-right-2" style="text-indent: 0px">
+                    <span style="position: absolute; left: 0; top: 20%; text-indent: 10px">Ca</span>
+                    <img src="img/kuangaa.png"
+                         onClick="Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '中间热点', 'Cc']);">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mobile-image" id="mobile_image">
+        <img src="img/ac.png"/>
+        <div class="mobile-close-button"></div>
+    </div>
+
+	
+	
+	
+
+    <!-- <div class="wer b1" style="display: none;"> -->
+        <!-- <p onClick="Show_Hidden(xqb1),donghua3();">Dd <p> -->
+    <!-- </div> -->
+    <!-- <div class="wer b2" style="display: none;"> -->
+        <!-- <p onClick="Show_Hidden(xqb2),donghua5();"> Ee<p> -->
+    <!-- </div> -->
+    <!-- <div class="wer b4" style="display: none;"> -->
+        <!-- <p onClick="Show_Hidden(xqb4),donghua6();">Ff<p> -->
+    <!-- </div> -->
+
+
+    <div class='twk' id='xq1' style='display:none'>
+    </div>
+    <div class='twk' id='xq2' style='display:none'>
+    </div>
+
+
+
+    <div class='twk' id='xqa1' style='display:none'>
+    </div>
+    <div class='twk' id='xqa2' style='display:none'>
+        <img class='tw' src='images/ziyuan.jpg'><img onClick="Show_Hidden(xq2)" class='close' id='closetab'
+            src='img/close.png'>
+    </div>
+    <div class='twk' id='xqa3' style='display:none'>
+    </div>
+    <div class='twk' id='xqa4' style='display:none'>
+    </div>
+    <div class='twk' id='xqa5' style='display:none'>
+    </div>
+
+
+    <div class='twk' id='xqb1' style='display:none'>
+    </div>
+    <div class='twk' id='xqb2' style='display:none'>
+    </div>
+    <div class='twk' id='xqb3' style='display:none'>
+    </div>
+    <div class='twk' id='xqb4' style='display:none'>
+    </div>
+
+	<div class='twk' id='xqmoren' style='display:none'>
+    </div>
+	
+	
+    <div class="image_background">
+
+    </div>
+
+    <!-- <div class="image_bottom">
+        <div class="btn_box pages">
+            <span class="tips" onclick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();"></span>
+            <span class="tips" onclick="Show_Hidden(xqa1),donghua3();"></span>
+            <span class="tips" onclick="Show_Hidden(xqa4),donghua6();"></span>
+        </div>
+    </div> -->
+  <!-- 右侧按钮点击后出图 -->
+  <div class='twk' id='pic1' style='display:none'>
+    <img class='picdi' src='files/bg1.png'>
+  </div>
+  <div class='twk' id='pic2' style='display:none'>
+    <img class='picdi' src='files/bg2.png'>
+  </div>
+    <div class='twk' id='pic3' style='display:none'>
+    <img class='picdi' src='files/bg3.png'>
+  </div>
+  <div class='twk' id='pic4' style='display:none'>
+    <img class='picdi' src='files/bg4.png'>
+  </div>
+    <div class='twk' id='pic5' style='display:none'>
+    <img class='picdi' src='files/bg5.png'>
+  </div>
+  <div class='twk' id='pic6' style='display:none'>
+    <img class='picdi' src='files/bg6.png'>
+  </div>
+  <!-- 右侧按钮 -->
+    <div class="layer-right"  >
+	<div class="firstright" >
+        <div class="layer-button" onClick="Show_Hidden(pic1),Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
+        <div class="layer-button" onClick="Show_Hidden(pic2),Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '右侧', '功能2']);"></div>
+        <div class="layer-button" onClick="Show_Hidden(pic3),Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '右侧', '功能3']);"></div>
+		<div class="layer-button" onClick="Show_Hidden(pic4),Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '右侧', '功能4']);"></div>
+        <div class="layer-button" onClick="Show_Hidden(pic5),Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '右侧', '功能5']);"></div>
+		<div class="layer-button" onClick="Show_Hidden(pic6),Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '右侧', '功能6']);"></div>
+    </div>
+	
+	
+
+	<div class="layera-right" style="display: none">
+        <div class="layera-button" onClick="Show_Hidden(pic1),Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
+        <div class="layera-button" onClick="Show_Hidden(pic2),Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
+        <div class="layera-button" onClick="Show_Hidden(pic3),Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
+		<div class="layera-button" onClick="Show_Hidden(pic4),Show_Hidden(xqa1),donghua3();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
+        <div class="layera-button" onClick="Show_Hidden(pic5),Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
+		<div class="layera-button" onClick="Show_Hidden(pic6),Show_Hidden(xqa4),donghua6();_czc.push(['_trackEvent', '右侧', '功能1']);"></div>
+    </div></div>
+	
+	
+	
+	    <!-- <div class="layer-qiehuan"> -->
+        <!-- <div class="layer-button" onClick="qiehuana();_czc.push(['_trackEvent', '首页', '按钮A']);"></div> -->
+        <!-- <div class="layer-button" onClick="qiehuanb();_czc.push(['_trackEvent', '首页', '按钮B']);"></div> -->
+    <!-- </div> -->
+	
+
+
+    <div class="xan" id="app">
+         
+        <!-- <div class="layer"> -->
+          <!-- <div class="layer-box"> -->
+            <!-- <span v-for="(item,index) in list1" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'" -->
+                <!-- class="active" @click="layerClick(index)"> -->
+            <!-- <img :src="layerIndex === index ? item.target : item.source" width="50" algin="center" /></span> -->
+          <!-- </div> -->
+        <!-- </div> -->
+		
+		
+        <div v-if="selectindex==1" class="active">
+            <span v-for="(item,index) in list1" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'" 
+                class="active" @click="layerClick(index);_czc.push(['_trackEvent', '首页', '五个按钮', '\'按钮'+(index+1)+'\'']);">
+                <img :src="layerIndex === index ? item.target : item.source" width="50" algin="center"  /></span>
+        </div>
+
+        <!-- <div v-if="selectindex==2" class="active"> -->
+            <!-- <span v-for="(item,index) in list2" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'" -->
+                <!-- class="active"> -->
+                <!-- <img :src="item" width="50" algin="center"  /></span> -->
+        <!-- </div> -->
+
+        <!-- <div v-if="selectindex==3" class="active"> -->
+            <!-- <span v-for="(item,index) in list3" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'" -->
+                <!-- class="active"> -->
+                <!-- <img :src="item" width="50" algin="center" /></span> -->
+        <!-- </div> -->
+
+        <!-- <div v-if="selectindex==4" class="active"> -->
+            <!-- <span v-for="(item,index) in list4" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'" -->
+                <!-- class="active"> -->
+                <!-- <img :src="item" width="50" algin="center"  /></span> -->
+        <!-- </div> -->
+
+        <!-- <div v-if="selectindex==5" class="active"> -->
+            <!-- <span v-for="(item,index) in list5" :onmousedown="'Anclick(\''+selectindex+'-'+(index+1)+'\')'" -->
+                <!-- class="active"> -->
+                <!-- <img :src="item" width="50" algin="center" /></span> -->
+        <!-- </div> -->
+
+    </div>
+	
+  
+
+
+
+			<div class="image_bottoma">
+		<div class="btn_boxa pagesa">
+<div class="shang"></div>
+      <span class="active  tips" onclick="Show_Hidden(xqa5),Show_Hidden(xqa2),donghua5();vm.selectindexa=1;"></span>
+      <span class="tips" onclick="Show_Hidden(xqa1),donghua3();vm.selectindexa=2;"></span>
+      <span class="tips" onclick="Show_Hidden(xqa4),donghua6();vm.selectindexa=3;"></span>
+
+      <div class="xia"></div>
+        </div>
+    </div>
+
+
+    <script src="build/three.js"></script>
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/controls/OrbitControls.js"></script>
+    <script src="js/loaders/GLTFLoader.js"></script>
+    <script src="js/libs/tween.min.js"></script>
+
+
+    <script src="js/WebGL.js"></script>
+    <script src="js/libs/stats.min.js"></script>
+
+
+    <script src="js/dat.gui.min.js"></script>
+    <script src="js/Detector.js"></script>
+    <script src="js/inflate.min.js"></script>
+			<script src="js/objects/Reflector.js"></script>
+				<!-- <script src="colora.js"></script> -->
+				<script src="js/loaders/FBXLoader.js"></script>
+						<script src="js/objects/Refractor.js"></script>
+		<script src="js/objects/Water2.js"></script>
+		
+		
+				<!-- <video id="video" loop crossOrigin="anonymous" webkit-playsinline style="display:none"> -->
+			<!-- <source src="textures/sintel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'> -->
+		<!-- </video> -->
+		
+		
+		<script type="text/javascript">
+            function selfButton() {
+              $(".self-dian").click(function(){
+                var self = $(this);
+                var index = $(this).attr("data-index");
+                if(document.body.clientWidth <= 768) {
+                  var imageSrc = ["img/ac.png","img/ac.png","img/ac.png"];
+                  $('#mobile_image').show();
+                  $('#mobile_image').attr('src',imageSrc[+index]);
+                } else {
+                  var tp2Class = ".tp2-" +index,
+                    selfRightClass = ".self-right-" + index,
+                    tp1Class = ".tp1-" + index;
+                  $(`.tp2:not(${tp2Class})`).css("margin-left","400px");
+                  $(`.self-right:not(${selfRightClass})`).animate({"margin-left":"0px"});
+                  setTimeout(function(){
+                    $(`.tp1:not(${tp1Class})`).hide();
+                    var parent = self.closest('.wer');
+                    if(parent.find('.tp2').css('margin-left') === "400px"){
+                      parent.find('.tp1').show();
+                      setTimeout(function(){
+                        parent.find('.self-right').animate({"margin-left": (index === "1" ? "300px" : "-300px")},function() {
+                          parent.find('.tp2').css("margin-left","0px");
+                        });
+                      },50)
+                    }else{
+                      parent.find('.self-right').animate({"margin-left":"0px"}, function() {
+                        parent.find('.tp2').css("margin-left","400px");
+                      });
+                      setTimeout(function(){
+                        parent.find(".tp1").hide();
+                      },550)
+                    }
+                  },550)
+                }
+
+              })
+              $('.close-button').click(function() {
+                var parent = $(this).closest('.wer');
+                parent.find('.self-right').animate({"margin-left":"0px"}, function() {
+                  parent.find('.tp2').css("margin-left","400px");
+                });
+                setTimeout(function(){
+                  parent.find(".tp1").hide();
+                },550)
+              });
+            }
+
+			$('.mobile-close-button').click(function () {
+              $('#mobile_image').hide();
+            })
+            
+            
+			$(".a2,.a4").click(function(){
+				isx=0;
+				$("#tp2").css("margin-left","100%");
+				setTimeout(function(){
+					$("#tp1").hide();
+					
+				},550)
+			})
+
+            function selfMap() {
+			    var layer_button_image = $('.layer-button-image');
+			    $('.layer-button').click(function() {
+			        var idx = $(this).index();
+                    layer_button_image.eq(idx).click();
+                })
+            }
+			
+
+
+            selfButton();
+            selfMap();
+
+
+        </script>
+		
+		
+		
+    <script>
+	<!-- $("A").keypress(function(){ -->
+		<!-- $("w").keypress(); -->
+	<!-- } -->
+	<!-- ) -->
+	
+	<!-- e = jQuery.Event("keydown"); -->
+
+	<!-- e.keyCode = 13; //enter key -->
+
+	<!-- jQuery('#input').trigger(e); -->
+
+	
+	
+        var layer_button = $('.layer-button');
+
+        layer_button.click(function(){
+            layer_button.removeClass('layer-button-active');
+            $(this).addClass('layer-button-active');
+        })
+        var vm = new Vue({
+            el: '#app',
+            data: function () {
+                return {
+                    selectindex: 1,
+                    layerIndex: "",
+                    list1: [
+                      {
+                        source: 'textures/a.png',
+                        target: 'textures/aa.png'
+                      },
+                      {
+                        source: 'textures/b.png',
+                        target: 'textures/bb.png'
+                      },
+                      {
+                        source: 'textures/c.png',
+                        target: 'textures/cc.png'
+                      },
+                      {
+                        source: 'textures/d.png',
+                        target: 'textures/dd.png'
+                      },
+                      {
+                        source: 'textures/e.png',
+                        target: 'textures/ee.png'
+                      }
+                    ],
+                };
+            },
+            methods: {
+              layerClick(index) {
+                this.layerIndex = index;
+              }
+            }
+        });
+
+
+	<!-- 左下角按钮的触发 -->
+        function Anclick(clickindex) {
+
+            switch (clickindex) {
+                case '1-1':
+                    qiehuanb(),Show_Hidden(xqmoren);
+                    break;
+                case '1-2':
+                    qiehuana(),Show_Hidden(xqmoren);
+                    break;
+                <!-- case '1-3': -->
+                    <!-- document.getElementById("colora.js").innerHTML = colorthree(); -->
+                    <!-- break; -->
+                <!-- case '1-4': -->
+                    <!-- document.getElementById("colora.js").innerHTML = colorfour(); -->
+                    <!-- break; -->
+                <!-- case '1-5': -->
+                    <!-- document.getElementById("colora.js").innerHTML = colorfive(); -->
+                    <!-- break; -->
+            }
+        }
+
+        function backToNormalView() {
+
+
+            var target = controls.target.clone();
+            new TWEEN.Tween(target).to({
+                x: 0,
+                y: 0,
+                z: 0
+            }, 1000)
+                .onUpdate(function () {
+                    camera.lookAt(target);
+                    controls.target = target.clone();
+                })
+                .onComplete(function () {
+                    controls.target = new THREE.Vec3(-0.00001, 0, 0)
+                    controls.enable = true;
+                })
+                .easing((TWEEN.Easing.Quadratic.InOut)).start();
+
+            new TWEEN.Tween(camera.position).to({
+                z: 0,
+                x: 0,
+                y: 0,
+            }, 2000).onComplete(function () {
+                if (trid.style.display == "block") {
+                    trid.style.display = 'none';
+                } else {
+                    trid.style.display = 'block';
+                    controls.enable = false;
+                }
+            }).easing((TWEEN.Easing.Quadratic.InOut)).start();
+        }
+        function Show_Hidden(trid) {
+            if (trid.style.display == "block") {
+                trid.style.display = 'none';
+            } else {
+                trid.style.display = 'block';
+            }
+            switch (trid.id) {
+                case ('xq1'):
+
+                    tweenCameraWithHotspot(targetArray[1], trid, cameraPositionArray[0].position);
+                    break;
+                case ('xq2'):
+
+                    tweenCameraWithHotspot(targetArray[2], trid, cameraPositionArray[1].position);
+                    break;
+
+                case ('xqa1'):
+
+                    tweenCameraWithHotspot(targetArray[3], trid, cameraPositionArray[2].position);
+                    break;
+                case ('xqa4'):
+
+                    tweenCameraWithHotspot(targetArray[2], trid, cameraPositionArray[3].position);
+                    break;
+
+                case ('xqa5'):
+
+                    tweenCameraWithHotspot(targetArray[7], trid, cameraPositionArray[4].position);
+                    break;
+					
+					
+				case ('xqmoren'):
+
+                    tweenCameraWithHotspot(targetArray[0], trid, cameraPositionArray[5].position);
+                    break;
+<!-- targetArray后面的序数写创建cube的顺序序数，这决定了摄影机的中心点在哪里。cameraPositionArray后面的序数写var定义那里排号序数。 -->
+
+                default: break;
+            }
+        }
+
+
+
+
+        if (WEBGL.isWebGLAvailable() === false) {
+            document.body.appendChild(WEBGL.getWebGLErrorMessage());
+        }
+
+        var container, mixer, controls;
+        var camera, scene, renderer, light, scenea;
+        var group = new THREE.Object3D();
+        var startMove = false;
+        var times = 0;
+        var rotationDirection = -1;
+        var opacity = 0.002;
+        var clock = new THREE.Clock();
+        var animUp = false;
+        var currentAction = null;
+        var Uvoffset = 0.03;
+        var renderer, gui, light, stats;
+        var cube, cube2, cube3, cube4, cube5, cube6, cubea1, cubea2, cubea3, cubea4, cubeb1, cubeb2, cubeb3, cubeb4,cubemoren;
+
+        var showanimation = [];
+        var shoeModel;
+        var opcityDir = -1;
+        var cameraStartToMove = false;
+        var array_count = 0;
+
+        var camPositions = [];
+        var ctlTargets = [];
+        var currentIndex = -1;
+        var intvTime = 2000;
+        var targetArray = [{ name: 'reset', position: new THREE.Vector3(0, 0, 0) }];
+        var targetArraya;
+        var cameraPositionArray = [{ position: new THREE.Vector3(3, 1, 21) }, { position: new THREE.Vector3(3, 1, 21) }, { position: new THREE.Vector3(1, 0.5, 4) }, { position: new THREE.Vector3(1, 0.5, 4) }, { position: new THREE.Vector3(3, 1, 21) }, { position: new THREE.Vector3(3, 1, 21) }];
+        var movingState = false;
+        var objectQi;
+		var water;
+		var video, texture;
+		<!-- var torusKnot; -->
+
+		<!-- var params = { -->
+			<!-- color: '#ffffff', -->
+			<!-- scale: 0, -->
+			<!-- flowX: 0, -->
+			<!-- flowY: 0 -->
+			
+		<!-- }; -->
+				
+		
+		
+		
+		
+		
+		
+		
+			// scene size
+			var WIDTH = window.innerWidth;
+			var HEIGHT = window.innerHeight;
+
+			// camera
+			var VIEW_ANGLE = 45;
+			var ASPECT = WIDTH / HEIGHT;
+			var NEAR = 1;
+			var FAR = 500;
+		var sphereGroup, smallSphere;
+		var cameraControls;
+		
+		
+
+        init();
+        animate();
+
+
+        function initRender() {
+            renderer = new THREE.WebGLRenderer({
+                alpha: true,
+                antialias: true
+            });
+
+            renderer.shadowMap.enabled = true;
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+            document.getElementById("container").appendChild(renderer.domElement);
+
+        }
+
+
+        function defineCameraPosition(camera, hotspot) {
+            var count = 1;
+            var cameraPosition = camera.position.clone();
+            var hotspotPosition = hotspot.position.clone();
+            var positionNormalize = cameraPosition.subVectors(cameraPosition, hotspotPosition).normalize();
+            return new THREE.Vector3(cameraPosition.x + count * positionNormalize.x, cameraPosition.y + count * positionNormalize.y, cameraPosition.z + count * positionNormalize.z);
+        }
+        function tweenCamera(index) {
+            controls.enable = false;
+            var target = controls.target.clone();
+            new TWEEN.Tween(target).to({
+                x: ctlTargets[index].x,
+                y: ctlTargets[index].y,
+                z: ctlTargets[index].z
+            }, 2000)
+                .onUpdate(function () {
+                    camera.lookAt(target);
+                    controls.target = target.clone();
+                })
+                .onComplete(function () {
+                    controls.target = ctlTargets[index].clone();
+                    controls.enable = true;
+                })
+                .easing(TWEEN.Easing.Linear.None).start();
+
+            new TWEEN.Tween(camera.position).to({
+                x: camPositions[index].x,
+                y: camPositions[index].y,
+                z: camPositions[index].z
+            }, 2000)
+                .easing(TWEEN.Easing.Linear.None).start();
+        }
+
+        function tweenCameraWithHotspot(hotspot, trid, cameraPosition) {
+            var hotspotPosition = hotspot.position;
+
+            console.log()
+            controls.enable = false;
+
+            var target = controls.target.clone();
+            new TWEEN.Tween(target).to({
+                x: hotspotPosition.x,
+                y: hotspotPosition.y,
+                z: hotspotPosition.z
+            }, 1000)
+                .onUpdate(function () {
+                    camera.lookAt(target);
+                    controls.target = target.clone();
+                })
+                .onComplete(function () {
+                    controls.target = hotspotPosition.clone();
+                    controls.enable = true;
+                })
+                .easing((TWEEN.Easing.Quadratic.InOut)).start();
+
+            new TWEEN.Tween(camera.position).to({
+                z: cameraPosition.z,
+                x: cameraPosition.x,
+                y: cameraPosition.y,
+            }, 2000).onComplete(function () {
+                movingState = false;
+                if (trid.style.display == "block" && trid.id != 'xq4') {
+                    trid.style.display = 'none';
+                } else {
+                    trid.style.display = 'block';
+                    controls.enable = false;
+                }
+            }).easing((TWEEN.Easing.Quadratic.InOut)).start();
+
+        }
+
+        function cameraMoveState() {
+            moveDirection = 1;
+            if (array_count < 4) {
+                array_count++;
+            } else {
+                array_count = 0;
+            }
+
+            if (camPositions.length > array_count) {
+                tweenCamera(array_count);
+            }
+
+
+        }
+
+
+        function cameraMoveBackState() {
+            moveDirection = -1;
+            if (array_count > 0) {
+                array_count--;
+
+            } else {
+                array_count = 4;
+            }
+
+            if (camPositions.length > array_count) {
+                tweenCamera(array_count);
+            }
+
+
+
+        }
+
+
+        function startTomove() {
+            times++;
+            if (times == 2) {
+                startMove = true;
+
+                opcityDir = -opcityDir;
+
+                playDownAnimation();
+                times = 0;
+            } else {
+                startMove = true;
+                opcityDir = -opcityDir;
+            }
+
+        }
+
+        function resetEveryThing() {
+            if (shoeModel) {
+                shoeModel.traverse(function (child) {
+                    if (child.type == 'Mesh') {
+                        child.material.opacity = 1;
+                        child.material.transparent = true;
+                    }
+
+                })
+            }
+        }
+
+        function playDownAnimation() {
+            if (showanimation[1]) {
+                var action = mixer.clipAction(showanimation[1]);
+                action.loop = THREE.LoopOnce;
+                action.time = 0;
+                action.clampWhenFinished = true;
+                action.enable = true;
+                action.play();
+            }
+        }
+        function donghua1() {
+		
+
+		
+            <!-- shoeModel.visible = true; -->
+            <!-- objectQi.visible = false; -->
+
+
+
+            <!-- cubea4.visible = true; -->
+            <!-- cubea1.visible = true; -->
+            <!-- cubea2.visible = true; -->
+            <!-- cubea3.visible = true; -->
+            <!-- document.getElementsByClassName('a1')[0].style.display = 'block'; -->
+            <!-- document.getElementsByClassName('a2')[0].style.display = 'block'; -->
+
+            <!-- document.getElementsByClassName('a4')[0].style.display = 'block'; -->
+
+
+
+            <!-- cubeb4.visible = false; -->
+            <!-- cubeb1.visible = false; -->
+            <!-- cubeb2.visible = false; -->
+            <!-- cubeb3.visible = false; -->
+            <!-- document.getElementsByClassName('b1')[0].style.display = 'none'; -->
+            <!-- document.getElementsByClassName('b2')[0].style.display = 'none'; -->
+
+            <!-- document.getElementsByClassName('b4')[0].style.display = 'none'; -->
+
+            <!-- controls.minPolarAngle = Math.PI / 2 - 0.11; -->
+            <!-- controls.maxPolarAngle = Math.PI / 2 + 0.08; -->
+            <!-- controls.minDistance = 6; -->
+        }
+
+
+        function donghua2() {
+            //动画2
+            shoeModel.visible = false;
+            objectQi.visible = true;
+            cubea4.visible = false;
+            cubea1.visible = false;
+            cubea2.visible = false;
+            cubea3.visible = false;
+            document.getElementsByClassName('a1')[0].style.display = 'none';
+            document.getElementsByClassName('a2')[0].style.display = 'none';
+            document.getElementsByClassName('a4')[0].style.display = 'none';
+
+            cubeb1.visible = true;
+            cubeb2.visible = true;
+            cubeb3.visible = true;
+            cubeb4.visible = true;
+            document.getElementsByClassName('b1')[0].style.display = 'block';
+            document.getElementsByClassName('b2')[0].style.display = 'block';
+            document.getElementsByClassName('b4')[0].style.display = 'block';
+
+            controls.minPolarAngle = Math.PI / 2 - 0.55;
+            controls.maxPolarAngle = Math.PI / 2 + 0.13;
+            controls.minDistance = 6;
+        }
+
+
+
+        var listener = new THREE.AudioListener();
+        var audio = document.getElementById("myAudio");
+        var sound = new THREE.Audio(listener);
+        function donghua3() {
+
+            <!-- audio.src = 'http://qiniucdn.happyppt.com/0402shi/R.mp3'; -->
+            <!-- audio.play(); -->
+            controls.minPolarAngle = Math.PI / 2 - 0.4;
+            controls.maxPolarAngle = Math.PI / 2 + 0.13;
+            controls.minDistance = 2;
+
+        }
+
+
+
+        function donghua4() {
+
+
+            <!-- audio.src = 'http://qiniucdn.happyppt.com/0402shi/L.mp3'; -->
+            <!-- audio.play(); -->
+
+
+        }
+
+
+        function donghua5() {
+
+
+            <!-- audio.src = 'http://qiniucdn.happyppt.com/0402shi/xijinping.mp3'; -->
+            <!-- audio.play(); -->
+
+
+        }
+
+
+
+        function donghua6() {
+
+
+            <!-- audio.src = 'http://qiniucdn.happyppt.com/0402shi/xy.mp3'; -->
+            <!-- audio.play(); -->
+
+            controls.minPolarAngle = Math.PI / 2 - 0.4;
+            controls.maxPolarAngle = Math.PI / 2 + 0.13;
+            controls.minDistance = 2;
+        }
+        function qiehuana() {
+
+
+ 
+ 
+            cubea1.visible = false;
+            cubea2.visible = false;
+            cubea4.visible = false;
+            document.getElementsByClassName('a1')[0].style.display = 'none';
+            document.getElementsByClassName('a2')[0].style.display = 'none';
+            document.getElementsByClassName('a4')[0].style.display = 'none';
+
+            cubeb1.visible = true;
+            cubeb2.visible = true;
+            cubeb4.visible = true;
+            document.getElementsByClassName('b1')[0].style.display = 'block';
+            document.getElementsByClassName('b2')[0].style.display = 'block';
+            document.getElementsByClassName('b4')[0].style.display = 'block';
+			
+			
+
+			
+			console.log('乡村');
+			document.getElementsByClassName('second')[0].style.display = 'block';
+			document.getElementsByClassName('first')[0].style.display = 'none';
+						document.getElementsByClassName('layera-right')[0].style.display = 'block';
+						document.getElementsByClassName('firstright')[0].style.display = 'none';
+        }
+		
+		
+		
+		
+		 function qiehuanb() {
+
+console.log('科技');
+
+		  
+			cubea1.visible = true;
+            cubea2.visible = true;
+            cubea4.visible = true;
+            document.getElementsByClassName('a1')[0].style.display = 'block';
+            document.getElementsByClassName('a2')[0].style.display = 'block';
+            document.getElementsByClassName('a4')[0].style.display = 'block';
+
+
+
+            cubeb1.visible = false;
+            cubeb2.visible = false;
+            cubeb4.visible = false;
+            document.getElementsByClassName('b1')[0].style.display = 'none';
+            document.getElementsByClassName('b2')[0].style.display = 'none';
+            document.getElementsByClassName('b4')[0].style.display = 'none';
+			
+
+			
+
+			
+			
+			document.getElementsByClassName('second')[0].style.display = 'none';
+			document.getElementsByClassName('first')[0].style.display = 'block';
+			document.getElementsByClassName('layera-right')[0].style.display = 'none';
+						document.getElementsByClassName('firstright')[0].style.display = 'block';
+        }
+
+
+
+
+
+
+        function init() {
+
+				
+
+		
+		
+		
+		
+            container = document.getElementsByClassName('image_background')[0];
+
+
+            camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 0.25, 200);
+            camera.position.set(3, 1, 21);
+            camera.add(listener);
+            scene = new THREE.Scene();
+			
+
+
+			
+			
+
+            scene.add(group);
+
+            var hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 1);
+            hemiLight.color.setHSL(0.6, .8, 1);
+            hemiLight.groundColor.setHSL(0.6, .3, 0.3);
+            hemiLight.position.set(0, 50, 0);
+            scene.add(hemiLight);
+
+
+            var ambientLight = new THREE.AmbientLight(0xcccccc, 0.6);
+            scene.add(ambientLight);
+
+            var pointLight = new THREE.PointLight(0xffffff, .1);
+            camera.add(pointLight);
+            group.add(camera);
+
+
+
+
+
+
+
+            var helper = new THREE.AxesHelper(50);
+
+
+            var material = new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.2 });
+
+
+            var geometry = new THREE.SphereBufferGeometry(0.01, 0.01, 0.01);
+
+
+            cube = new THREE.Mesh(geometry, material);
+            cube.position.set(0, 0, 0);
+            cube.name = 'xq1';
+            targetArray.push({ name: cube.name, position: cube.position });
+            scene.add(cube);
+
+
+            cube2 = new THREE.Mesh(geometry, material);
+            cube2.position.set(0, 0, 0);
+            cube2.name = 'xq2';
+            targetArray.push({ name: cube2.name, position: cube2.position });
+            scene.add(cube2);
+
+
+            cubea1 = new THREE.Mesh(geometry, material);
+            cubea1.position.set(0.8, 2.8, -1.3);
+            cubea1.name = 'xqa1';
+            targetArray.push({ name: cubea1.name, position: cubea1.position });
+            scene.add(cubea1);
+
+
+            cubea2 = new THREE.Mesh(geometry, material);
+            cubea2.position.set(6, 1.3, 0.3);
+            cubea2.name = 'xqa2';
+            targetArray.push({ name: cubea2.name, position: cubea2.position });
+            scene.add(cubea2);
+
+            cubea3 = new THREE.Mesh(geometry, material);
+            cubea3.position.set(-2, 0.8, -0.17);
+            cubea3.name = 'xqa3';
+            targetArray.push({ name: cubea3.name, position: cubea3.position });
+            scene.add(cubea3);
+
+
+            cubea4 = new THREE.Mesh(geometry, material);
+            cubea4.position.set(-1, 1, -2.5);
+            cubea4.name = 'xqa4';
+            targetArray.push({ name: cubea4.name, position: cubea4.position });
+            scene.add(cubea3);
+
+
+            cubea5 = new THREE.Mesh(geometry, material);
+            cubea5.position.set(-0.12, -1.3, 0);
+            cubea5.name = 'xqa5';
+            targetArray.push({ name: cubea5.name, position: cubea5.position });
+            scene.add(cubea5);
+
+
+            cubeb1 = new THREE.Mesh(geometry, material);
+            cubeb1.position.set(-1.8, 1.4, -1);
+            cubeb1.name = 'xqb1';
+            targetArray.push({ name: cubeb1.name, position: cubeb1.position });
+            scene.add(cubeb1);
+
+            cubeb2 = new THREE.Mesh(geometry, material);
+            cubeb2.position.set(2.2, 2, -0.3);
+            cubeb2.name = 'xqb2';
+            targetArray.push({ name: cubeb2.name, position: cubeb2.position });
+            scene.add(cubeb2);
+
+
+            cubeb3 = new THREE.Mesh(geometry, material);
+            cubeb3.position.set(-3, 0.8, -3.2);
+            cubeb3.name = 'xqb3';
+            targetArray.push({ name: cubeb3.name, position: cubeb3.position });
+            scene.add(cubeb3);
+
+
+            cubeb4 = new THREE.Mesh(geometry, material);
+            cubeb4.position.set(-0.12, 3, -1);
+            cubeb4.name = 'xqb4';
+            targetArray.push({ name: cubeb3.name, position: cubeb3.position });
+            scene.add(cubeb3);
+
+
+			cubemoren = new THREE.Mesh(geometry, material);
+            cubemoren.position.set(0, 0, 0);
+            cubemoren.name = 'xqmoren';
+            targetArray.push({ name: cubemoren.name, position: cubemoren.position });
+            scene.add(cubemoren);
+			
+			
+			
+
+            console.log(targetArray);
+
+
+
+
+            var path = 'textures/cube/Bridge2/';
+            var format = '.jpg';
+            var envMap = new THREE.CubeTextureLoader().load([
+                path + 'posx' + format, path + 'negx' + format,
+                path + 'posy' + format, path + 'negy' + format,
+                path + 'posz' + format, path + 'negz' + format
+
+            ]);
+
+
+            var patha = 'textures/cube/Bridge2/';
+            var formata = '.jpg';
+            var backtex = new THREE.CubeTextureLoader().load([
+                patha + 'house.right' + formata,
+                patha + 'house.left' + formata,
+                patha + 'house.top' + formata,
+                patha + 'house.bottom' + formata,
+                patha + 'house.front' + formata,
+                patha + 'house.back' + formata
+            ]);
+            scene.background = backtex;
+            scene.add(group);
+
+
+			 <!-- var pathb = 'textures/cube/Bridge2/'; -->
+            <!-- var formatb = '.jpg'; -->
+            <!-- var backtexb = new THREE.CubeTextureLoader().load([ -->
+                <!-- pathb + 'house.right' + formatb, -->
+                <!-- pathb + 'house.left' + formatb, -->
+                <!-- pathb + 'house.top' + formatb, -->
+                <!-- pathb + 'house.bottom' + formatb, -->
+                <!-- pathb + 'house.front' + formatb, -->
+                <!-- pathb + 'house.back' + formatb -->
+            <!-- ]); -->
+			
+			 
+
+<!-- var loader = new THREE.FBXLoader(); -->
+				<!-- loader.load( 'files/chumo_SCREEN/fff.fbx', function ( object ) { -->
+				<!-- object.position.y -= 1.1; -->
+				<!-- object.rotation.y -= 0.6; -->
+				<!-- object.scale.set(.63, .63, 0.63); -->
+				<!-- shoeModel = object; -->
+					<!-- scene.add( object ); -->
+					<!-- console.log(object); -->
+					<!-- object.material.roughness = 0.1; -->
+					
+					                    <!-- object.traverse(function (child) { -->
+                        <!-- if (child.isMesh) { -->
+
+                            <!-- child.material.envMap = envMap; -->
+					
+                        <!-- } -->
+                    <!-- }); -->
+					
+					
+				<!-- } ); -->
+				<!-- console.log(shoeModel); -->
+				
+				
+						var mapa55 = new  THREE.TextureLoader().load('files/bb.jpg');
+	//遮罩片			
+var cubeaaa = new THREE.Mesh(new THREE.CircleGeometry(25, 25,),
+        new THREE.MeshStandardMaterial({
+		color: 0x282a3a,
+            //color: 0x2c3444,
+			opacity:0.5,
+			transparent:true,
+		    emissive:0xffffff,
+			emissiveMap:mapa55,
+			emissiveIntensity:1
+        })
+);
+cubeaaa.position.y = -1.7;
+cubeaaa.rotation.x = -1.57;
+scene.add(cubeaaa);
+
+
+
+				<!-- video = document.getElementById( 'video' ); -->
+				<!-- video.play(); -->
+				<!-- texture = new THREE.VideoTexture( video ); -->
+				<!-- var parameters = { color: 0xffffff, map: texture }; -->
+				<!-- materials = new THREE.MeshLambertMaterial( parameters ); -->
+				<!-- var cubett = new THREE.Mesh(new THREE.PlaneGeometry(1.75,1.05),materials); -->
+				<!-- scene.add(cubett); -->
+				<!-- cubett.position.set(5.05, 1.5, -0.08); -->
+                <!-- cubett.rotation.y -= 0.33; -->
+
+				
+            <!-- var loader = new THREE.GLTFLoader(); -->
+            <!-- loader.load('files/new/a.gltf', -->
+                <!-- function (gltf) { -->
+				
+				
+                    <!-- gltf.scene.scale.set(.2, .2, .2); -->
+					<!-- gltf.scene.rotation.y -= 1.9; -->
+                    <!-- gltf.scene.position.y -= 2; -->
+					<!-- gltf.scene.position.z += 2; -->
+
+                    <!-- gltf.scene.traverse(function (child) { -->
+                        <!-- if (child.isMesh) { -->
+						
+                            <!-- child.material.envMap = envMap; -->
+							
+                        <!-- } -->
+                    <!-- }); -->
+                    <!-- var animations = gltf.animations; -->
+                    <!-- shoeModel = gltf.scene; -->
+                    <!-- scene.add(gltf.scene); -->
+                    <!-- console.log(shoeModel); -->
+
+                <!-- }, -->
+                <!-- undefined, -->
+                <!-- function (e) { -->
+
+                    <!-- console.error(e); -->
+
+                <!-- }); -->
+
+
+            <!-- var loadera = new THREE.GLTFLoader(); -->
+            <!-- loadera.load('files/glb/A.gltf', -->
+                <!-- function (gltfa) { -->
+                    <!-- gltfa.scene.scale.set(.27, .27, .27); -->
+					<!-- gltfa.scene.rotation.y -= 0.2; -->
+                    <!-- gltfa.scene.position.y -= 1.65; -->
+<!-- gltfa.scene.position.z += 2; -->
+                    <!-- gltfa.scene.traverse(function (child) { -->
+                        <!-- if (child.isMesh) { -->
+						
+                            <!-- child.material.envMap = envMap; -->
+							
+                        <!-- } -->
+                    <!-- }); -->
+					<!-- objectQi = gltfa.scene; -->
+                    <!-- scene.add(gltfa.scene); -->
+					<!-- objectQi.visible = false; -->
+                <!-- }, -->
+                <!-- undefined, -->
+                <!-- function (e) { -->
+
+                    <!-- console.error(e); -->
+
+                <!-- }); -->
+				
+	//遮罩片			
+<!-- var cubeaaa = new THREE.Mesh(new THREE.CircleGeometry(20, 20,), -->
+        <!-- new THREE.MeshBasicMaterial({ -->
+		<!-- color: 0x282a3a, -->
+            <!-- //color: 0x2c3444, -->
+			<!-- opacity: 0.9, -->
+			<!-- transparent:true -->
+        <!-- }) -->
+<!-- ); -->
+<!-- cubeaaa.position.y = -1.12; -->
+<!-- cubeaaa.rotation.x = -1.57; -->
+<!-- scene.add(cubeaaa); -->
+
+
+
+
+
+
+
+            renderer = new THREE.WebGLRenderer({
+                antialias: true, alpha: true
+            });
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setClearColor(0x4f6c97, 1.0);
+            renderer.gammaOutput = true;
+			renderer.gammaFactor = 2.2;
+            container.appendChild(renderer.domElement);
+            controls = new THREE.OrbitControls(
+                camera,
+                renderer.domElement
+            );
+            controls.enablePan = true;
+            controls.panSpeed = .1;
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.1;
+            controls.enableZoom = true;
+            controls.target.set(-0.00001, 0, 0);
+            controls.minPolarAngle = Math.PI / 2 - 0.8;
+            controls.maxPolarAngle = Math.PI / 2 -0.001;
+            controls.autoRotateSpeed = -0.016;
+            controls.autoRotate = false;
+            controls.minDistance = 6;
+            controls.maxDistance = 23;
+			controls.rotateSpeed = 0.05;
+			
+			controls.maxAzimuthAngle = 1.3;
+			controls.minAzimuthAngle = -1.8 ;       //水平角度最大最小限制
+
+            window.addEventListener('resize', onWindowResize, false);
+			
+			
+			
+//反射
+			var waterGeometry = new THREE.CircleGeometry( 25, 25 );
+
+			water = new THREE.Water( waterGeometry, {
+
+				flowDirection: new THREE.Vector2( 0, 0 ),
+				textureWidth: 1024,
+				textureHeight: 1024
+			} );
+
+			water.position.y = -1.72;
+			water.rotation.x = Math.PI * - 0.5;
+			scene.add( water );
+			water.material.uniforms[ "config" ].value.w = 0;
+			
+
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        function onDocumentMouseMove(event) {
+            event.preventDefault();
+            console.log(event);
+        }
+
+        function onDocumentMouseStart(event) {
+            event.preventDefault();
+            console.log(event);
+        }
+
+        function onDocumentMouseEnd(event) {
+            event.preventDefault();
+            console.log(event);
+        }
+
+
+
+
+
+
+        function initGui() {
+
+            gui = {
+            };
+
+        }
+
+
+
+        function initStats() {
+            stats = new Stats();
+
+        }
+
+
+
+        function initControls() {
+
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.addEventListener('change', render);
+            controls.maxPolarAngle = Math.PI / 2;
+
+        }
+
+
+        function render() {
+            renderer.render(scene, camera);
+            let halfWidth = window.innerWidth / 2;
+            let halfHeight = window.innerHeight / 2;
+            var vector1 = cube.position.clone().project(camera);
+            var vector2 = cube2.position.clone().project(camera);
+            var vectora1 = cubea1.position.clone().project(camera);
+            var vectora2 = cubea2.position.clone().project(camera);
+            var vectora3 = cubea3.position.clone().project(camera);
+            var vectora4 = cubea4.position.clone().project(camera);
+            var vectorb1 = cubeb1.position.clone().project(camera);
+            var vectorb2 = cubeb2.position.clone().project(camera);
+            var vectorb3 = cubeb3.position.clone().project(camera);
+            var vectorb3 = cubeb3.position.clone().project(camera);
+            var vectorb4 = cubeb4.position.clone().project(camera);
+
+            $(".one").css({
+                left: vector1.x * halfWidth + halfWidth,
+                top: -vector1.y * halfHeight + halfHeight
+            });
+            $(".two").css({
+                left: vector2.x * halfWidth + halfWidth,
+                top: -vector2.y * halfHeight + halfHeight
+            });
+
+			
+            $(".a1").css({
+                left: vectora1.x * halfWidth + halfWidth,
+                top: -vectora1.y * halfHeight + halfHeight
+            });
+            $(".a2").css({
+                left: vectora2.x * halfWidth + halfWidth,
+                top: -vectora2.y * halfHeight + halfHeight
+            });
+            $(".a3").css({
+                left: vectora3.x * halfWidth + halfWidth,
+                top: -vectora3.y * halfHeight + halfHeight
+            });
+            $(".a4").css({
+                left: vectora4.x * halfWidth + halfWidth,
+                top: -vectora4.y * halfHeight + halfHeight
+            });
+
+            $(".b1").css({
+                left: vectorb1.x * halfWidth + halfWidth,
+                top: -vectorb1.y * halfHeight + halfHeight
+            });
+            $(".b2").css({
+                left: vectorb2.x * halfWidth + halfWidth,
+                top: -vectorb2.y * halfHeight + halfHeight
+            });
+            $(".b3").css({
+                left: vectorb3.x * halfWidth + halfWidth,
+                top: -vectorb3.y * halfHeight + halfHeight
+            });
+            $(".b4").css({
+                left: vectorb4.x * halfWidth + halfWidth,
+                top: -vectorb4.y * halfHeight + halfHeight
+            });
+
+
+			
+        }
+
+
+        function onWindowResize() {
+
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            render();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+
+        }
+
+
+
+        function draw() {
+            if (!Detector.webgl) Detector.addGetWebGLMessage();
+            initGui();
+            initRender();
+            initScene();
+            fbxLoader();
+            initCamera();
+            initLight();
+            initModel();
+            initControls();
+            initStats();
+            animate();
+            window.onresize = onWindowResize;
+        }
+
+
+        var time = 0;
+
+        function animate() {
+            render();
+            requestAnimationFrame(animate);
+            TWEEN.update();
+            controls.update();
+            renderer.render(scene, camera);
+            if (mixer) mixer.update(clock.getDelta());
+            if (shoeModel && startMove) {
+                time += 1;
+                shoeModel.traverse(function (child) {
+                    if (child.type == 'Mesh') {
+                        child.material.opacity -= opacity * opcityDir;
+                        child.material.transparent = true;
+                        if (child.material.opacity < 0.4 || child.material.opacity == 1) {
+                            startMove = false;
+                            time = 0;
+                        }
+                    }
+                })
+                if (time > 230) {
+                    var action = mixer.clipAction(showanimation[0]);
+                    action.loop = THREE.LoopOnce;
+                    action.time = 0;
+                    action.clampWhenFinished = true;
+                    action.enable = true;
+                    action.play();
+
+                }
+
+
+
+                if (mixers.length > 0) {
+                    for (var i = 0; i < mixers.length; i++) {
+
+                        mixers[i].update(clock.getDelta());
+
+                    }
+
+                }
+                requestAnimationFrame(animate);
+                if (modelShow && modelShow.children.length > 0 && !initPosition) {
+                    camera.position.set(0, cameraResetPositionY, cameraResetPosition);
+                    console.log('enter');
+                    initPosition = true;
+                }
+            }
+
+        }
+		
+
+		
+		
+		
+		
+    $(function () {
+      $('.shang').on('click', function () {
+        var dqindex = vm.selectindexa;
+        //上翻页
+        cameraMoveBackState();
+        if ($('.tips.active').index() - 1 == 0) {
+          $('.tips').removeClass('active');
+          $($('.tips')[$('.tips').length - 1])
+            .addClass('active')
+            .click();
+        } else {
+          $($('.tips')[$('.tips.active').index() - 2])
+            .addClass('active')
+            .click()
+            .siblings()
+            .removeClass('active');
+          vm.selectindexa = dqindex - 1;
+        }
+      });
+
+      $('.xia').on('click', function () {
+        cameraMoveState();
+        var dqindex = vm.selectindexa;
+        //下翻页
+        if ($('.tips.active').index() == $('.tips').length) {
+          $('.tips').removeClass('active');
+          $($('.tips')[0])
+            .addClass('active')
+            .click();
+          vm.selectindexa = 1;
+          console.log(8);
+        } else {
+          $($('.tips')[$('.tips.active').index()])
+            .addClass('active')
+            .click()
+            .siblings()
+            .removeClass('active');
+          vm.selectindexa = dqindex + 1;
+        }
+      });
+
+      $('.tips').on('click', function () {
+        //单独点击
+        $('.tips').removeClass('active');
+        $(this).addClass('active');
+      });
+    });
+
+	
+	
+	//键盘控制
+	window.onkeydown = onKeyDown;
+	
+
+	
+function onKeyDown(event){
+
+//if(event.keyCode==87){document.getElementById("js/controls/OrbitControls.js").innerHTML = dollyOut( getZoomScale() )}
+//if(event.keyCode==83){dollyIn( getZoomScale() )}
+
+
+    if(event.keyCode==65){
+ var dqindex = vm.selectindexa;
+        //上翻页
+        cameraMoveBackState();
+        if ($('.tips.active').index() - 1 == 0) {
+          $('.tips').removeClass('active');
+          $($('.tips')[$('.tips').length - 1])
+            .addClass('active')
+            .click();
+        } else {
+          $($('.tips')[$('.tips.active').index() - 2])
+            .addClass('active')
+            .click()
+            .siblings()
+            .removeClass('active');
+          vm.selectindexa = dqindex - 1;
+        }
+		}
+
+		
+		
+	if(event.keyCode==66){
+ cameraMoveState();
+        var dqindex = vm.selectindexa;
+        //下翻页
+        if ($('.tips.active').index() == $('.tips').length) {
+          $('.tips').removeClass('active');
+          $($('.tips')[0])
+            .addClass('active')
+            .click();
+          vm.selectindexa = 1;
+          console.log(8);
+        } else {
+          $($('.tips')[$('.tips.active').index()])
+            .addClass('active')
+            .click()
+            .siblings()
+            .removeClass('active');
+          vm.selectindexa = dqindex + 1;
+        }
+		}
+    }
+	
+	
+        function loadJs(url, callback) {
+            var script = document.createElement('script');
+            script.type = "text/javascript";
+            if (typeof (callback) != "undefined") {
+                if (script.readyState) {
+                    script.onreadystatechange = function () {
+                        if (script.readyState == "loaded" || script.readyState == "complete") {
+                            script.onreadystatechange = null;
+                            callback();
+                        }
+                    }
+                } else {
+                    script.onload = function () {
+                        callback();
+                    }
+                }
+            }
+            script.src = url;
+            document.body.appendChild(script);
+        }
+    </script>
+    <script src="js/video-control.js"></script>
+	
+	
+	<div style="display:none">
+	<script type="text/javascript" src="https://s23.cnzz.com/z_stat.php?id=1277224848&web_id=1277224848"></script>
+	</div>
+	
+	
+</body>
+</html>
